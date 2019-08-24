@@ -17,9 +17,6 @@ class CreateTroublesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->bigInteger('tasks_id')
-                ->references('id')->on('taks')
-                ->onDelete('set null');
             $table->bigInteger('devices_id')
                 ->references('id')->on('devices')
                 ->onDelete('set null');

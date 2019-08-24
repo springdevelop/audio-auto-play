@@ -2,6 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\Models\User;
+use App\Models\Group;
+use App\Models\Position;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -16,12 +18,22 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Position::class, function (Faker $faker) {
+	$userIds = App\Models\User::pluck('id')->toArray();
+    $groupIds = App\Models\Group::pluck('id')->toArray();
+
+    shuffle($userIds);
+    shuffle($groupIds);
+
+    $name = 'Position '.$faker->numberBetween(1, 100);
+    $slug = str_slug($name);    
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
+        'name' => $name,
+        'parent_id' => 1,
+        'desc' => $faker->sentence(),
+        'slug' => $slug,
+        'users_id' => $userIds[0],
+        'groups_id' => $groupIds[0],
     ];
 });

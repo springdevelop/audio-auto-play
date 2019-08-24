@@ -13,12 +13,15 @@ class CreateTaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('taks', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('desc')->nullable();
             $table->timestamp('time_from')->nullable()->default(null);
             $table->timestamp('time_to')->nullable()->default(null);
+            $table->bigInteger('troubles_id')
+                ->references('id')->on('troubles')
+                ->onDelete('set null');
             $table->bigInteger('users_id')
                 ->references('id')->on('users')
                 ->onDelete('set null');
@@ -34,6 +37,6 @@ class CreateTaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taks');
+        Schema::dropIfExists('tasks');
     }
 }

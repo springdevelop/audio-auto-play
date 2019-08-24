@@ -15,6 +15,9 @@ class CreatePositionsTable extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('parent_id')
+                ->references('id')->on('positions')
+                ->onDelete('set null');
             $table->string('name');
             $table->string('desc')->nullable();
             $table->string('slug');
