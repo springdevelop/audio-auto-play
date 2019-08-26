@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Calendar;
-use App\Repositories\Contracts\CalendarRepository;
+use App\Repositories\Contracts\CalendarRepositoryInterface;
 
-class EloquentCalendarRepository extends EloquentBaseRepository implements CalendarRepository
+class CalendarRepository extends BaseRepository implements CalendarRepositoryInterface
 {
     public function __construct(Calendar $model)
     {

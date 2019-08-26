@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Task;
-use App\Repositories\Contracts\TaskRepository;
+use App\Repositories\Contracts\TaskRepositoryInterface;
 
-class EloquentTaskRepository extends EloquentBaseRepository implements TaskRepository
+class TaskRepository extends BaseRepository implements TaskRepositoryInterface
 {
     public function __construct(Task $model)
     {

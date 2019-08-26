@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Position;
-use App\Repositories\Contracts\PositionRepository;
+use App\Repositories\Contracts\PositionRepositoryInterface;
 
-class EloquentPositionRepository extends EloquentBaseRepository implements PositionRepository
+class PositionRepository extends BaseRepository implements PositionRepositoryInterface
 {
     public function __construct(Position $model)
     {

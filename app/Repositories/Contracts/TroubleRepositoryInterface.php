@@ -2,6 +2,6 @@
 
 namespace App\Repositories\Contract;
 
-interface TroubleRepository{
+interface TroubleRepositoryInterface{
 	
 }

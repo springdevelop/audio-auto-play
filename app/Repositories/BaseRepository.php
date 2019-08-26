@@ -4,14 +4,14 @@ namespace App\Repositories\Eloquent;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use App\Repositories\Contracts\BaseRepository;
+use App\Repositories\Contracts\BaseRepositoryInterface;
 
 /**
  * Class EloquentBaseRepository
  *
  * @package App\Repositories
  */
-abstract class EloquentBaseRepository implements BaseRepository
+abstract class BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @var \Illuminate\Database\Eloquent\Model An instance of the Eloquent Model

@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Device;
-use App\Repositories\Contracts\DeviceRepository;
+use App\Repositories\Contracts\DeviceRepositoryInterface;
 
-class EloquentDeviceRepository extends EloquentBaseRepository implements DeviceRepository
+class DeviceRepository extends BaseRepository implements DeviceRepositoryInterface
 {
     public function __construct(Device $model)
     {
