@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Group;
-use App\Repositories\Contracts\GroupRepository;
+use App\Repositories\Contracts\GroupRepositoryInterface;
 
-class EloquentGroupRepository extends EloquentBaseRepository implements GroupRepository
+class GroupRepository extends BaseRepository implements GroupRepositoryInterface
 {
     public function __construct(Group $model)
     {

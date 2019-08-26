@@ -3,7 +3,7 @@ namespace App\Repositories\Contract;
 
 use Illuminate\Database\Eloquent\Builder;
 
-interface BaseRepository
+interface BaseRepositoryInterface
 {
     /**
      * @param  int $id

@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Trouble;
-use App\Repositories\Contracts\TroubleRepository;
+use App\Repositories\Contracts\TroubleRepositoryInterface;
 
-class EloquentTroubleRepository extends EloquentBaseRepository implements TroubleRepository
+class TroubleRepository extends BaseRepository implements TroubleRepositoryInterface
 {
     public function __construct(Trouble $model)
     {

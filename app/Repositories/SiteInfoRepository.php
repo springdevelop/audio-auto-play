@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\SiteInfo;
-use App\Repositories\Contracts\SiteInfoRepository;
+use App\Repositories\Contracts\SiteInfoRepositoryInterface;
 
-class EloquentSiteInfoRepository extends EloquentBaseRepository implements SiteInfoRepository
+class SiteInfoRepository extends BaseRepository implements SiteInfoRepositoryInterface
 {
     public function __construct(SiteInfo $model)
     {

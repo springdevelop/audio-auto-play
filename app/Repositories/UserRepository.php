@@ -3,9 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\User;
-use App\Repositories\Contracts\UserRepository;
+use App\Repositories\Contracts\UserRepositoryInterface;
 
-class EloquentUserRepository extends EloquentBaseRepository implements UserRepository
+class UserRepository extends BaseRepository implements UserRepositoryInterface
 {
     public function __construct(User $model)
     {
