@@ -13,6 +13,11 @@ use App\Http\Requests\Api\UserRegisterRequest;
 use App\Http\Requests\Api\UserUpdateRequest;
 use App\Services\Api\Contracts\UserServiceInterface;
 
+/**
+ * @group user
+ *
+ * APIs for managing users
+ */
 class UsersController extends BaseController
 {
     protected $service;
@@ -25,14 +30,15 @@ class UsersController extends BaseController
     }
 
     /**
+     * register
      * @api {post} /user/register Register user by email
      * @apiName Register
      * @apiGroup User
      *
      *
-     * @apiParam {String} name (Required) name, max 20 character
-     * @apiParam {String} email (Required) Unique email
-     * @apiParam {String} password (Required) Password: min 6 chararacter
+     * @bodyParam name string required name, max 20 character
+     * @bodyParam email string required Unique email
+     * @bodyParam password string required Password: min 6 chararacter
      *
      * @apiSuccess {Array} user User's infomations.
      *
@@ -76,15 +82,16 @@ class UsersController extends BaseController
     }
 
     /**
+     * updateProfile
      * @api {put} /user/me Update user's profile
      * @apiName Update user's profile
      * @apiGroup User
      *
      * @apiUse RequireAuthHeader
      *
-     * @apiParam {String} name (Required) name, max 20 character
-     * @apiParam {String} birthday  birthday, format: Y-m-
-     * @apiParam {String} job job, max 255 character
+     * @bodyParam name string required name, max 20 character
+     * @bodyParam birthday string required birthday, format: Y-m-
+     * @bodyParam job string required job, max 255 character
      *
      * @apiSuccess {String} code 200
      *
@@ -116,6 +123,7 @@ class UsersController extends BaseController
     }
 
     /**
+     * me
      * @api {get} /user/me Get current user
      * @apiName Get current user
      * @apiGroup User
@@ -140,12 +148,10 @@ class UsersController extends BaseController
      *
      * @apiError 706 User not found
      *
-     * @apiErrorExample Error-Response:
-     *     HTTP/1.1 200 OK
-     *     {
-     *       "code": "706",
-     *       "message": "User not found"
-     *     }
+     * @response 404{
+     *  "code": "404",
+     *  "message": "User not found"
+     * }
      */
     public function getCurrentUser(Request $request)
     {

@@ -20,7 +20,6 @@ class CreatePositionsTable extends Migration
                 ->onDelete('set null');
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->string('slug');
             $table->integer('users_id');
             $table->integer('groups_id');
             $table->timestamps();

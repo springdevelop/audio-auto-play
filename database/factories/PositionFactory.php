@@ -26,13 +26,11 @@ $factory->define(Position::class, function (Faker $faker) {
     shuffle($groupIds);
 
     $name = 'Position '.$faker->numberBetween(1, 100);
-    $slug = str_slug($name);    
 
     return [
         'name' => $name,
         'parent_id' => 1,
         'desc' => $faker->sentence(),
-        'slug' => $slug,
         'users_id' => $userIds[0],
         'groups_id' => $groupIds[0],
     ];

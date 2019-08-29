@@ -34,7 +34,6 @@ $factory->define(Device::class, function (Faker $faker) {
     return [
         'name' => $name,
         'desc' => $faker->unique()->safeEmail,
-        'slug' => $slug,
         'positions_id' => $groupIds[0],
         'users_id' => $userIds[0],
         'groups_id' => $groupIds[0],

@@ -17,7 +17,6 @@ class CreateGroupsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->string('slug');
             $table->string('type');
             $table->timestamps();
         });
