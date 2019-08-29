@@ -18,5 +18,10 @@ Route::group(['namespace' => 'Api'], function () {
     Route::group(['middleware' => ['api']], function () {
         Route::put('user/me', 'UsersController@updateProfile');
         Route::get('user/me', 'UsersController@getCurrentUser');
+
+        Route::get('positions', 'PositionController@index');
+        Route::get('positions/{id}', 'PositionController@show');
+        Route::put('positions/{id}', 'PositionController@update');
+        Route::delete('positions/{id}', 'PositionController@destroy');
     });
 });

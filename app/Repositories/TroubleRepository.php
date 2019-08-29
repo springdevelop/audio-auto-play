@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Repositories;
 
 use App\Models\Trouble;
 use App\Repositories\Contracts\TroubleRepositoryInterface;

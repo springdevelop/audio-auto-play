@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Repositories;
 
 use App\Models\SiteInfo;
 use App\Repositories\Contracts\SiteInfoRepositoryInterface;
