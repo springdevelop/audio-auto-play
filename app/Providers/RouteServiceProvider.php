@@ -29,6 +29,14 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
+     * Get the route key for model
+     * @return String
+     */
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+
+    /**
      * Define the routes for the application.
      *
      * @return void

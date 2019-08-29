@@ -15,23 +15,23 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Gate $gate)
     {
-        // $gate->define('permission', function ($user, $permissions) {
-        //     if (is_array($permissions)) {
-        //         $permit = true;
-        //         foreach ($permissions as $permission) {
-        //             if ($user->hasDefinePrivilege($permission)) {
-        //                 return true;
-        //             }
+        $gate->define('permission', function ($user, $permissions) {
+            if (is_array($permissions)) {
+                $permit = true;
+                foreach ($permissions as $permission) {
+                    if ($user->hasDefinePrivilege($permission)) {
+                        return true;
+                    }
 
-        //             $permit = $permit && $user->hasDefinePrivilege($permission);
-        //         }
+                    $permit = $permit && $user->hasDefinePrivilege($permission);
+                }
 
-        //         return $permit;
-        //     }
+                return $permit;
+            }
 
-        //     return $user->hasDefinePrivilege($permissions);
-        // });
-        Schema::defaultStringLength(191);
+            return $user->hasDefinePrivilege($permissions);
+        });
+        // Schema::defaultStringLength(191);
     }
 
     /**
