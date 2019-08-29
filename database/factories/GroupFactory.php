@@ -19,12 +19,10 @@ use Faker\Generator as Faker;
 $factory->define(Group::class, function (Faker $faker) {
 
     $name = 'Group '.$faker->numberBetween(1, 100);
-    $slug = str_slug($name);
 
     return [
         'name' => $name,
         'desc' => $faker->sentence(),
-        'slug' => $slug,
         'type' => 'vip',
     ];
 });

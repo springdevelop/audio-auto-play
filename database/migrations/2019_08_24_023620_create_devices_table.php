@@ -17,7 +17,6 @@ class CreateDevicesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->string('slug');
             $table->integer('positions_id');
             $table->bigInteger('users_id')
                 ->references('id')->on('users')
