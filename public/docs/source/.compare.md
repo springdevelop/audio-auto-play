@@ -20,6 +20,290 @@ Welcome to the generated API reference.
 
 <!-- END_INFO -->
 
+#devices
+
+
+<!-- START_8f41217bf023ddef5d8995d7c7c7e2e2 -->
+## index
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/devices" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/devices");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Device 47",
+            "desc": "qschmitt@example.com",
+            "slug": 6,
+            "positions_id": 2,
+            "users_id": 6,
+            "groups_id": 2,
+            "status": "good"
+        },
+        {
+            "id": 2,
+            "name": "Device 19",
+            "desc": "jasen01@example.org",
+            "slug": 5,
+            "positions_id": 1,
+            "users_id": 5,
+            "groups_id": 1,
+            "status": "good"
+        },
+        {
+            "id": 3,
+            "name": "Device 98",
+            "desc": "uerdman@example.com",
+            "slug": 10,
+            "positions_id": 5,
+            "users_id": 10,
+            "groups_id": 5,
+            "status": "good"
+        },
+        {
+            "id": 4,
+            "name": "Device 67",
+            "desc": "casper.spencer@example.net",
+            "slug": 9,
+            "positions_id": 4,
+            "users_id": 9,
+            "groups_id": 4,
+            "status": "good"
+        },
+        {
+            "id": 5,
+            "name": "Device 60",
+            "desc": "eve.windler@example.org",
+            "slug": 3,
+            "positions_id": 2,
+            "users_id": 3,
+            "groups_id": 2,
+            "status": "good"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/devices`
+
+
+<!-- END_8f41217bf023ddef5d8995d7c7c7e2e2 -->
+
+<!-- START_35518d88ab5833207b674a947d6f081e -->
+## show
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/devices/1" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/devices/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Device 47",
+        "desc": "qschmitt@example.com",
+        "slug": 6,
+        "positions_id": 2,
+        "users_id": 6,
+        "groups_id": 2,
+        "status": "good"
+    }
+}
+```
+
+### HTTP Request
+`GET api/devices/{id}`
+
+
+<!-- END_35518d88ab5833207b674a947d6f081e -->
+
+<!-- START_dbb21adf8d2a4b13a3c3113b57e8d329 -->
+## store
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost:8000/api/devices" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"repellat","desc":"rerum","positions_id":19,"users_id":12,"groups_id":5}'
+
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/devices");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "repellat",
+    "desc": "rerum",
+    "positions_id": 19,
+    "users_id": 12,
+    "groups_id": 5
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/devices`
+
+#### Body Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | Name of device
+    desc | string |  required  | Description of device
+    positions_id | integer |  required  | positions_id of device
+    users_id | integer |  required  | users_id of device
+    groups_id | integer |  required  | groups_id of device
+
+<!-- END_dbb21adf8d2a4b13a3c3113b57e8d329 -->
+
+<!-- START_9ba4e8a6f45956843d28279ce168ee5a -->
+## update
+
+> Example request:
+
+```bash
+curl -X PUT "http://localhost:8000/api/devices/1" \
+    -H "Content-Type: application/json" \
+    -d '{"parent_id":"aperiam","name":"non","desc":"alias","groups_id":10}'
+
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/devices/1");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "parent_id": "aperiam",
+    "name": "non",
+    "desc": "alias",
+    "groups_id": 10
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT api/devices/{id}`
+
+#### Body Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    parent_id | string |  required  | id of parent's device
+    name | string |  required  | Name of device
+    desc | string |  required  | Description of device
+    groups_id | integer |  required  | groups_id of deivce
+
+<!-- END_9ba4e8a6f45956843d28279ce168ee5a -->
+
+<!-- START_a4154b0d5af10d6c8e1041a02fe34ba6 -->
+## delete
+
+> Example request:
+
+```bash
+curl -X DELETE "http://localhost:8000/api/devices/1" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/devices/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE api/devices/{id}`
+
+
+<!-- END_a4154b0d5af10d6c8e1041a02fe34ba6 -->
+
 #general
 
 
@@ -195,7 +479,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"non","desc":"ipsam","type":"voluptatibus"}'
+    -d '{"name":"voluptas","desc":"ratione","type":"iure"}'
 
 ```
 
@@ -208,9 +492,9 @@ let headers = {
 }
 
 let body = {
-    "name": "non",
-    "desc": "ipsam",
-    "type": "voluptatibus"
+    "name": "voluptas",
+    "desc": "ratione",
+    "type": "iure"
 }
 
 fetch(url, {
@@ -245,7 +529,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"qui","desc":"error","type":"et"}'
+    -d '{"name":"repellendus","desc":"animi","type":"ex"}'
 
 ```
 
@@ -258,9 +542,9 @@ let headers = {
 }
 
 let body = {
-    "name": "qui",
-    "desc": "error",
-    "type": "et"
+    "name": "repellendus",
+    "desc": "animi",
+    "type": "ex"
 }
 
 fetch(url, {
@@ -320,7 +604,7 @@ fetch(url, {
 
 <!-- END_1047682f8958a6c8574e111e83f9cc17 -->
 
-#position
+#positions
 
 
 <!-- START_ee1d1766a73d2f5c17cc2e47c84bd12b -->
@@ -470,7 +754,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"pariatur","name":"asperiores","desc":"temporibus","groups_id":18}'
+    -d '{"parent_id":"perspiciatis","name":"ut","desc":"quibusdam","groups_id":5}'
 
 ```
 
@@ -483,10 +767,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "pariatur",
-    "name": "asperiores",
-    "desc": "temporibus",
-    "groups_id": 18
+    "parent_id": "perspiciatis",
+    "name": "ut",
+    "desc": "quibusdam",
+    "groups_id": 5
 }
 
 fetch(url, {
@@ -522,7 +806,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"aut","name":"sed","desc":"voluptatum","groups_id":8}'
+    -d '{"parent_id":"eligendi","name":"ipsa","desc":"qui","groups_id":14}'
 
 ```
 
@@ -535,10 +819,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "aut",
-    "name": "sed",
-    "desc": "voluptatum",
-    "groups_id": 8
+    "parent_id": "eligendi",
+    "name": "ipsa",
+    "desc": "qui",
+    "groups_id": 14
 }
 
 fetch(url, {
@@ -611,7 +895,7 @@ APIs for managing users
 ```bash
 curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"voluptatem","email":"id","password":"quidem"}'
+    -d '{"name":"veniam","email":"deleniti","password":"nihil"}'
 
 ```
 
@@ -624,9 +908,9 @@ let headers = {
 }
 
 let body = {
-    "name": "voluptatem",
-    "email": "id",
-    "password": "quidem"
+    "name": "veniam",
+    "email": "deleniti",
+    "password": "nihil"
 }
 
 fetch(url, {
@@ -661,7 +945,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"quisquam","birthday":"asperiores","job":"ipsum"}'
+    -d '{"name":"aspernatur","birthday":"molestias","job":"ipsum"}'
 
 ```
 
@@ -674,8 +958,8 @@ let headers = {
 }
 
 let body = {
-    "name": "quisquam",
-    "birthday": "asperiores",
+    "name": "aspernatur",
+    "birthday": "molestias",
     "job": "ipsum"
 }
 
