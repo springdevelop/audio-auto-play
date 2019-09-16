@@ -9,7 +9,7 @@ use App\Http\Requests\Api\PositionStoreRequest;
 use App\Repositories\Contracts\PositionRepositoryInterface;
 
 /**
- * @group position
+ * @group positions
  * @authenticated
  *
  * APIs for managing positions
@@ -28,7 +28,6 @@ class PositionController extends BaseController
     /**
      * index
      * @api {get} /positions Get all list position
-     * @param {String} name (Required) name, max 20 character
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -47,9 +46,6 @@ class PositionController extends BaseController
      * @bodyParam desc string required Description of position
      * @bodyParam groups_id integer required groups_id of position
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(PositionStoreRequest $request)
     {
@@ -67,8 +63,6 @@ class PositionController extends BaseController
      * show
      * @api {post} /positions/{id} Get position's detail
      * Display the specified resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
@@ -88,9 +82,8 @@ class PositionController extends BaseController
      * @bodyParam name string required Name of position
      * @bodyParam desc string required Description of position
      * @bodyParam groups_id integer required groups_id of position
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PositionUpdateRequest $request, $id)
     {
         $inputs = $request->only('name', 'desc', 'groups_id');
         $position = $this->repository->find($id);
@@ -109,9 +102,6 @@ class PositionController extends BaseController
      * delete
      * @api {delete} /positions/{id} Delete a position
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {

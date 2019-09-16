@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class PositionUpdateRequest extends FormRequest
+class GroupStoreRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +22,8 @@ class PositionUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'groups_id' => 'required',
             'name' => 'required|max:20',
+            'type' => 'required|max:20',
         ];
     }
 
