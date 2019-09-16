@@ -54,5 +54,11 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('siteinfos', 'SiteInfoController@store');
         Route::put('siteinfos/{id}', 'SiteInfoController@update');
         Route::delete('siteinfos/{id}', 'SiteInfoController@destroy');
+
+        Route::get('calendars', 'CalendarController@index');
+        Route::get('calendars/{id}', 'CalendarController@show');
+        Route::post('calendars', 'CalendarController@store');
+        Route::put('calendars/{id}', 'CalendarController@update');
+        Route::delete('calendars/{id}', 'CalendarController@destroy');
     });
 });

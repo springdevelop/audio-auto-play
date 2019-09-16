@@ -31,7 +31,7 @@ class SiteInfoUpdateRequest extends BaseRequest
     public function messages()
     {
         return array_merge(parent::messages(), [
-            'required' => config('code.device.field_required'),
+            'required' => config('code.siteinfo.field_required'),
         ]);
     }
 }
