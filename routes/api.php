@@ -36,5 +36,11 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('devices', 'DeviceController@store');
         Route::put('devices/{id}', 'DeviceController@update');
         Route::delete('devices/{id}', 'DeviceController@destroy');
+
+        Route::get('troubles', 'TroubleController@index');
+        Route::get('troubles/{id}', 'TroubleController@show');
+        Route::post('troubles', 'TroubleController@store');
+        Route::put('troubles/{id}', 'TroubleController@update');
+        Route::delete('troubles/{id}', 'TroubleController@destroy');
     });
 });

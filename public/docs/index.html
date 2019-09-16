@@ -174,7 +174,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/devices" \
     -H "Content-Type: application/json" \
-    -d '{"name":"repellat","desc":"rerum","positions_id":19,"users_id":12,"groups_id":5}'
+    -d '{"name":"enim","desc":"et","positions_id":2,"users_id":18,"groups_id":4}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/devices");
 
@@ -184,11 +184,11 @@ let headers = {
 }
 
 let body = {
-    "name": "repellat",
-    "desc": "rerum",
-    "positions_id": 19,
-    "users_id": 12,
-    "groups_id": 5
+    "name": "enim",
+    "desc": "et",
+    "positions_id": 2,
+    "users_id": 18,
+    "groups_id": 4
 }
 
 fetch(url, {
@@ -251,7 +251,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/devices/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"aperiam","name":"non","desc":"alias","groups_id":10}'
+    -d '{"parent_id":"pariatur","name":"et","desc":"ducimus","groups_id":13}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/devices/1");
 
@@ -261,10 +261,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "aperiam",
-    "name": "non",
-    "desc": "alias",
-    "groups_id": 10
+    "parent_id": "pariatur",
+    "name": "et",
+    "desc": "ducimus",
+    "groups_id": 13
 }
 
 fetch(url, {
@@ -471,7 +471,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"voluptas","desc":"ratione","type":"iure"}'
+    -d '{"name":"a","desc":"aspernatur","type":"alias"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups");
 
@@ -481,9 +481,9 @@ let headers = {
 }
 
 let body = {
-    "name": "voluptas",
-    "desc": "ratione",
-    "type": "iure"
+    "name": "a",
+    "desc": "aspernatur",
+    "type": "alias"
 }
 
 fetch(url, {
@@ -534,7 +534,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"repellendus","desc":"animi","type":"ex"}'
+    -d '{"name":"impedit","desc":"sequi","type":"reiciendis"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups/1");
 
@@ -544,9 +544,9 @@ let headers = {
 }
 
 let body = {
-    "name": "repellendus",
-    "desc": "animi",
-    "type": "ex"
+    "name": "impedit",
+    "desc": "sequi",
+    "type": "reiciendis"
 }
 
 fetch(url, {
@@ -735,7 +735,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"perspiciatis","name":"ut","desc":"quibusdam","groups_id":5}'
+    -d '{"parent_id":"aut","name":"expedita","desc":"libero","groups_id":13}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/positions");
 
@@ -745,10 +745,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "perspiciatis",
-    "name": "ut",
-    "desc": "quibusdam",
-    "groups_id": 5
+    "parent_id": "aut",
+    "name": "expedita",
+    "desc": "libero",
+    "groups_id": 13
 }
 
 fetch(url, {
@@ -805,7 +805,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"eligendi","name":"ipsa","desc":"qui","groups_id":14}'
+    -d '{"parent_id":"quae","name":"dolore","desc":"tenetur","groups_id":3}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/positions/1");
 
@@ -815,10 +815,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "eligendi",
-    "name": "ipsa",
-    "desc": "qui",
-    "groups_id": 14
+    "parent_id": "quae",
+    "name": "dolore",
+    "desc": "tenetur",
+    "groups_id": 3
 }
 
 fetch(url, {
@@ -890,6 +890,249 @@ fetch(url, {
 <h3>HTTP Request</h3>
 <p><code>DELETE api/positions/{id}</code></p>
 <!-- END_e6bf7734043f180ab3c35f8face9a212 -->
+<h1>troubles</h1>
+<!-- START_38f3fbc47413c9ae16e2b430c60b659e -->
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost:8000/api/troubles" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/troubles");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Trouble 80",
+            "desc": "forest06@example.net",
+            "devices_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Trouble 64",
+            "desc": "iva04@example.net",
+            "devices_id": 4
+        },
+        {
+            "id": 3,
+            "name": "Trouble 16",
+            "desc": "tbogisich@example.com",
+            "devices_id": 4
+        },
+        {
+            "id": 4,
+            "name": "Trouble 49",
+            "desc": "ansel.pfeffer@example.org",
+            "devices_id": 3
+        },
+        {
+            "id": 5,
+            "name": "Trouble 7",
+            "desc": "allie90@example.org",
+            "devices_id": 2
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/troubles</code></p>
+<!-- END_38f3fbc47413c9ae16e2b430c60b659e -->
+<!-- START_01032dc854ff032ad3305e565daa6ad2 -->
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost:8000/api/troubles/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/troubles/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Trouble 80",
+        "desc": "forest06@example.net",
+        "devices_id": 1
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/troubles/{id}</code></p>
+<!-- END_01032dc854ff032ad3305e565daa6ad2 -->
+<!-- START_f2d9eaa096a6038d13aa9d8f9185f9d7 -->
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost:8000/api/troubles" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"vitae","desc":"fugit","devices_id":3}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/troubles");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "vitae",
+    "desc": "fugit",
+    "devices_id": 3
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/troubles</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+<td>Name of trouble</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>string</td>
+<td>required</td>
+<td>Description of trouble</td>
+</tr>
+<tr>
+<td>devices_id</td>
+<td>integer</td>
+<td>required</td>
+<td>devices_id of trouble</td>
+</tr>
+</tbody>
+</table>
+<!-- END_f2d9eaa096a6038d13aa9d8f9185f9d7 -->
+<!-- START_40fa1be4539611dd5901f9e7b4437e98 -->
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/troubles/1" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"dicta","desc":"nobis","devices_id":19}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/troubles/1");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "dicta",
+    "desc": "nobis",
+    "devices_id": 19
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/troubles/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+<td>Name of trouble</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>string</td>
+<td>required</td>
+<td>Description of trouble</td>
+</tr>
+<tr>
+<td>devices_id</td>
+<td>integer</td>
+<td>required</td>
+<td>devices_id of trouble</td>
+</tr>
+</tbody>
+</table>
+<!-- END_40fa1be4539611dd5901f9e7b4437e98 -->
+<!-- START_9635f4ddc3e1ed64ca45dcb4b97d771a -->
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost:8000/api/troubles/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/troubles/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/troubles/{id}</code></p>
+<!-- END_9635f4ddc3e1ed64ca45dcb4b97d771a -->
 <h1>user</h1>
 <p>APIs for managing users</p>
 <!-- START_638687f1aca2f1e69b360d1516c7c1f9 -->
@@ -899,7 +1142,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"veniam","email":"deleniti","password":"nihil"}'
+    -d '{"name":"consequatur","email":"omnis","password":"rerum"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/user/register");
 
@@ -909,9 +1152,9 @@ let headers = {
 }
 
 let body = {
-    "name": "veniam",
-    "email": "deleniti",
-    "password": "nihil"
+    "name": "consequatur",
+    "email": "omnis",
+    "password": "rerum"
 }
 
 fetch(url, {
@@ -962,7 +1205,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"aspernatur","birthday":"molestias","job":"ipsum"}'
+    -d '{"name":"eaque","birthday":"et","job":"sed"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/user/me");
 
@@ -972,9 +1215,9 @@ let headers = {
 }
 
 let body = {
-    "name": "aspernatur",
-    "birthday": "molestias",
-    "job": "ipsum"
+    "name": "eaque",
+    "birthday": "et",
+    "job": "sed"
 }
 
 fetch(url, {
