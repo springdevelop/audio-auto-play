@@ -32,7 +32,7 @@ class GroupUpdateRequest extends FormRequest
     public function messages()
     {
         return array_merge(parent::messages(), [
-            'required' => config('code.position.field_required'),
+            'required' => config('code.group.field_required'),
         ]);
     }
 }
