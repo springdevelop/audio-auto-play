@@ -75,6 +75,255 @@ fetch(url, {
 <h3>HTTP Request</h3>
 <p><code>GET admin</code></p>
 <!-- END_e40bc60a458a9740730202aaec04f818 -->
+<h1>groups</h1>
+<!-- START_007018a8a9f15c2d47fcb105431ffeee -->
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost:8000/api/groups" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Group 40",
+            "desc": "Itaque tempore qui qui nisi totam.",
+            "slug": null,
+            "type": "vip"
+        },
+        {
+            "id": 2,
+            "name": "Group 30",
+            "desc": "Sequi vero et quos quos ipsam provident.",
+            "slug": null,
+            "type": "vip"
+        },
+        {
+            "id": 3,
+            "name": "Group 20",
+            "desc": "Enim amet et quis dolor.",
+            "slug": null,
+            "type": "vip"
+        },
+        {
+            "id": 4,
+            "name": "Group 95",
+            "desc": "Et possimus praesentium est sunt nisi quia.",
+            "slug": null,
+            "type": "vip"
+        },
+        {
+            "id": 5,
+            "name": "Group 21",
+            "desc": "Similique incidunt dolorum quaerat nam harum.",
+            "slug": null,
+            "type": "vip"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/groups</code></p>
+<!-- END_007018a8a9f15c2d47fcb105431ffeee -->
+<!-- START_8ab1516beb4ee4a6d65e907114740b5f -->
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost:8000/api/groups/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Group 40",
+        "desc": "Itaque tempore qui qui nisi totam.",
+        "slug": null,
+        "type": "vip"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/groups/{id}</code></p>
+<!-- END_8ab1516beb4ee4a6d65e907114740b5f -->
+<!-- START_15c22564ad248f952405021410fd1d25 -->
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost:8000/api/groups" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"non","desc":"ipsam","type":"voluptatibus"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "non",
+    "desc": "ipsam",
+    "type": "voluptatibus"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/groups</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+<td>Name of group</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>string</td>
+<td>required</td>
+<td>Description of group</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>required</td>
+<td>type of group</td>
+</tr>
+</tbody>
+</table>
+<!-- END_15c22564ad248f952405021410fd1d25 -->
+<!-- START_698e46ffc5cce5bf1942909d27080afc -->
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/groups/1" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"qui","desc":"error","type":"et"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups/1");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "qui",
+    "desc": "error",
+    "type": "et"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/groups/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+<td>Name of group</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>string</td>
+<td>required</td>
+<td>Description of group</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>required</td>
+<td>type of group</td>
+</tr>
+</tbody>
+</table>
+<!-- END_698e46ffc5cce5bf1942909d27080afc -->
+<!-- START_1047682f8958a6c8574e111e83f9cc17 -->
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost:8000/api/groups/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/groups/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/groups/{id}</code></p>
+<!-- END_1047682f8958a6c8574e111e83f9cc17 -->
 <h1>position</h1>
 <!-- START_ee1d1766a73d2f5c17cc2e47c84bd12b -->
 <h2>index</h2>
@@ -102,39 +351,60 @@ fetch(url, {
     "code": 200,
     "data": [
         {
-            "id": 4,
-            "name": "Position 36",
-            "desc": "Quos debitis amet est.",
-            "users_id": 3,
-            "groups_id": 3
+            "id": 9,
+            "name": "quo",
+            "desc": "sed",
+            "users_id": 1,
+            "groups_id": 8
         },
         {
-            "id": 5,
-            "name": "Position 94",
-            "desc": "Deleniti nemo facilis in non reiciendis officiis.",
-            "users_id": 2,
-            "groups_id": 2
+            "id": 8,
+            "name": "quo",
+            "desc": "sed",
+            "users_id": 1,
+            "groups_id": 8
         },
         {
-            "id": 1,
-            "name": "Position 29",
-            "desc": "Cum similique aut dolor omnis ea.",
-            "users_id": 5,
-            "groups_id": 3
+            "id": 7,
+            "name": "quo",
+            "desc": "sed",
+            "users_id": 1,
+            "groups_id": 8
+        },
+        {
+            "id": 6,
+            "name": "quo",
+            "desc": "sed",
+            "users_id": 1,
+            "groups_id": 8
         },
         {
             "id": 2,
-            "name": "Position 66",
-            "desc": "Quos ipsa velit consequatur doloribus excepturi ea ut.",
-            "users_id": 1,
-            "groups_id": 5
+            "name": "Position 27",
+            "desc": "Magnam enim quia et perferendis omnis aut at.",
+            "users_id": 9,
+            "groups_id": 2
         },
         {
             "id": 3,
-            "name": "Position 98",
-            "desc": "Qui animi harum amet consequatur.",
-            "users_id": 1,
+            "name": "Position 73",
+            "desc": "Vel eos error vel voluptates.",
+            "users_id": 6,
+            "groups_id": 2
+        },
+        {
+            "id": 4,
+            "name": "Position 72",
+            "desc": "Aut explicabo ipsa cupiditate corrupti.",
+            "users_id": 2,
             "groups_id": 4
+        },
+        {
+            "id": 5,
+            "name": "Position 2",
+            "desc": "Occaecati perspiciatis dignissimos eligendi placeat quidem.",
+            "users_id": 8,
+            "groups_id": 5
         }
     ]
 }</code></pre>
@@ -164,14 +434,8 @@ fetch(url, {
 <p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "code": 200,
-    "data": {
-        "id": 1,
-        "name": "Position 29",
-        "desc": "Cum similique aut dolor omnis ea.",
-        "users_id": 5,
-        "groups_id": 3
-    }
+    "code": 706,
+    "message": "messages.position.position_not_found"
 }</code></pre>
 <h3>HTTP Request</h3>
 <p><code>GET api/positions/{id}</code></p>
@@ -183,7 +447,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"{name}":"quo","{desc}":"sed","{groups_id}":8}'
+    -d '{"parent_id":"pariatur","name":"asperiores","desc":"temporibus","groups_id":18}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/positions");
 
@@ -193,9 +457,10 @@ let headers = {
 }
 
 let body = {
-    "{name}": "quo",
-    "{desc}": "sed",
-    "{groups_id}": 8
+    "parent_id": "pariatur",
+    "name": "asperiores",
+    "desc": "temporibus",
+    "groups_id": 18
 }
 
 fetch(url, {
@@ -219,19 +484,25 @@ fetch(url, {
 </thead>
 <tbody>
 <tr>
-<td>{name}</td>
+<td>parent_id</td>
+<td>string</td>
+<td>required</td>
+<td>id of parent's position</td>
+</tr>
+<tr>
+<td>name</td>
 <td>string</td>
 <td>required</td>
 <td>Name of position</td>
 </tr>
 <tr>
-<td>{desc}</td>
+<td>desc</td>
 <td>string</td>
 <td>required</td>
 <td>Description of position</td>
 </tr>
 <tr>
-<td>{groups_id}</td>
+<td>groups_id</td>
 <td>integer</td>
 <td>required</td>
 <td>groups_id of position</td>
@@ -244,22 +515,70 @@ fetch(url, {
 <blockquote>
 <p>Example request:</p>
 </blockquote>
-<pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/positions/1" </code></pre>
+<pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/positions/1" \
+    -H "Content-Type: application/json" \
+    -d '{"parent_id":"aut","name":"sed","desc":"voluptatum","groups_id":8}'
+</code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/positions/1");
 
 let headers = {
-    "Accept": "application/json",
     "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "parent_id": "aut",
+    "name": "sed",
+    "desc": "voluptatum",
+    "groups_id": 8
 }
 
 fetch(url, {
     method: "PUT",
     headers: headers,
+    body: body
 })
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <h3>HTTP Request</h3>
 <p><code>PUT api/positions/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent_id</td>
+<td>string</td>
+<td>required</td>
+<td>id of parent's position</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+<td>Name of position</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>string</td>
+<td>required</td>
+<td>Description of position</td>
+</tr>
+<tr>
+<td>groups_id</td>
+<td>integer</td>
+<td>required</td>
+<td>groups_id of position</td>
+</tr>
+</tbody>
+</table>
 <!-- END_0a2857bf8752d14e9e4bb3613fd7f3d0 -->
 <!-- START_e6bf7734043f180ab3c35f8face9a212 -->
 <h2>delete</h2>
@@ -292,7 +611,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"aut","email":"sunt","password":"quidem"}'
+    -d '{"name":"voluptatem","email":"id","password":"quidem"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/user/register");
 
@@ -302,8 +621,8 @@ let headers = {
 }
 
 let body = {
-    "name": "aut",
-    "email": "sunt",
+    "name": "voluptatem",
+    "email": "id",
     "password": "quidem"
 }
 
@@ -355,7 +674,7 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-bash">curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"incidunt","birthday":"illum","job":"repudiandae"}'
+    -d '{"name":"quisquam","birthday":"asperiores","job":"ipsum"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost:8000/api/user/me");
 
@@ -365,9 +684,9 @@ let headers = {
 }
 
 let body = {
-    "name": "incidunt",
-    "birthday": "illum",
-    "job": "repudiandae"
+    "name": "quisquam",
+    "birthday": "asperiores",
+    "job": "ipsum"
 }
 
 fetch(url, {

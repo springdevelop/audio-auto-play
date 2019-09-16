@@ -24,5 +24,11 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('positions', 'PositionController@store');
         Route::put('positions/{id}', 'PositionController@update');
         Route::delete('positions/{id}', 'PositionController@destroy');
+
+        Route::get('groups', 'GroupController@index');
+        Route::get('groups/{id}', 'GroupController@show');
+        Route::post('groups', 'GroupController@store');
+        Route::put('groups/{id}', 'GroupController@update');
+        Route::delete('groups/{id}', 'GroupController@destroy');
     });
 });

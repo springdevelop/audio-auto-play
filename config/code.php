@@ -13,4 +13,7 @@ return [
         'login_twitter_failed' => 705,
         'user_not_found' => 706,
     ],
+    'position' => [
+        'position_not_found' => 706,
+    ],
 ];
