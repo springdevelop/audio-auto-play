@@ -48,5 +48,11 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('tasks', 'TaskController@store');
         Route::put('tasks/{id}', 'TaskController@update');
         Route::delete('tasks/{id}', 'TaskController@destroy');
+
+        Route::get('siteinfos', 'SiteInfoController@index');
+        Route::get('siteinfos/{id}', 'SiteInfoController@show');
+        Route::post('siteinfos', 'SiteInfoController@store');
+        Route::put('siteinfos/{id}', 'SiteInfoController@update');
+        Route::delete('siteinfos/{id}', 'SiteInfoController@destroy');
     });
 });

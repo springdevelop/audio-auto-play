@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Api\TroubleResource;
 use App\Http\Resources\Api\TroubleCollection;
 use App\Http\Requests\Api\TroubleStoreRequest;
+use App\Http\Requests\Api\TroubleUpdateRequest;
 use App\Repositories\Contracts\TroubleRepositoryInterface;
 
 /**
