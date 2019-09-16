@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Api\PositionResource;
 use App\Http\Resources\Api\PositionCollection;
 use App\Http\Requests\Api\PositionStoreRequest;
+use App\Http\Requests\Api\PositionUpdateRequest;
 use App\Repositories\Contracts\PositionRepositoryInterface;
 
 /**

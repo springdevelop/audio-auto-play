@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Api\GroupResource;
 use App\Http\Resources\Api\GroupCollection;
 use App\Http\Requests\Api\GroupStoreRequest;
+use App\Http\Requests\Api\GroupUpdateRequest;
 use App\Repositories\Contracts\GroupRepositoryInterface;
 
 /**

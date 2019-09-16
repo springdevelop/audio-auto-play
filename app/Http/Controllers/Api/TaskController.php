@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Api\TaskResource;
 use App\Http\Resources\Api\TaskCollection;
 use App\Http\Requests\Api\TaskStoreRequest;
+use App\Http\Requests\Api\TaskUpdateRequest;
 use App\Repositories\Contracts\TaskRepositoryInterface;
 
 /**

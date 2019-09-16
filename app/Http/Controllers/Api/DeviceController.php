@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Api\DeviceResource;
 use App\Http\Resources\Api\DeviceCollection;
 use App\Http\Requests\Api\DeviceStoreRequest;
+use App\Http\Requests\Api\DeviceUpdateRequest;
 use App\Repositories\Contracts\DeviceRepositoryInterface;
 
 /**
