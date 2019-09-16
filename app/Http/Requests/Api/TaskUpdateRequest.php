@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-class TroubleStoreRequest extends BaseRequest
+class TaskUpdateRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,14 +23,18 @@ class TroubleStoreRequest extends BaseRequest
     {
         return [
             'name' => 'required|max:20',
-            'devices_id' => 'required',
+            'time_from' => 'required',
+            'time_to' => 'required',
+            'status' => 'required',
+            'users_id' => 'required',
+            'troubles_id' => 'required',
         ];
     }
 
     public function messages()
     {
         return array_merge(parent::messages(), [
-            'required' => config('code.trouble.field_required'),
+            'required' => config('code.taks.field_required'),
         ]);
     }
 }

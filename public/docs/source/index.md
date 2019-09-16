@@ -173,7 +173,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/devices" \
     -H "Content-Type: application/json" \
-    -d '{"name":"enim","desc":"et","positions_id":2,"users_id":18,"groups_id":4}'
+    -d '{"name":"explicabo","desc":"est","positions_id":15,"users_id":20,"groups_id":15}'
 
 ```
 
@@ -186,11 +186,11 @@ let headers = {
 }
 
 let body = {
-    "name": "enim",
-    "desc": "et",
-    "positions_id": 2,
-    "users_id": 18,
-    "groups_id": 4
+    "name": "explicabo",
+    "desc": "est",
+    "positions_id": 15,
+    "users_id": 20,
+    "groups_id": 15
 }
 
 fetch(url, {
@@ -227,7 +227,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/devices/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"pariatur","name":"et","desc":"ducimus","groups_id":13}'
+    -d '{"parent_id":"consequatur","name":"iste","desc":"fugit","groups_id":11}'
 
 ```
 
@@ -240,10 +240,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "pariatur",
-    "name": "et",
-    "desc": "ducimus",
-    "groups_id": 13
+    "parent_id": "consequatur",
+    "name": "iste",
+    "desc": "fugit",
+    "groups_id": 11
 }
 
 fetch(url, {
@@ -479,7 +479,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"a","desc":"aspernatur","type":"alias"}'
+    -d '{"name":"accusamus","desc":"non","type":"reprehenderit"}'
 
 ```
 
@@ -492,9 +492,9 @@ let headers = {
 }
 
 let body = {
-    "name": "a",
-    "desc": "aspernatur",
-    "type": "alias"
+    "name": "accusamus",
+    "desc": "non",
+    "type": "reprehenderit"
 }
 
 fetch(url, {
@@ -529,7 +529,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"impedit","desc":"sequi","type":"reiciendis"}'
+    -d '{"name":"voluptatem","desc":"unde","type":"excepturi"}'
 
 ```
 
@@ -542,9 +542,9 @@ let headers = {
 }
 
 let body = {
-    "name": "impedit",
-    "desc": "sequi",
-    "type": "reiciendis"
+    "name": "voluptatem",
+    "desc": "unde",
+    "type": "excepturi"
 }
 
 fetch(url, {
@@ -754,7 +754,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"aut","name":"expedita","desc":"libero","groups_id":13}'
+    -d '{"parent_id":"quod","name":"quae","desc":"optio","groups_id":2}'
 
 ```
 
@@ -767,10 +767,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "aut",
-    "name": "expedita",
-    "desc": "libero",
-    "groups_id": 13
+    "parent_id": "quod",
+    "name": "quae",
+    "desc": "optio",
+    "groups_id": 2
 }
 
 fetch(url, {
@@ -806,7 +806,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"quae","name":"dolore","desc":"tenetur","groups_id":3}'
+    -d '{"parent_id":"sunt","name":"quo","desc":"a","groups_id":9}'
 
 ```
 
@@ -819,10 +819,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "quae",
-    "name": "dolore",
-    "desc": "tenetur",
-    "groups_id": 3
+    "parent_id": "sunt",
+    "name": "quo",
+    "desc": "a",
+    "groups_id": 9
 }
 
 fetch(url, {
@@ -882,6 +882,300 @@ fetch(url, {
 
 
 <!-- END_e6bf7734043f180ab3c35f8face9a212 -->
+
+#tasks
+
+
+<!-- START_4227b9e5e54912af051e8dd5472afbce -->
+## index
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/tasks" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/tasks");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Task 49",
+            "desc": "Dicta quia dicta qui optio aliquam dolores.",
+            "time_from": "2019-08-29 14:05:17",
+            "time_to": "2019-08-29 14:05:17",
+            "status": 5,
+            "users_id": 5,
+            "troubles_id": 4
+        },
+        {
+            "id": 2,
+            "name": "Task 66",
+            "desc": "Autem nam et at nam sequi dolorem excepturi doloribus.",
+            "time_from": "2019-08-29 14:05:17",
+            "time_to": "2019-08-29 14:05:17",
+            "status": 6,
+            "users_id": 6,
+            "troubles_id": 3
+        },
+        {
+            "id": 3,
+            "name": "Task 66",
+            "desc": "Debitis quaerat ut delectus dolore tempore ut repudiandae.",
+            "time_from": "2019-08-29 14:05:17",
+            "time_to": "2019-08-29 14:05:17",
+            "status": 7,
+            "users_id": 7,
+            "troubles_id": 4
+        },
+        {
+            "id": 4,
+            "name": "Task 9",
+            "desc": "Minus nihil sit ipsum consectetur earum et ea.",
+            "time_from": "2019-08-29 14:05:17",
+            "time_to": "2019-08-29 14:05:17",
+            "status": 9,
+            "users_id": 9,
+            "troubles_id": 1
+        },
+        {
+            "id": 5,
+            "name": "Task 28",
+            "desc": "Qui libero et sint deserunt.",
+            "time_from": "2019-08-29 14:05:17",
+            "time_to": "2019-08-29 14:05:17",
+            "status": 1,
+            "users_id": 1,
+            "troubles_id": 5
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/tasks`
+
+
+<!-- END_4227b9e5e54912af051e8dd5472afbce -->
+
+<!-- START_7de0405fed5cd5226f5960f19b6ca3cd -->
+## show
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/tasks/1" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/tasks/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Task 49",
+        "desc": "Dicta quia dicta qui optio aliquam dolores.",
+        "time_from": "2019-08-29 14:05:17",
+        "time_to": "2019-08-29 14:05:17",
+        "status": 5,
+        "users_id": 5,
+        "troubles_id": 4
+    }
+}
+```
+
+### HTTP Request
+`GET api/tasks/{id}`
+
+
+<!-- END_7de0405fed5cd5226f5960f19b6ca3cd -->
+
+<!-- START_4da0d9b378428dcc89ced395d4a806e7 -->
+## store
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost:8000/api/tasks" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"libero","desc":"doloremque","time_from":"et","time_to":3,"status":"ea","users_id":20,"troubles_id":4}'
+
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/tasks");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "libero",
+    "desc": "doloremque",
+    "time_from": "et",
+    "time_to": 3,
+    "status": "ea",
+    "users_id": 20,
+    "troubles_id": 4
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/tasks`
+
+#### Body Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | Name of task
+    desc | string |  required  | Description of task
+    time_from | string |  required  | time from of task
+    time_to | integer |  required  | time to of task
+    status | string |  required  | status of task
+    users_id | integer |  required  | users_id of task
+    troubles_id | integer |  required  | troubles_id of task
+
+<!-- END_4da0d9b378428dcc89ced395d4a806e7 -->
+
+<!-- START_69075358732d924d06bc0709e0be43f6 -->
+## update
+
+> Example request:
+
+```bash
+curl -X PUT "http://localhost:8000/api/tasks/1" \
+    -H "Content-Type: application/json" \
+    -d '{"name":"sed","desc":"dolorum","time_from":"voluptatem","time_to":17,"status":"qui","users_id":8,"troubles_id":14}'
+
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/tasks/1");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "name": "sed",
+    "desc": "dolorum",
+    "time_from": "voluptatem",
+    "time_to": 17,
+    "status": "qui",
+    "users_id": 8,
+    "troubles_id": 14
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT api/tasks/{id}`
+
+#### Body Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | Name of task
+    desc | string |  required  | Description of task
+    time_from | string |  required  | time from of task
+    time_to | integer |  required  | time to of task
+    status | string |  required  | status of task
+    users_id | integer |  required  | users_id of task
+    troubles_id | integer |  required  | troubles_id of task
+
+<!-- END_69075358732d924d06bc0709e0be43f6 -->
+
+<!-- START_64a33c367c5cefce2d1f64abcd08d2e9 -->
+## delete
+
+> Example request:
+
+```bash
+curl -X DELETE "http://localhost:8000/api/tasks/1" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/tasks/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE api/tasks/{id}`
+
+
+<!-- END_64a33c367c5cefce2d1f64abcd08d2e9 -->
 
 #troubles
 
@@ -1012,7 +1306,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/troubles" \
     -H "Content-Type: application/json" \
-    -d '{"name":"vitae","desc":"fugit","devices_id":3}'
+    -d '{"name":"rerum","desc":"doloribus","devices_id":14}'
 
 ```
 
@@ -1025,9 +1319,9 @@ let headers = {
 }
 
 let body = {
-    "name": "vitae",
-    "desc": "fugit",
-    "devices_id": 3
+    "name": "rerum",
+    "desc": "doloribus",
+    "devices_id": 14
 }
 
 fetch(url, {
@@ -1062,7 +1356,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/troubles/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"dicta","desc":"nobis","devices_id":19}'
+    -d '{"name":"dicta","desc":"officia","devices_id":10}'
 
 ```
 
@@ -1076,8 +1370,8 @@ let headers = {
 
 let body = {
     "name": "dicta",
-    "desc": "nobis",
-    "devices_id": 19
+    "desc": "officia",
+    "devices_id": 10
 }
 
 fetch(url, {
@@ -1149,7 +1443,7 @@ APIs for managing users
 ```bash
 curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"consequatur","email":"omnis","password":"rerum"}'
+    -d '{"name":"iure","email":"id","password":"qui"}'
 
 ```
 
@@ -1162,9 +1456,9 @@ let headers = {
 }
 
 let body = {
-    "name": "consequatur",
-    "email": "omnis",
-    "password": "rerum"
+    "name": "iure",
+    "email": "id",
+    "password": "qui"
 }
 
 fetch(url, {
@@ -1199,7 +1493,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"eaque","birthday":"et","job":"sed"}'
+    -d '{"name":"ex","birthday":"alias","job":"vero"}'
 
 ```
 
@@ -1212,9 +1506,9 @@ let headers = {
 }
 
 let body = {
-    "name": "eaque",
-    "birthday": "et",
-    "job": "sed"
+    "name": "ex",
+    "birthday": "alias",
+    "job": "vero"
 }
 
 fetch(url, {
