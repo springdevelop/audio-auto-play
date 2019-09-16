@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-class SiteInfoStoreRequest extends BaseRequest
+class CalendarStoreRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,19 @@ class SiteInfoStoreRequest extends BaseRequest
     {
         return [
             'name' => 'required|max:20',
-            'desc' => 'required',
-            'url' => 'required',
+            'audio' => 'required|max:20',
+            'time_from' => 'required',
+            'time_to' => 'required',
+            'positions_id' => 'required',
+            'users_id' => 'required',
+            'status' => 'required',
         ];
     }
 
     public function messages()
     {
         return array_merge(parent::messages(), [
-            'required' => config('code.siteinfo.field_required'),
+            'required' => config('code.calendar.field_required'),
         ]);
     }
 }
