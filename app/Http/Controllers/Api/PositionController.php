@@ -8,6 +8,7 @@ use App\Http\Resources\Api\PositionCollection;
 use App\Http\Requests\Api\PositionStoreRequest;
 use App\Http\Requests\Api\PositionUpdateRequest;
 use App\Repositories\Contracts\PositionRepositoryInterface;
+use App\Models\Position;
 
 /**
  * @group positions
@@ -35,8 +36,11 @@ class PositionController extends BaseController
      */
     public function index(PositionRepositoryInterface $repository)
     {
-        $positions = $this->repository->all();
-        return $this->responseSuccess(new PositionCollection($positions));
+        // $positions = $this->repository->all();
+        // return $this->responseSuccess(new PositionCollection($positions));
+        $positions = Position::all();
+        return $positions;
+        return PositionCollection::collection($positions);
     }
 
     /**
