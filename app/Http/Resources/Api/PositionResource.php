@@ -16,6 +16,7 @@ class PositionResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'parent_id' => $this->parent_id,
             'name' => $this->name,
             'desc' => $this->desc,
             'users_id' => $this->users_id,
