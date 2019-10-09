@@ -60,5 +60,71 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('calendars', 'CalendarController@store');
         Route::put('calendars/{id}', 'CalendarController@update');
         Route::delete('calendars/{id}', 'CalendarController@destroy');
+
+        /** ====================
+        * Api azuracast
+        ======================*/
+
+        /**====================
+        * Stations: Nowplaying
+        =====================*/
+
+        Route::get('nowplayings', 'AzuracastController@getNowPlayings');
+        Route::get('nowplaying/{station_id}', 'AzuracastController@getNowPlaying');
+
+        /*
+        =============================================
+        * Stations: General
+        =============================================
+        */
+
+        Route::get('stations', 'AzuracastController@getStations');
+        Route::get('station/{station_id}', 'AzuracastController@getStation');
+
+        /*
+        =============================================
+        * Stations: Song Requests
+        =============================================
+        */
+
+        Route::get('station/{station_id}/requests', 'AzuracastController@getStationRequests');
+        Route::post('station/{station_id/request/{request_id}', 'AzuracastController@postStationRequest');
+
+        /*
+        =============================================
+        * Stations: Service Control
+        =============================================
+        */
+
+        Route::get('station/{station_id}/status', 'AzuracastController@getStationStatus');
+        Route::get('station/{station_id}/restart', 'AzuracastController@postStationRestart');
+        Route::get('station/{station_id}/frontend/{action}', 'AzuracastController@postStationFrontend');
+        Route::get('station/{station_id}/backend/{action}', 'AzuracastController@postStationBackend');
+
+        /*
+        =============================================
+        * Stations: History
+        =============================================
+        */
+
+        Route::get('station/{station_id}/history', 'AzuracastController@getStationHistory');
+
+        /*
+        =============================================
+        * Stations: Listeners
+        =============================================
+        */
+
+        Route::get('station/{station_id}/listeners', 'AzuracastController@getStationListeners');
+
+        /*
+        =============================================
+        * Stations: Playlists
+        =============================================
+        */
+
+        Route::get('station/{station_id}/playlists', 'AzuracastController@getStationPlaylists');
+        Route::get('station/{station_id}/playlist/{playlist_id}', 'AzuracastController@getStationPlaylist');
+            
     });
 });
