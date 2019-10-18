@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Resources\Api\PositionResource;
+use App\Http\Resources\Api\DeviceCollection;
 use App\Http\Resources\Api\PositionCollection;
 use App\Http\Requests\Api\PositionStoreRequest;
 use App\Http\Requests\Api\PositionUpdateRequest;
@@ -117,5 +118,18 @@ class PositionController extends BaseController
             return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));
 
         return $this->responseSuccess([]);
+    }
+
+    /**
+     * devices
+     * @api {get} /positions/{id}/devices Get all devices's a position
+     * Display the specified resource.
+     */
+    public function devices($id)
+    {
+        $position = $this->repository->find($id);
+        if($position) return $this->responseSuccess(new DeviceCollection($position->devices));
+
+        return $this->responseErrors(config('code.position.position_not_found'), trans('messages.position.position_not_found')); 
     }
 }

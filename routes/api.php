@@ -24,6 +24,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('positions', 'PositionController@store');
         Route::put('positions/{id}', 'PositionController@update');
         Route::delete('positions/{id}', 'PositionController@destroy');
+        Route::get('positions/{id}/devices', 'PositionController@devices');
 
         Route::get('groups', 'GroupController@index');
         Route::get('groups/{id}', 'GroupController@show');

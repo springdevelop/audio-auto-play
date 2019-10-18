@@ -188,7 +188,7 @@ class AzuracastController extends BaseController
     }
 
     /**
-     * @group Stations : Playlists
+     * @group Stations : Playlist
      * listeners
      * @method get
      * @bodyParam stationId integer required
