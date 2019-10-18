@@ -31,7 +31,6 @@ $factory->define(Calendar::class, function (Faker $faker) {
     return [
         'name' => $name,
         'desc' => $faker->sentence(),
-        'audio' => 'http://api.audio.com/mp3/s1.mp3',
         'time_from' => now(),
         'time_to' => now(),
         'positions_id' => $userIds[0],
