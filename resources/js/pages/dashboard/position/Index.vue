@@ -1,6 +1,6 @@
 <template>
 <div>
-    <tree-view class="item py-3" :treeData="this.treeData" ></tree-view>
+    <tree-view class="item py-3" :treeData="treeData" ></tree-view>
 </div>
 </template>
 <script>

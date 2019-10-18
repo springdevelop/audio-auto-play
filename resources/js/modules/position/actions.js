@@ -7,10 +7,10 @@
 import API from '@/js/api/positions.js';
 
 export default {
-    initPosition({ commit }) {
-        return new Promise((resolve, reject) => {
+    initPosition({ commit }, parent_id = 0) {
+        return new Promise((resolve) => {
             commit('setGetPositionStatus', 0)
-            var position = { id: null, name: 'Nhập tên', desc: 'Nhập mô tả ngắn', parent_id: 0, groups_id: 0, users_id: null }
+            var position = { id: null, name: 'Nhập tên', desc: 'Nhập mô tả ngắn', parent_id: parent_id, groups_id: 1 }
             commit('setPosition', position)
             resolve(position)
         })
@@ -45,25 +45,35 @@ export default {
                 })
         })
     },
-    updatePosition({ commit }, data) {
-        commit('setUpdatePositionStatus', 1)
-        API.update(data.id, data)
-            .then(function(resp) {
-                commit('setUpdatePositionStatus', 2)
-            })
-            .catch(function() {
-                commit('setUpdatePositionStatus', 3)
-            });
+    updatePosition({ commit, state }, data) {
+        return new Promise((resolve, reject) => {
+            API.update(data.id, data)
+                .then(function(resp) {
+                    console.log("test")
+                    commit('setUpdatePositionStatus', 2)
+                    console.log(state.updatePositionStatus)
+                    resolve(resp)
+                })
+                .catch(function() {
+                    commit('setUpdatePositionStatus', 3)
+                    reject(err)
+                });
+        })
+
     },
     createPosition({ commit }, data) {
-        commit('setCreatePositionStatus', 1)
-        API.store(data)
-            .then(function(resp) {
-                commit('setCreatePositionStatus', 2)
-            })
-            .catch(function() {
-                commit('setCreatePositionStatus', 3)
-            });
+        return new Promise((resolve, reject) => {
+            commit('setCreatePositionStatus', 1)
+            API.store(data)
+                .then(function(resp) {
+                    commit('setCreatePositionStatus', 2)
+                    resolve(resp)
+                })
+                .catch(function() {
+                    commit('setCreatePositionStatus', 3)
+                    reject(err)
+                });
+        })
     },
 
 }

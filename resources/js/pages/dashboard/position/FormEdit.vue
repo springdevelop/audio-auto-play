@@ -30,11 +30,10 @@
 </template>
 <script>
 export default {
-   
     computed: {
         position: function() {
             return this.$store.getters.getPosition;
         },
-    }
+    },
 }
 </script>

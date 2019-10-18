@@ -20,6 +20,12 @@
                     Địa điểm
                 </a>
             </router-link>
+             <router-link tag="li" class="nav-item" to="/dashboard/tasks">
+                <a class="nav-link" href="#">
+                    <activity-icon size="1.5x" class="custom-class"></activity-icon>
+                    Kênh phát
+                </a>
+            </router-link>
             <router-link tag="li" class="nav-item" to="/dashboard/users">
                  <a class="nav-link" href="#">
                     <user-icon size="1.5x" class="custom-class"></user-icon>
@@ -31,13 +37,14 @@
 </nav>
 </template>
 <script>
-import { CalendarIcon, MapIcon, HomeIcon, UserIcon } from 'vue-feather-icons'
+import { CalendarIcon, MapIcon, HomeIcon, UserIcon, ActivityIcon } from 'vue-feather-icons'
 export default {
     components: {
         CalendarIcon,
         MapIcon,
         HomeIcon,
-        UserIcon
+        UserIcon,
+        ActivityIcon
     },
 }
 </script>
