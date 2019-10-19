@@ -9,7 +9,9 @@ use App\Http\Resources\Api\PositionCollection;
 use App\Http\Requests\Api\PositionStoreRequest;
 use App\Http\Requests\Api\PositionUpdateRequest;
 use App\Repositories\Contracts\PositionRepositoryInterface;
+use App\Services\Api\Contracts\PositionServiceInterface;
 use App\Models\Position;
+use App\Services\Api\Values\ApiParam;
 
 /**
  * @group positions
@@ -19,13 +21,12 @@ use App\Models\Position;
  */
 class PositionController extends BaseController
 {
+    protected $service;
 
-    protected $repository;
-
-    public function __construct(PositionRepositoryInterface $repository)
+    public function __construct(PositionServiceInterface $service)
     {
         parent::__construct();
-        $this->repository = $repository;
+        $this->service = $service;
     }
 
     /**
@@ -35,13 +36,14 @@ class PositionController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(PositionRepositoryInterface $repository)
+    public function index(Request $request)
     {
-        // $positions = $this->repository->all();
-        // return $this->responseSuccess(new PositionCollection($positions));
-        $positions = Position::all();
-        return $positions;
-        return PositionCollection::collection($positions);
+        $apiParam = new ApiParam(
+            $request->query(),
+            $request->url(),
+            $this->service
+        );
+        return $this->service->getList($apiParam);
     }
 
     /**
@@ -56,9 +58,7 @@ class PositionController extends BaseController
     public function store(PositionStoreRequest $request)
     {
         $inputs = $request->only('parent_id', 'name', 'desc', 'groups_id');
-        $position = $this->repository->create(array_merge([
-            'users_id' => 1
-        ],$inputs));
+        $position = $this->service->create(array_merge($inputs));
 
         if($position) return $this->responseSuccess(new PositionResource($position));
 
@@ -72,8 +72,9 @@ class PositionController extends BaseController
      */
     public function show($id)
     {
-        $position = $this->repository->find($id);
-        if($position) return $this->responseSuccess(new PositionResource($position));
+        $rs = $this->service->getDetail($id);
+        if($rs['data'])
+            return $rs;
 
         return $this->responseErrors(config('code.position.position_not_found'), trans('messages.position.position_not_found')); 
     }
@@ -89,16 +90,13 @@ class PositionController extends BaseController
      * @bodyParam desc string required Description of position
      * @bodyParam groups_id integer required groups_id of position
      */
-    public function update(PositionUpdateRequest $request, $id)
+    public function update(PositionUpdateRequest $request, $position)
     {
         $inputs = $request->only('name', 'desc', 'groups_id');
-        $position = $this->repository->find($id);
+        $position = $this->service->update($position, $inputs);
 
-        if($position){
-            $updated = $this->repository->update($position, $inputs);
-            if ($updated) {
-                return $this->responseSuccess(new PositionResource($updated));
-            }
+        if ($updated) {
+            return $this->responseSuccess(new PositionResource($updated));
         }
 
         return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
@@ -111,10 +109,8 @@ class PositionController extends BaseController
      */
     public function destroy($id)
     {
-        $position = $this->repository->find($id);
-        if($position) 
-            $this->repository->destroy($position);
-        else
+        $bool = $this->service->delete($id);
+        if(!$bool) 
             return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));
 
         return $this->responseSuccess([]);
@@ -125,11 +121,8 @@ class PositionController extends BaseController
      * @api {get} /positions/{id}/devices Get all devices's a position
      * Display the specified resource.
      */
-    public function devices($id)
+    public function devices($positionId)
     {
-        $position = $this->repository->find($id);
-        if($position) return $this->responseSuccess(new DeviceCollection($position->devices));
-
-        return $this->responseErrors(config('code.position.position_not_found'), trans('messages.position.position_not_found')); 
+        return $this->service->devices($positionId);
     }
 }

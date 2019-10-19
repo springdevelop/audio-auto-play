@@ -16,6 +16,11 @@ class Device extends Model
     	'groups_id',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
     public function position(){
     	return $this->belongsTo('App\Models\Position', 'positions_id');
     }

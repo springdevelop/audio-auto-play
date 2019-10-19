@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Traits\ApiScopes;
 use Illuminate\Database\Eloquent\Model;
 
 class Position extends Model
 {
+    use ApiScopes;
+    
     protected $fillable = [
     	'parent_id',
     	'name',
@@ -13,6 +16,11 @@ class Position extends Model
     	'slug',
     	'users_id',
     	'groups_id',
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
     ];
 
     public function user(){
