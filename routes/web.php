@@ -11,7 +11,14 @@
 |
 */
 
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 Route::get('/', function () {
+	// $role = Role::find(1);
+	// $user = User::find(1);
+	// $user->assignRole($role);
     return view('app');
 });
 Route::get('/{any}', function () {

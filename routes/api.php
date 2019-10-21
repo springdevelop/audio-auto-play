@@ -14,13 +14,15 @@ use Illuminate\Http\Request;
 */
 Route::group(['namespace' => 'Api'], function () {
     Route::post('user/register', 'UsersController@register');
+    Route::post('auth/login', 'AuthController@login');
 
-    Route::group(['middleware' => ['api']], function () {
+    Route::group(['middleware' => ['api','role:admin']], function () {
         Route::put('user/me', 'UsersController@updateProfile');
         Route::get('user/me', 'UsersController@getCurrentUser');
 
         Route::get('positions', 'PositionController@index');
-        Route::get('positions/{id}', 'PositionController@show');
+        Route::get('positions/all', 'PositionController@tree');
+        Route::get('positions/{id}', 'PositionController@show')->where('id','[0-9]+');
         Route::post('positions', 'PositionController@store');
         Route::put('positions/{id}', 'PositionController@update');
         Route::delete('positions/{id}', 'PositionController@destroy');
