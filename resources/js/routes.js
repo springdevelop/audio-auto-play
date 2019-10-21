@@ -9,6 +9,8 @@ import Calendars from '@/js/pages/dashboard/Calendars';
 import Users from '@/js/pages/dashboard/Users';
 import Positions from '@/js/pages/dashboard/Positions';
 import IndexPositions from '@/js/pages/dashboard/position/Index';
+import Stations from '@/js/pages/dashboard/Stations';
+import IndexStations from '@/js/pages/dashboard/station/Index';
 
 
 Vue.use(VueRouter);
@@ -44,6 +46,15 @@ const router = new VueRouter({
                     children: [{
                         path: '',
                         name: 'positions',
+                        component: IndexPositions,
+                    }]
+                },
+                {
+                    path: 'stations',
+                    component: IndexStations,
+                    children: [{
+                        path: '',
+                        name: 'stations',
                         component: IndexPositions,
                     }]
                 }

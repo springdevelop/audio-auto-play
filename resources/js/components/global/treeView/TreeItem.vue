@@ -5,7 +5,7 @@
             @contextmenu="show"
             @dblclick="toggle"
             >
-            {{model.name}}
+            <span @click="loadItem(model.id)">{{model.name}}</span>
             <span @click="toggle" v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
             <button @click="show" type="button" class="btn btn-outline-secondary btn-sm ml-1">
                 <more-horizontal-icon size="2x" class="custom-class  text-muted"></more-horizontal-icon>
@@ -108,6 +108,9 @@ export default {
             this.$store.dispatch('setModalTitle','Thêm mới vị trí')
             this.$store.dispatch('setModalSubmit','Thêm')
             this.setShowModal();
+        },
+        loadItem: function(id) {
+            this.$store.dispatch('loadPosition', id)
         },
         setShowModal: function() {
             this.$emit('setShowModal', 'true')

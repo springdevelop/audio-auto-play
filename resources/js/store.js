@@ -15,10 +15,12 @@ import Vuex from 'vuex';
 Vue.use(Vuex)
 
 import { positions } from '@/js/modules/positions.js';
+import { stations } from '@/js/modules/stations.js';
 import { modal } from '@/js/modules/modal.js';
 
 export default new Vuex.Store({
     modules: {
+        stations,
         positions,
         modal
     }
