@@ -3,6 +3,9 @@
     <ul class="tree-list">
           <node-tree class="node-tree" :treeData="filterTreeData" :model="model" @setShowModal="setShowModal" ></node-tree>
     </ul>
+    <div class="node-info p-3">
+      {{position.name}}
+    </div>
     <modal v-if="showModal" @close="showModal = false" @submit="updatePosition"></modal>
  </div>
 </template>
@@ -67,9 +70,14 @@ export default {
 </script>
 
 <style>
+.tree{
+  min-height: calc(100vh - 48px);
+  position: relative;
+}
 .tree-list {
   list-style: none;
   font-size: 1.1em;
+ 
 }
 
 .tree-list ul {
@@ -129,5 +137,14 @@ export default {
 li.add-new:hover{
   color: #0c5af7;
   cursor: pointer;
+}
+.node-info{
+  position: absolute;
+  right:0;
+  width: 300px;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  border-left: 1px solid #333;
 }
 </style>
