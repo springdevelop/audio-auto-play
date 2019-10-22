@@ -11,7 +11,10 @@ use App\Http\Requests\Api\PositionUpdateRequest;
 use App\Repositories\Contracts\PositionRepositoryInterface;
 use App\Services\Api\Contracts\PositionServiceInterface;
 use App\Models\Position;
+use App\Models\User;
 use App\Services\Api\Values\ApiParam;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 /**
  * @group positions
@@ -27,6 +30,18 @@ class PositionController extends BaseController
     {
         parent::__construct();
         $this->service = $service;
+    }
+
+    /**
+     * tree
+     * @api {get} /tree Get all list position
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tree(PositionRepositoryInterface $repository)
+    {
+        return $repository->all();
     }
 
     /**

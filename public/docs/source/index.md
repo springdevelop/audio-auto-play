@@ -22,9 +22,10 @@ Welcome to the generated API reference.
 
 #Azuracast : Nowplaying
 
-nowplayings
+
 <!-- START_365cf185d94517578df143c1ce14f245 -->
-## api/nowplayings
+## nowplayings
+
 > Example request:
 
 ```bash
@@ -63,13 +64,14 @@ fetch(url, {
 <!-- END_365cf185d94517578df143c1ce14f245 -->
 
 <!-- START_556be71436df35e17d263ad6d41066fe -->
-## api/nowplaying/{station_id}
+## nowplaying
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/nowplaying/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":15}'
+    -d '{"stationId":1}'
 
 ```
 
@@ -82,7 +84,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 15
+    "stationId": 1
 }
 
 fetch(url, {
@@ -116,9 +118,10 @@ Parameter | Type | Status | Description
 
 #Stations : General
 
-stations
+
 <!-- START_33b3612600feaada1500dc120fac39a0 -->
-## api/stations
+## stations
+
 > Example request:
 
 ```bash
@@ -157,13 +160,14 @@ fetch(url, {
 <!-- END_33b3612600feaada1500dc120fac39a0 -->
 
 <!-- START_081332e7c4666b381ad9427a29f1215e -->
-## api/station/{station_id}
+## station
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"$stationId":8}'
+    -d '{"$stationId":6}'
 
 ```
 
@@ -176,7 +180,7 @@ let headers = {
 }
 
 let body = {
-    "$stationId": 8
+    "$stationId": 6
 }
 
 fetch(url, {
@@ -210,15 +214,16 @@ Parameter | Type | Status | Description
 
 #Stations : History
 
-history
+
 <!-- START_bfa982c383cea3ff78ca5291d5f70fb6 -->
-## api/station/{station_id}/history
+## history
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/history" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":19}'
+    -d '{"stationId":1}'
 
 ```
 
@@ -231,7 +236,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 19
+    "stationId": 1
 }
 
 fetch(url, {
@@ -265,15 +270,16 @@ Parameter | Type | Status | Description
 
 #Stations : Listeners
 
-listeners
+
 <!-- START_1e517aa40ddfad3804e7ca311cf8858f -->
-## api/station/{station_id}/listeners
+## listeners
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/listeners" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":10}'
+    -d '{"stationId":2}'
 
 ```
 
@@ -286,7 +292,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 10
+    "stationId": 2
 }
 
 fetch(url, {
@@ -320,15 +326,16 @@ Parameter | Type | Status | Description
 
 #Stations : Playlist
 
-listeners
+
 <!-- START_96b9c99b88c999fcc6256f07e9af2a9e -->
-## api/station/{station_id}/playlists
+## listeners
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/playlists" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":6}'
+    -d '{"stationId":9}'
 
 ```
 
@@ -341,7 +348,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 6
+    "stationId": 9
 }
 
 fetch(url, {
@@ -374,13 +381,14 @@ Parameter | Type | Status | Description
 <!-- END_96b9c99b88c999fcc6256f07e9af2a9e -->
 
 <!-- START_469fb7452ae8840ac8a59c05baf80d76 -->
-## api/station/{station_id}/playlist/{playlist_id}
+## listeners
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/playlist/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":16}'
+    -d '{"stationId":4}'
 
 ```
 
@@ -393,7 +401,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 16
+    "stationId": 4
 }
 
 fetch(url, {
@@ -427,15 +435,16 @@ Parameter | Type | Status | Description
 
 #Stations : Service Control
 
-status
+
 <!-- START_d5b874339b941e240bd82315c2c04afa -->
-## api/station/{station_id}/status
+## status
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/status" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":8}'
+    -d '{"stationId":14}'
 
 ```
 
@@ -448,7 +457,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 8
+    "stationId": 14
 }
 
 fetch(url, {
@@ -481,13 +490,14 @@ Parameter | Type | Status | Description
 <!-- END_d5b874339b941e240bd82315c2c04afa -->
 
 <!-- START_f7b01f22b958053198f6f744efeccc6b -->
-## api/station/{station_id}/restart
+## restart
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/restart" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":15}'
+    -d '{"stationId":2}'
 
 ```
 
@@ -500,7 +510,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 15
+    "stationId": 2
 }
 
 fetch(url, {
@@ -533,13 +543,14 @@ Parameter | Type | Status | Description
 <!-- END_f7b01f22b958053198f6f744efeccc6b -->
 
 <!-- START_74413ee64ef2c849cde09c93681ae41c -->
-## api/station/{station_id}/frontend/{action}
+## frontend
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/frontend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":2,"action":"adipisci"}'
+    -d '{"stationId":18,"action":"tempore"}'
 
 ```
 
@@ -552,8 +563,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 2,
-    "action": "adipisci"
+    "stationId": 18,
+    "action": "tempore"
 }
 
 fetch(url, {
@@ -587,13 +598,14 @@ Parameter | Type | Status | Description
 <!-- END_74413ee64ef2c849cde09c93681ae41c -->
 
 <!-- START_ce7daccdc7ce9750c7e87833a9b26fa1 -->
-## api/station/{station_id}/backend/{action}
+## backend
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/backend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":8,"action":"blanditiis"}'
+    -d '{"stationId":17,"action":"nulla"}'
 
 ```
 
@@ -606,8 +618,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 8,
-    "action": "blanditiis"
+    "stationId": 17,
+    "action": "nulla"
 }
 
 fetch(url, {
@@ -642,15 +654,16 @@ Parameter | Type | Status | Description
 
 #Stations : Song Request
 
-songs-request
+
 <!-- START_9e7bd4f8b35c832ac0a17dee9fa669e4 -->
-## api/station/{station_id}/requests
+## songs-request
+
 > Example request:
 
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/requests" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":7,"requestId":10}'
+    -d '{"stationId":1,"requestId":19}'
 
 ```
 
@@ -663,8 +676,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 7,
-    "requestId": 10
+    "stationId": 1,
+    "requestId": 19
 }
 
 fetch(url, {
@@ -698,13 +711,14 @@ Parameter | Type | Status | Description
 <!-- END_9e7bd4f8b35c832ac0a17dee9fa669e4 -->
 
 <!-- START_f6194339a825edc35fc10aef3f8d6851 -->
-## api/station/{station_id/request/{request_id}
+## song-request
+
 > Example request:
 
 ```bash
 curl -X POST "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":15,"requestId":18}'
+    -d '{"stationId":11,"requestId":20}'
 
 ```
 
@@ -717,8 +731,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 15,
-    "requestId": 18
+    "stationId": 11,
+    "requestId": 20
 }
 
 fetch(url, {
@@ -743,6 +757,57 @@ Parameter | Type | Status | Description
     requestId | integer |  required  | Return information about a single station
 
 <!-- END_f6194339a825edc35fc10aef3f8d6851 -->
+
+#auth
+
+
+<!-- START_a925a8d22b3615f12fca79456d286859 -->
+## login
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost:8000/api/auth/login" \
+    -H "Content-Type: application/json" \
+    -d '{"email":"eos","password":"quos"}'
+
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/auth/login");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "email": "eos",
+    "password": "quos"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/auth/login`
+
+#### Body Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    email | string |  required  | 
+    password | string |  required  | Get a JWT via given credentials.
+
+<!-- END_a925a8d22b3615f12fca79456d286859 -->
 
 #calendars
 
@@ -781,57 +846,57 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Calendar 9",
-            "desc": "Ipsum qui labore quis quam dignissimos id libero.",
+            "name": "Calendar 96",
+            "desc": "Quis aliquid veniam eos voluptas autem possimus.",
             "audio": null,
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
             "positions_id": 2,
             "users_id": 4,
             "status": "pending"
         },
         {
             "id": 2,
-            "name": "Calendar 69",
-            "desc": "Quia accusantium tempore architecto asperiores atque fuga laborum.",
+            "name": "Calendar 38",
+            "desc": "Quam repudiandae fugiat similique excepturi sed.",
             "audio": null,
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "positions_id": 4,
-            "users_id": 4,
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "positions_id": 1,
+            "users_id": 5,
             "status": "pending"
         },
         {
             "id": 3,
-            "name": "Calendar 51",
-            "desc": "Et quo dicta nulla.",
+            "name": "Calendar 90",
+            "desc": "Iure recusandae tempora hic repellat.",
             "audio": null,
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "positions_id": 5,
-            "users_id": 2,
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "positions_id": 2,
+            "users_id": 3,
             "status": "pending"
         },
         {
             "id": 4,
-            "name": "Calendar 79",
-            "desc": "Corrupti iste aut soluta ipsum excepturi quia vitae.",
+            "name": "Calendar 87",
+            "desc": "Soluta qui eum in consequuntur ut eius.",
             "audio": null,
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "positions_id": 3,
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "positions_id": 5,
             "users_id": 5,
             "status": "pending"
         },
         {
             "id": 5,
-            "name": "Calendar 1",
-            "desc": "Distinctio et aliquam excepturi tenetur.",
+            "name": "Calendar 27",
+            "desc": "Maiores accusantium ut voluptas sit maxime.",
             "audio": null,
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "positions_id": 3,
-            "users_id": 5,
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "positions_id": 1,
+            "users_id": 4,
             "status": "pending"
         }
     ]
@@ -892,7 +957,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/calendars" \
     -H "Content-Type: application/json" \
-    -d '{"name":"cum","desc":"sint","audio":"dolores","time_from":"eos","time_to":"ratione","positions_id":"sequi","status":"totam"}'
+    -d '{"name":"cumque","desc":"vero","audio":"ab","time_from":"distinctio","time_to":"qui","positions_id":"quia","status":"magni"}'
 
 ```
 
@@ -905,13 +970,13 @@ let headers = {
 }
 
 let body = {
-    "name": "cum",
-    "desc": "sint",
-    "audio": "dolores",
-    "time_from": "eos",
-    "time_to": "ratione",
-    "positions_id": "sequi",
-    "status": "totam"
+    "name": "cumque",
+    "desc": "vero",
+    "audio": "ab",
+    "time_from": "distinctio",
+    "time_to": "qui",
+    "positions_id": "quia",
+    "status": "magni"
 }
 
 fetch(url, {
@@ -950,7 +1015,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/calendars/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"quia","desc":"cumque","audio":"ut","time_from":"et","time_to":"eum","positions_id":"temporibus","status":"provident"}'
+    -d '{"name":"officia","desc":"atque","audio":"iste","time_from":"ad","time_to":"est","positions_id":"consectetur","status":"voluptas"}'
 
 ```
 
@@ -963,13 +1028,13 @@ let headers = {
 }
 
 let body = {
-    "name": "quia",
-    "desc": "cumque",
-    "audio": "ut",
-    "time_from": "et",
-    "time_to": "eum",
-    "positions_id": "temporibus",
-    "status": "provident"
+    "name": "officia",
+    "desc": "atque",
+    "audio": "iste",
+    "time_from": "ad",
+    "time_to": "est",
+    "positions_id": "consectetur",
+    "status": "voluptas"
 }
 
 fetch(url, {
@@ -1070,51 +1135,51 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Device 53",
-            "desc": "vjacobs@example.net",
+            "name": "Device 21",
+            "desc": "ferry.stevie@example.org",
             "slug": 4,
-            "positions_id": 1,
+            "positions_id": 2,
             "users_id": 4,
-            "groups_id": 1,
+            "groups_id": 2,
             "status": "good"
         },
         {
             "id": 2,
-            "name": "Device 28",
-            "desc": "velda.jaskolski@example.net",
-            "slug": 2,
-            "positions_id": 3,
-            "users_id": 2,
-            "groups_id": 3,
-            "status": "good"
-        },
-        {
-            "id": 3,
-            "name": "Device 73",
-            "desc": "noelia.mcdermott@example.net",
-            "slug": 5,
+            "name": "Device 92",
+            "desc": "earnest30@example.org",
+            "slug": 3,
             "positions_id": 1,
-            "users_id": 5,
+            "users_id": 3,
             "groups_id": 1,
             "status": "good"
         },
         {
-            "id": 4,
-            "name": "Device 61",
-            "desc": "annabel.ohara@example.org",
-            "slug": 1,
+            "id": 3,
+            "name": "Device 69",
+            "desc": "loyce.heaney@example.com",
+            "slug": 3,
             "positions_id": 4,
-            "users_id": 1,
+            "users_id": 3,
             "groups_id": 4,
             "status": "good"
         },
         {
+            "id": 4,
+            "name": "Device 97",
+            "desc": "tpadberg@example.com",
+            "slug": 3,
+            "positions_id": 1,
+            "users_id": 3,
+            "groups_id": 1,
+            "status": "good"
+        },
+        {
             "id": 5,
-            "name": "Device 98",
-            "desc": "terry42@example.net",
-            "slug": 4,
+            "name": "Device 51",
+            "desc": "ahintz@example.com",
+            "slug": 2,
             "positions_id": 4,
-            "users_id": 4,
+            "users_id": 2,
             "groups_id": 4,
             "status": "good"
         }
@@ -1161,12 +1226,12 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Device 53",
-        "desc": "vjacobs@example.net",
+        "name": "Device 21",
+        "desc": "ferry.stevie@example.org",
         "slug": 4,
-        "positions_id": 1,
+        "positions_id": 2,
         "users_id": 4,
-        "groups_id": 1,
+        "groups_id": 2,
         "status": "good"
     }
 }
@@ -1186,7 +1251,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/devices" \
     -H "Content-Type: application/json" \
-    -d '{"name":"ut","desc":"accusantium","positions_id":18,"users_id":20,"groups_id":8}'
+    -d '{"name":"architecto","desc":"eaque","positions_id":14,"users_id":9,"groups_id":11}'
 
 ```
 
@@ -1199,11 +1264,11 @@ let headers = {
 }
 
 let body = {
-    "name": "ut",
-    "desc": "accusantium",
-    "positions_id": 18,
-    "users_id": 20,
-    "groups_id": 8
+    "name": "architecto",
+    "desc": "eaque",
+    "positions_id": 14,
+    "users_id": 9,
+    "groups_id": 11
 }
 
 fetch(url, {
@@ -1240,7 +1305,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/devices/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"itaque","name":"voluptatem","desc":"dolore","groups_id":18}'
+    -d '{"parent_id":"nam","name":"eveniet","desc":"doloremque","groups_id":20}'
 
 ```
 
@@ -1253,10 +1318,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "itaque",
-    "name": "voluptatem",
-    "desc": "dolore",
-    "groups_id": 18
+    "parent_id": "nam",
+    "name": "eveniet",
+    "desc": "doloremque",
+    "groups_id": 20
 }
 
 fetch(url, {
@@ -1394,36 +1459,36 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Group 22",
-            "desc": "Alias libero possimus minus eum voluptatem.",
+            "name": "Group 71",
+            "desc": "Deserunt commodi aliquam officia commodi soluta error libero ex.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 2,
-            "name": "Group 68",
-            "desc": "Totam aut aut consectetur laborum reprehenderit ut eos.",
+            "name": "Group 24",
+            "desc": "Enim itaque rem quia dolorum non.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 3,
-            "name": "Group 31",
-            "desc": "Sint eligendi occaecati quam.",
+            "name": "Group 89",
+            "desc": "Unde sapiente voluptatum est beatae doloribus incidunt tenetur vero.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 4,
-            "name": "Group 65",
-            "desc": "Sed facilis officiis eius eos.",
+            "name": "Group 77",
+            "desc": "Iste animi quae blanditiis qui possimus.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 5,
-            "name": "Group 55",
-            "desc": "Hic illo ab cumque et illum et eum.",
+            "name": "Group 95",
+            "desc": "Sequi ullam culpa dolor.",
             "slug": null,
             "type": "vip"
         }
@@ -1470,8 +1535,8 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Group 22",
-        "desc": "Alias libero possimus minus eum voluptatem.",
+        "name": "Group 71",
+        "desc": "Deserunt commodi aliquam officia commodi soluta error libero ex.",
         "slug": null,
         "type": "vip"
     }
@@ -1492,7 +1557,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"provident","desc":"et","type":"iste"}'
+    -d '{"name":"hic","desc":"quia","type":"omnis"}'
 
 ```
 
@@ -1505,9 +1570,9 @@ let headers = {
 }
 
 let body = {
-    "name": "provident",
-    "desc": "et",
-    "type": "iste"
+    "name": "hic",
+    "desc": "quia",
+    "type": "omnis"
 }
 
 fetch(url, {
@@ -1542,7 +1607,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"beatae","desc":"aut","type":"iure"}'
+    -d '{"name":"omnis","desc":"sunt","type":"numquam"}'
 
 ```
 
@@ -1555,9 +1620,9 @@ let headers = {
 }
 
 let body = {
-    "name": "beatae",
-    "desc": "aut",
-    "type": "iure"
+    "name": "omnis",
+    "desc": "sunt",
+    "type": "numquam"
 }
 
 fetch(url, {
@@ -1649,63 +1714,63 @@ fetch(url, {
 > Example response (200):
 
 ```json
-[
-    {
-        "id": 1,
-        "parent_id": 1,
-        "name": "Position 91",
-        "desc": "Tempore dolorem quas repellendus dolor.",
-        "users_id": 2,
-        "groups_id": 5,
-        "created_at": "2019-10-18 15:02:19",
-        "updated_at": "2019-10-18 15:02:19",
-        "station_id": 0
-    },
-    {
-        "id": 2,
-        "parent_id": 1,
-        "name": "Position 12",
-        "desc": "Blanditiis similique non sunt quos sequi quae nihil.",
-        "users_id": 5,
-        "groups_id": 2,
-        "created_at": "2019-10-18 15:02:19",
-        "updated_at": "2019-10-18 15:02:19",
-        "station_id": 0
-    },
-    {
-        "id": 3,
-        "parent_id": 1,
-        "name": "Position 27",
-        "desc": "Tenetur repudiandae consequatur harum facere neque.",
-        "users_id": 4,
-        "groups_id": 4,
-        "created_at": "2019-10-18 15:02:19",
-        "updated_at": "2019-10-18 15:02:19",
-        "station_id": 0
-    },
-    {
-        "id": 4,
-        "parent_id": 1,
-        "name": "Position 30",
-        "desc": "Rerum et soluta facere velit ad porro.",
-        "users_id": 3,
-        "groups_id": 2,
-        "created_at": "2019-10-18 15:02:19",
-        "updated_at": "2019-10-18 15:02:19",
-        "station_id": 0
-    },
-    {
-        "id": 5,
-        "parent_id": 1,
-        "name": "Position 25",
-        "desc": "Hic tenetur fugiat sunt non odio incidunt voluptatem.",
-        "users_id": 4,
-        "groups_id": 2,
-        "created_at": "2019-10-18 15:02:19",
-        "updated_at": "2019-10-18 15:02:19",
-        "station_id": 0
+{
+    "status_code": 200,
+    "is_error": false,
+    "message": "",
+    "data": {
+        "results": [
+            {
+                "id": 1,
+                "parent_id": 1,
+                "name": "Position 2",
+                "desc": "Ut aspernatur cum velit magnam ut quo ut.",
+                "users_id": 1,
+                "groups_id": 2,
+                "station_id": 0
+            },
+            {
+                "id": 2,
+                "parent_id": 1,
+                "name": "Position 24",
+                "desc": "Sit ut sapiente optio aliquid eos.",
+                "users_id": 2,
+                "groups_id": 3,
+                "station_id": 0
+            },
+            {
+                "id": 3,
+                "parent_id": 1,
+                "name": "Position 3",
+                "desc": "Velit est et debitis exercitationem cum tempore.",
+                "users_id": 4,
+                "groups_id": 4,
+                "station_id": 0
+            },
+            {
+                "id": 4,
+                "parent_id": 1,
+                "name": "Position 77",
+                "desc": "Alias voluptatibus enim nemo eaque totam itaque consequatur.",
+                "users_id": 2,
+                "groups_id": 2,
+                "station_id": 0
+            },
+            {
+                "id": 5,
+                "parent_id": 1,
+                "name": "Position 44",
+                "desc": "Eveniet id non animi et non.",
+                "users_id": 3,
+                "groups_id": 4,
+                "station_id": 0
+            }
+        ],
+        "count": 5,
+        "next": null,
+        "previous": null
     }
-]
+}
 ```
 
 ### HTTP Request
@@ -1713,6 +1778,90 @@ fetch(url, {
 
 
 <!-- END_ee1d1766a73d2f5c17cc2e47c84bd12b -->
+
+<!-- START_5627f1eb151303b7e65e36cce5efec09 -->
+## tree
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/positions/all" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/positions/all");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+[
+    {
+        "id": 1,
+        "parent_id": 1,
+        "name": "Position 2",
+        "desc": "Ut aspernatur cum velit magnam ut quo ut.",
+        "users_id": 1,
+        "groups_id": 2,
+        "station_id": 0
+    },
+    {
+        "id": 2,
+        "parent_id": 1,
+        "name": "Position 24",
+        "desc": "Sit ut sapiente optio aliquid eos.",
+        "users_id": 2,
+        "groups_id": 3,
+        "station_id": 0
+    },
+    {
+        "id": 3,
+        "parent_id": 1,
+        "name": "Position 3",
+        "desc": "Velit est et debitis exercitationem cum tempore.",
+        "users_id": 4,
+        "groups_id": 4,
+        "station_id": 0
+    },
+    {
+        "id": 4,
+        "parent_id": 1,
+        "name": "Position 77",
+        "desc": "Alias voluptatibus enim nemo eaque totam itaque consequatur.",
+        "users_id": 2,
+        "groups_id": 2,
+        "station_id": 0
+    },
+    {
+        "id": 5,
+        "parent_id": 1,
+        "name": "Position 44",
+        "desc": "Eveniet id non animi et non.",
+        "users_id": 3,
+        "groups_id": 4,
+        "station_id": 0
+    }
+]
+```
+
+### HTTP Request
+`GET api/positions/all`
+
+
+<!-- END_5627f1eb151303b7e65e36cce5efec09 -->
 
 <!-- START_e81ba66b65818f4ba3d9daee3dfd84e3 -->
 ## show
@@ -1744,14 +1893,17 @@ fetch(url, {
 
 ```json
 {
-    "code": 200,
+    "status_code": 200,
+    "is_error": false,
+    "message": "",
     "data": {
         "id": 1,
         "parent_id": 1,
-        "name": "Position 91",
-        "desc": "Tempore dolorem quas repellendus dolor.",
-        "users_id": 2,
-        "groups_id": 5
+        "name": "Position 2",
+        "desc": "Ut aspernatur cum velit magnam ut quo ut.",
+        "users_id": 1,
+        "groups_id": 2,
+        "station_id": 0
     }
 }
 ```
@@ -1770,7 +1922,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"odio","name":"nemo","desc":"optio","groups_id":1}'
+    -d '{"parent_id":"aut","name":"ad","desc":"aperiam","groups_id":5}'
 
 ```
 
@@ -1783,10 +1935,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "odio",
-    "name": "nemo",
-    "desc": "optio",
-    "groups_id": 1
+    "parent_id": "aut",
+    "name": "ad",
+    "desc": "aperiam",
+    "groups_id": 5
 }
 
 fetch(url, {
@@ -1822,7 +1974,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"eveniet","name":"ut","desc":"sunt","groups_id":12}'
+    -d '{"parent_id":"soluta","name":"dolorum","desc":"est","groups_id":20}'
 
 ```
 
@@ -1835,10 +1987,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "eveniet",
-    "name": "ut",
-    "desc": "sunt",
-    "groups_id": 12
+    "parent_id": "soluta",
+    "name": "dolorum",
+    "desc": "est",
+    "groups_id": 20
 }
 
 fetch(url, {
@@ -1900,7 +2052,7 @@ fetch(url, {
 <!-- END_e6bf7734043f180ab3c35f8face9a212 -->
 
 <!-- START_9624413aa537849ce33d1e999bc330c7 -->
-## show
+## devices
 
 > Example request:
 
@@ -1925,11 +2077,31 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "code": 200,
+    "data": [
+        {
+            "id": 2,
+            "name": "Device 92",
+            "desc": "earnest30@example.org",
+            "positions_id": 1,
+            "users_id": 3,
+            "groups_id": 1,
+            "status": "good"
+        },
+        {
+            "id": 4,
+            "name": "Device 97",
+            "desc": "tpadberg@example.com",
+            "positions_id": 1,
+            "users_id": 3,
+            "groups_id": 1,
+            "status": "good"
+        }
+    ]
 }
 ```
 
@@ -2030,7 +2202,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/siteinfos" \
     -H "Content-Type: application/json" \
-    -d '{"name":"aut","desc":"vitae","url":"et"}'
+    -d '{"name":"sunt","desc":"deserunt","url":"qui"}'
 
 ```
 
@@ -2043,9 +2215,9 @@ let headers = {
 }
 
 let body = {
-    "name": "aut",
-    "desc": "vitae",
-    "url": "et"
+    "name": "sunt",
+    "desc": "deserunt",
+    "url": "qui"
 }
 
 fetch(url, {
@@ -2080,7 +2252,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/siteinfos/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"sit","desc":"totam","url":"et"}'
+    -d '{"name":"molestiae","desc":"id","url":"non"}'
 
 ```
 
@@ -2093,9 +2265,9 @@ let headers = {
 }
 
 let body = {
-    "name": "sit",
-    "desc": "totam",
-    "url": "et"
+    "name": "molestiae",
+    "desc": "id",
+    "url": "non"
 }
 
 fetch(url, {
@@ -2192,53 +2364,53 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Task 77",
-            "desc": "Ut quidem laboriosam molestiae aut quod explicabo aut.",
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "status": 4,
-            "users_id": 4,
-            "troubles_id": 2
-        },
-        {
-            "id": 2,
-            "name": "Task 36",
-            "desc": "Recusandae eos harum inventore dolor dolores ratione alias.",
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "status": 3,
-            "users_id": 3,
-            "troubles_id": 2
-        },
-        {
-            "id": 3,
-            "name": "Task 32",
-            "desc": "Dolor minus ut est iure occaecati.",
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
+            "name": "Task 50",
+            "desc": "In pariatur dicta id voluptate aliquam soluta.",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
             "status": 2,
             "users_id": 2,
             "troubles_id": 1
         },
         {
-            "id": 4,
-            "name": "Task 10",
-            "desc": "Neque optio distinctio delectus enim tempore dolores ducimus.",
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
+            "id": 2,
+            "name": "Task 41",
+            "desc": "Ut minima aliquam corporis placeat eos.",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
             "status": 1,
             "users_id": 1,
             "troubles_id": 1
         },
         {
+            "id": 3,
+            "name": "Task 64",
+            "desc": "Ad quia autem repellat qui.",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "status": 2,
+            "users_id": 2,
+            "troubles_id": 5
+        },
+        {
+            "id": 4,
+            "name": "Task 57",
+            "desc": "Harum explicabo delectus ad adipisci.",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "status": 5,
+            "users_id": 5,
+            "troubles_id": 3
+        },
+        {
             "id": 5,
-            "name": "Task 71",
-            "desc": "Accusantium et voluptatem eos dolor recusandae voluptas.",
-            "time_from": "2019-10-18 15:02:19",
-            "time_to": "2019-10-18 15:02:19",
-            "status": 3,
-            "users_id": 3,
-            "troubles_id": 4
+            "name": "Task 94",
+            "desc": "Ducimus occaecati atque aut doloribus officiis omnis.",
+            "time_from": "2019-10-21 01:14:11",
+            "time_to": "2019-10-21 01:14:11",
+            "status": 1,
+            "users_id": 1,
+            "troubles_id": 5
         }
     ]
 }
@@ -2283,13 +2455,13 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Task 77",
-        "desc": "Ut quidem laboriosam molestiae aut quod explicabo aut.",
-        "time_from": "2019-10-18 15:02:19",
-        "time_to": "2019-10-18 15:02:19",
-        "status": 4,
-        "users_id": 4,
-        "troubles_id": 2
+        "name": "Task 50",
+        "desc": "In pariatur dicta id voluptate aliquam soluta.",
+        "time_from": "2019-10-21 01:14:11",
+        "time_to": "2019-10-21 01:14:11",
+        "status": 2,
+        "users_id": 2,
+        "troubles_id": 1
     }
 }
 ```
@@ -2308,7 +2480,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/tasks" \
     -H "Content-Type: application/json" \
-    -d '{"name":"consequatur","desc":"provident","time_from":"hic","time_to":20,"status":"tempore","users_id":4,"troubles_id":5}'
+    -d '{"name":"ut","desc":"suscipit","time_from":"qui","time_to":19,"status":"nihil","users_id":11,"troubles_id":9}'
 
 ```
 
@@ -2321,13 +2493,13 @@ let headers = {
 }
 
 let body = {
-    "name": "consequatur",
-    "desc": "provident",
-    "time_from": "hic",
-    "time_to": 20,
-    "status": "tempore",
-    "users_id": 4,
-    "troubles_id": 5
+    "name": "ut",
+    "desc": "suscipit",
+    "time_from": "qui",
+    "time_to": 19,
+    "status": "nihil",
+    "users_id": 11,
+    "troubles_id": 9
 }
 
 fetch(url, {
@@ -2366,7 +2538,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/tasks/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"quia","desc":"voluptas","time_from":"autem","time_to":17,"status":"accusamus","users_id":12,"troubles_id":11}'
+    -d '{"name":"quidem","desc":"suscipit","time_from":"architecto","time_to":12,"status":"ut","users_id":16,"troubles_id":19}'
 
 ```
 
@@ -2379,13 +2551,13 @@ let headers = {
 }
 
 let body = {
-    "name": "quia",
-    "desc": "voluptas",
-    "time_from": "autem",
-    "time_to": 17,
-    "status": "accusamus",
-    "users_id": 12,
-    "troubles_id": 11
+    "name": "quidem",
+    "desc": "suscipit",
+    "time_from": "architecto",
+    "time_to": 12,
+    "status": "ut",
+    "users_id": 16,
+    "troubles_id": 19
 }
 
 fetch(url, {
@@ -2486,32 +2658,32 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Trouble 32",
-            "desc": "cmertz@example.com",
-            "devices_id": 5
+            "name": "Trouble 25",
+            "desc": "ddaniel@example.org",
+            "devices_id": 4
         },
         {
             "id": 2,
-            "name": "Trouble 3",
-            "desc": "paucek.laurence@example.org",
-            "devices_id": 2
+            "name": "Trouble 65",
+            "desc": "torey.gislason@example.net",
+            "devices_id": 4
         },
         {
             "id": 3,
-            "name": "Trouble 73",
-            "desc": "baby.osinski@example.org",
+            "name": "Trouble 6",
+            "desc": "pnikolaus@example.net",
             "devices_id": 2
         },
         {
             "id": 4,
-            "name": "Trouble 49",
-            "desc": "payton11@example.net",
-            "devices_id": 4
+            "name": "Trouble 10",
+            "desc": "nkuphal@example.com",
+            "devices_id": 3
         },
         {
             "id": 5,
-            "name": "Trouble 80",
-            "desc": "borer.vivian@example.com",
+            "name": "Trouble 50",
+            "desc": "germaine09@example.org",
             "devices_id": 2
         }
     ]
@@ -2557,9 +2729,9 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Trouble 32",
-        "desc": "cmertz@example.com",
-        "devices_id": 5
+        "name": "Trouble 25",
+        "desc": "ddaniel@example.org",
+        "devices_id": 4
     }
 }
 ```
@@ -2578,7 +2750,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/troubles" \
     -H "Content-Type: application/json" \
-    -d '{"name":"consectetur","desc":"pariatur","devices_id":7}'
+    -d '{"name":"aut","desc":"aliquid","devices_id":1}'
 
 ```
 
@@ -2591,9 +2763,9 @@ let headers = {
 }
 
 let body = {
-    "name": "consectetur",
-    "desc": "pariatur",
-    "devices_id": 7
+    "name": "aut",
+    "desc": "aliquid",
+    "devices_id": 1
 }
 
 fetch(url, {
@@ -2628,7 +2800,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/troubles/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"officia","desc":"ut","devices_id":5}'
+    -d '{"name":"omnis","desc":"aperiam","devices_id":7}'
 
 ```
 
@@ -2641,9 +2813,9 @@ let headers = {
 }
 
 let body = {
-    "name": "officia",
-    "desc": "ut",
-    "devices_id": 5
+    "name": "omnis",
+    "desc": "aperiam",
+    "devices_id": 7
 }
 
 fetch(url, {
@@ -2715,7 +2887,7 @@ APIs for managing users
 ```bash
 curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"aut","email":"quae","password":"ratione"}'
+    -d '{"name":"sapiente","email":"qui","password":"ut"}'
 
 ```
 
@@ -2728,9 +2900,9 @@ let headers = {
 }
 
 let body = {
-    "name": "aut",
-    "email": "quae",
-    "password": "ratione"
+    "name": "sapiente",
+    "email": "qui",
+    "password": "ut"
 }
 
 fetch(url, {
@@ -2765,7 +2937,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"vero","birthday":"debitis","job":"aut"}'
+    -d '{"name":"illo","birthday":"esse","job":"itaque"}'
 
 ```
 
@@ -2778,9 +2950,9 @@ let headers = {
 }
 
 let body = {
-    "name": "vero",
-    "birthday": "debitis",
-    "job": "aut"
+    "name": "illo",
+    "birthday": "esse",
+    "job": "itaque"
 }
 
 fetch(url, {
@@ -2839,6 +3011,14 @@ fetch(url, {
 {
     "code": "404",
     "message": "User not found"
+}
+```
+> Example response (200):
+
+```json
+{
+    "code": 706,
+    "message": "messages.user.user_not_found"
 }
 ```
 
