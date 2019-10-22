@@ -4,6 +4,7 @@
 import { CONFIG } from '../config.js';
 
 export default {
+    all: () => axios.get(CONFIG.API_URL + '/positions/all'),
     index: () => axios.get(CONFIG.API_URL + '/positions'),
     show: (id) => axios.get(CONFIG.API_URL + '/positions/' + id),
     store: (data) => axios.post(CONFIG.API_URL + '/positions', data),

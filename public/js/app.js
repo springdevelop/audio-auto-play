@@ -72204,6 +72204,9 @@ __webpack_require__.r(__webpack_exports__);
 */
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  all: function all() {
+    return axios.get(_config_js__WEBPACK_IMPORTED_MODULE_0__["CONFIG"].API_URL + '/positions/all');
+  },
   index: function index() {
     return axios.get(_config_js__WEBPACK_IMPORTED_MODULE_0__["CONFIG"].API_URL + '/positions');
   },
@@ -72921,8 +72924,8 @@ __webpack_require__.r(__webpack_exports__);
     var commit = _ref2.commit;
     return new Promise(function (resolve, reject) {
       commit('setGetPositionsStatus', 1);
-      _js_api_positions_js__WEBPACK_IMPORTED_MODULE_0__["default"].index().then(function (resp) {
-        commit('setPositions', resp.data);
+      _js_api_positions_js__WEBPACK_IMPORTED_MODULE_0__["default"].all().then(function (resp) {
+        commit('setPositions', resp.data.data);
         commit('setGetPositionsStatus', 2);
         resolve(resp);
       })["catch"](function (err) {

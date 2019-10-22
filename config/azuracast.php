@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'host' => 'http://1ac3524e.ngrok.io',
-    'api_key' => 'c65d8c1093bccfbe:21b2bf375ad07e36d9023cdc7cf03fe4',
+    'host' => 'http://localhost',
+    'api_key' => 'aee959f6ceeb7e3a:e3495021e507ead2d50a3ed991a0b3dd',
 ];

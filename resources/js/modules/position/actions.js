@@ -18,9 +18,9 @@ export default {
     loadPositions({ commit }) {
         return new Promise((resolve, reject) => {
             commit('setGetPositionsStatus', 1)
-            API.index()
+            API.all()
                 .then(resp => {
-                    commit('setPositions', resp.data)
+                    commit('setPositions', resp.data.data)
                     commit('setGetPositionsStatus', 2)
                     resolve(resp)
                 })

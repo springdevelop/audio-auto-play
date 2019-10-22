@@ -41,7 +41,7 @@ class PositionController extends BaseController
      */
     public function tree(PositionRepositoryInterface $repository)
     {
-        return $repository->all();
+        return api_success($repository->all());
     }
 
     /**
