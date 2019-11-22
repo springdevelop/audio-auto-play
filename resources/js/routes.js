@@ -6,9 +6,12 @@ import WebHome from '@/js/pages/web/Home';
 import Dashboard from '@/js/pages/dashboard/Layout';
 import DashboardHome from '@/js/pages/dashboard/Home';
 import Calendars from '@/js/pages/dashboard/Calendars';
+import IndexCalendars from '@/js/pages/dashboard/calendars/Index';
 import Users from '@/js/pages/dashboard/Users';
 import Positions from '@/js/pages/dashboard/Positions';
 import IndexPositions from '@/js/pages/dashboard/position/Index';
+import Devices from '@/js/pages/dashboard/Devices';
+import IndexDevices from '@/js/pages/dashboard/device/Index';
 import Stations from '@/js/pages/dashboard/Stations';
 import IndexStations from '@/js/pages/dashboard/station/Index';
 
@@ -19,8 +22,12 @@ const router = new VueRouter({
     mode: 'history',
     routes: [{
             path: '/',
-            name: 'web',
             component: Web,
+            children: [{
+                    path: '',
+                    name: 'web_Home',
+                    component: WebHome
+                }]
         },
         {
             path: '/dashboard',
@@ -32,8 +39,14 @@ const router = new VueRouter({
                 },
                 {
                     path: 'calendars',
-                    name: 'calendars',
-                    component: Calendars
+                    component: Calendars,
+                    children: [
+                        {
+                            path: '',
+                            name: 'calendars',
+                            component: IndexCalendars,
+                        }
+                    ]
                 },
                 {
                     path: 'users',
@@ -47,6 +60,15 @@ const router = new VueRouter({
                         path: '',
                         name: 'positions',
                         component: IndexPositions,
+                    }]
+                },
+                {
+                    path: 'devices',
+                    component: Devices,
+                    children: [{
+                        path: '',
+                        name: 'devices',
+                        component: IndexDevices,
                     }]
                 },
                 {

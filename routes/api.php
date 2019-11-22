@@ -24,7 +24,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::get('positions/all', 'PositionController@tree');
         Route::get('positions/{id}', 'PositionController@show')->where('id','[0-9]+');
         Route::post('positions', 'PositionController@store');
-        Route::put('positions/{id}', 'PositionController@update');
+        Route::put('positions/{id}', 'PositionController@update')->where('id','[0-9]+');
         Route::delete('positions/{id}', 'PositionController@destroy');
         Route::get('positions/{id}/devices', 'PositionController@devices');
 

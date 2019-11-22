@@ -107,13 +107,11 @@ class PositionController extends BaseController
      */
     public function update(PositionUpdateRequest $request, $position)
     {
-        $inputs = $request->only('name', 'desc', 'groups_id');
-        $position = $this->service->update($position, $inputs);
-
-        if ($updated) {
-            return $this->responseSuccess(new PositionResource($updated));
+        $inputs = $request->only('name', 'desc', 'groups_id', 'parent_id');
+        $update = $this->service->update($position, $inputs);
+        if ($update) {
+            return $this->responseSuccess(true);
         }
-
         return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }
 
