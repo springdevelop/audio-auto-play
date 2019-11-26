@@ -20,6 +20,12 @@
                     Địa điểm
                 </a>
             </router-link>
+            <router-link tag="li" class="nav-item" to="/dashboard/devices">
+                <a class="nav-link" href="#">
+                    <map-icon size="1.5x" class="custom-class"></map-icon>
+                    Thiết bị
+                </a>
+            </router-link>
              <router-link tag="li" class="nav-item" to="/dashboard/stations">
                 <a class="nav-link" href="#">
                     <activity-icon size="1.5x" class="custom-class"></activity-icon>

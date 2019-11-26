@@ -34,7 +34,9 @@ class PositionService extends BaseService implements PositionServiceInterface
      */
     public function update($position, $inputs)
     {
-        return $this->model->update($position, $inputs);
+        // return $this->model->update($position, $inputs);
+        return $this->model->find($position)->update($inputs);
+
     }
 
     /**

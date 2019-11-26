@@ -1,6 +1,6 @@
 <template>
  <div class="tree">
-    <ul class="tree-list">
+    <ul class="tree-list root">
           <node-tree class="node-tree" :treeData="filterTreeData" :model="model" @setShowModal="setShowModal" ></node-tree>
     </ul>
     <div class="node-info p-3">
@@ -85,8 +85,8 @@ export default {
     margin: 6px 0;
     list-style: none;
 }
-.root>ul{
-  padding-left: 0; 
+.root>li>div{
+  padding-left: 20px; 
 }
 .tree-list .node-tree.open >ul>.node-tree{
   border-left: 1px dashed #666666;
@@ -115,6 +115,7 @@ export default {
   margin-right: 3px;
   content: "\f015";
   left: -1.5em;
+  left: 0;
 }
 .tree-list .node-tree>div> button{
   display: none;
