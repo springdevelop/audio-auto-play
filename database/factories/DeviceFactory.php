@@ -32,6 +32,7 @@ $factory->define(Device::class, function (Faker $faker) {
     $slug = str_slug($name);
 
     return [
+        'code' => $slug,
         'name' => $name,
         'desc' => $faker->unique()->safeEmail,
         'positions_id' => $groupIds[0],

@@ -8,9 +8,10 @@ interface AzuracastServiceInterface extends BaseServiceInterface
     * Stations: Nowplaying
     =============================================
     */
-    
+
     public function getNowPlayings();
     public function getNowPlaying($stationId);
+    public function getAudioByStationId($stationId);
 
     /*
     =============================================

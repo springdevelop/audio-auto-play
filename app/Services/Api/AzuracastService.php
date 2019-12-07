@@ -27,6 +27,12 @@ class AzuracastService extends BaseService implements AzuracastServiceInterface
         return api_success($this->api->station($stationId)->nowPlaying());
     }
 
+    public function getAudioByStationId($stationId)
+    {
+        $link = $this->api->station($stationId)->nowPlaying()[0]['station']['listen_url'];
+        return api_success($link);
+    }
+
     public function getStations()
     {
         return api_success($this->api->stations());

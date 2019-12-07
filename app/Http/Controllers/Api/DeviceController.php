@@ -8,6 +8,7 @@ use App\Http\Resources\Api\DeviceCollection;
 use App\Http\Requests\Api\DeviceStoreRequest;
 use App\Http\Requests\Api\DeviceUpdateRequest;
 use App\Repositories\Contracts\DeviceRepositoryInterface;
+use App\Services\Api\Contracts\AzuracastServiceInterface;
 
 /**
  * @group devices
@@ -20,10 +21,13 @@ class DeviceController extends BaseController
 
     protected $repository;
 
-    public function __construct(DeviceRepositoryInterface $repository)
+    protected $service;
+
+    public function __construct(DeviceRepositoryInterface $repository, AzuracastServiceInterface $service)
     {
         parent::__construct();
         $this->repository = $repository;
+        $this->service = $service;
     }
 
     /**
@@ -42,6 +46,7 @@ class DeviceController extends BaseController
     /**
      * store
      * @api {post} /devices Create device
+     * @bodyParam code string required Code of device
      * @bodyParam name string required Name of device
      * @bodyParam desc string required Description of device
      * @bodyParam positions_id integer required positions_id of device
@@ -51,14 +56,14 @@ class DeviceController extends BaseController
      */
     public function store(DeviceStoreRequest $request)
     {
-        $inputs = $request->only('name', 'desc', 'positions_id', 'groups_id');
+        $inputs = $request->only('code', 'name', 'desc', 'positions_id', 'groups_id');
         $device = $this->repository->create(array_merge([
             'users_id' => 1
         ],$inputs));
 
         if($device) return $this->responseSuccess(new DeviceResource($device));
 
-        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed')); 
+        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }
 
     /**
@@ -71,9 +76,9 @@ class DeviceController extends BaseController
         $device = $this->repository->find($id);
         if($device) return $this->responseSuccess(new DeviceResource($device));
 
-        return $this->responseErrors(config('code.devices.device_not_found'), trans('messages.devices.device_not_found')); 
+        return $this->responseErrors(config('code.devices.device_not_found'), trans('messages.devices.device_not_found'));
     }
-    
+
 
     /**
      * update
@@ -81,13 +86,14 @@ class DeviceController extends BaseController
      * Update the specified resource in storage.
      *
      * @bodyParam parent_id string required id of parent's device
+     * @bodyParam code string required Code of device
      * @bodyParam name string required Name of device
      * @bodyParam desc string required Description of device
      * @bodyParam groups_id integer required groups_id of deivce
      */
     public function update(DeviceUpdateRequest $request, $id)
     {
-        $inputs = $request->only('name', 'desc', 'positions_id', 'groups_id');
+        $inputs = $request->only('code', 'name','desc', 'positions_id', 'groups_id');
         $device = $this->repository->find($id);
 
         if($device){
@@ -108,7 +114,7 @@ class DeviceController extends BaseController
     public function destroy($id)
     {
         $device = $this->repository->find($id);
-        if($device) 
+        if($device)
             $this->repository->destroy($device);
         else
             return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));

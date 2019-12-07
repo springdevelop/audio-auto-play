@@ -16,6 +16,8 @@ Route::group(['namespace' => 'Api'], function () {
     Route::post('user/register', 'UsersController@register');
     Route::post('auth/login', 'AuthController@login');
 
+    Route::get('audio/{code}', 'HomeController@audio');
+
     // Route::group(['middleware' => ['api','role:admin']], function () {
         Route::put('user/me', 'UsersController@updateProfile');
         Route::get('user/me', 'UsersController@getCurrentUser');
@@ -128,6 +130,6 @@ Route::group(['namespace' => 'Api'], function () {
 
         Route::get('station/{station_id}/playlists', 'AzuracastController@getStationPlaylists');
         Route::get('station/{station_id}/playlist/{playlist_id}', 'AzuracastController@getStationPlaylist');
-            
+
     // });
 });
