@@ -49,11 +49,424 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "code": 200,
+    "data": [
+        {
+            "station": {
+                "id": 1,
+                "name": "Kenh 1",
+                "shortcode": "kenh 1",
+                "description": "Kênh phát 1",
+                "frontend": "icecast",
+                "backend": "liquidsoap",
+                "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779012",
+                "is_public": true,
+                "mounts": [
+                    {
+                        "path": "\/radio.mp3",
+                        "is_default": true,
+                        "id": 1,
+                        "name": "128kbps MP3",
+                        "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779012",
+                        "bitrate": 128,
+                        "format": "mp3",
+                        "listeners": {
+                            "current": 1,
+                            "unique": 1,
+                            "total": 1
+                        }
+                    }
+                ],
+                "remotes": []
+            },
+            "listeners": {
+                "current": 1,
+                "unique": 1,
+                "total": 1
+            },
+            "live": {
+                "is_live": false,
+                "streamer_name": ""
+            },
+            "now_playing": {
+                "elapsed": 806,
+                "remaining": 1441,
+                "sh_id": 254,
+                "played_at": 1575778212,
+                "duration": 2247,
+                "playlist": "playlist kenh 1",
+                "is_request": false,
+                "song": {
+                    "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                    "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                    "artist": "V.A",
+                    "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                    "album": "nhaccuatui.com",
+                    "lyrics": "",
+                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                    "custom_fields": []
+                }
+            },
+            "playing_next": null,
+            "song_history": [
+                {
+                    "sh_id": 255,
+                    "played_at": 1575778209,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "7a1230502efebe8990578f71285bcf46",
+                        "text": "Stream Offline",
+                        "artist": "",
+                        "title": "",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 253,
+                    "played_at": 1575764152,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 252,
+                    "played_at": 1575764156,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 251,
+                    "played_at": 1575743932,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 250,
+                    "played_at": 1575743936,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 249,
+                    "played_at": 1575723712,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 248,
+                    "played_at": 1575723717,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 247,
+                    "played_at": 1575714728,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 246,
+                    "played_at": 1575714730,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 245,
+                    "played_at": 1575703492,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 244,
+                    "played_at": 1575703498,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 243,
+                    "played_at": 1575694508,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 242,
+                    "played_at": 1575694511,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 241,
+                    "played_at": 1575680347,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 240,
+                    "played_at": 1575680351,
+                    "duration": 2247,
+                    "playlist": "playlist kenh 1",
+                    "is_request": false,
+                    "song": {
+                        "id": "eb4fd5e95f4f54300395cd58d3d65ae3",
+                        "text": "V.A - 10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "artist": "V.A",
+                        "title": "10 Bản Nhạc Không Lời Tuyển Chọn",
+                        "album": "nhaccuatui.com",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                }
+            ],
+            "cache": "station"
+        },
+        {
+            "station": {
+                "id": 2,
+                "name": "Kenh 2",
+                "shortcode": "kenh_2",
+                "description": "Kenh 2",
+                "frontend": "icecast",
+                "backend": "liquidsoap",
+                "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575779012",
+                "is_public": true,
+                "mounts": [
+                    {
+                        "path": "\/radio.mp3",
+                        "is_default": true,
+                        "id": 2,
+                        "name": "128kbps MP3",
+                        "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575779012",
+                        "bitrate": 128,
+                        "format": "mp3",
+                        "listeners": {
+                            "current": 0,
+                            "unique": 0,
+                            "total": 0
+                        }
+                    }
+                ],
+                "remotes": []
+            },
+            "listeners": {
+                "current": 0,
+                "unique": 0,
+                "total": 0
+            },
+            "live": {
+                "is_live": false,
+                "streamer_name": ""
+            },
+            "now_playing": {
+                "elapsed": 250081,
+                "remaining": 0,
+                "sh_id": 210,
+                "played_at": 1575528937,
+                "duration": 0,
+                "playlist": "",
+                "is_request": false,
+                "song": {
+                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                    "text": "AzuraCast.com - AzuraCast is Live!",
+                    "artist": "AzuraCast.com",
+                    "title": "AzuraCast is Live!",
+                    "album": "",
+                    "lyrics": "",
+                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                    "custom_fields": []
+                }
+            },
+            "playing_next": null,
+            "song_history": [
+                {
+                    "sh_id": 209,
+                    "played_at": 1575528879,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "7a1230502efebe8990578f71285bcf46",
+                        "text": "Stream Offline",
+                        "artist": "",
+                        "title": "",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 2,
+                    "played_at": 1574392102,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                }
+            ],
+            "cache": "station"
+        }
+    ]
 }
 ```
 
@@ -71,7 +484,7 @@ fetch(url, {
 ```bash
 curl -X GET -G "http://localhost:8000/api/nowplaying/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":1}'
+    -d '{"stationId":4}'
 
 ```
 
@@ -84,7 +497,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 1
+    "stationId": 4
 }
 
 fetch(url, {
@@ -145,11 +558,67 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Kenh 1",
+            "shortcode": "kenh 1",
+            "description": "Kênh phát 1",
+            "frontend": "icecast",
+            "backend": "liquidsoap",
+            "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779013",
+            "is_public": true,
+            "mounts": [
+                {
+                    "path": "\/radio.mp3",
+                    "is_default": true,
+                    "id": 1,
+                    "name": "128kbps MP3",
+                    "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779013",
+                    "bitrate": 128,
+                    "format": "mp3",
+                    "listeners": {
+                        "current": 1,
+                        "unique": 1,
+                        "total": 1
+                    }
+                }
+            ],
+            "remotes": []
+        },
+        {
+            "id": 2,
+            "name": "Kenh 2",
+            "shortcode": "kenh_2",
+            "description": "Kenh 2",
+            "frontend": "icecast",
+            "backend": "liquidsoap",
+            "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575779013",
+            "is_public": true,
+            "mounts": [
+                {
+                    "path": "\/radio.mp3",
+                    "is_default": true,
+                    "id": 2,
+                    "name": "128kbps MP3",
+                    "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575779013",
+                    "bitrate": 128,
+                    "format": "mp3",
+                    "listeners": {
+                        "current": 0,
+                        "unique": 0,
+                        "total": 0
+                    }
+                }
+            ],
+            "remotes": []
+        }
+    ]
 }
 ```
 
@@ -167,7 +636,7 @@ fetch(url, {
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"$stationId":6}'
+    -d '{"$stationId":16}'
 
 ```
 
@@ -180,7 +649,7 @@ let headers = {
 }
 
 let body = {
-    "$stationId": 6
+    "$stationId": 16
 }
 
 fetch(url, {
@@ -193,11 +662,38 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Kenh 1",
+        "shortcode": "kenh 1",
+        "description": "Kênh phát 1",
+        "frontend": "icecast",
+        "backend": "liquidsoap",
+        "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779013",
+        "is_public": true,
+        "mounts": [
+            {
+                "path": "\/radio.mp3",
+                "is_default": true,
+                "id": 1,
+                "name": "128kbps MP3",
+                "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575779013",
+                "bitrate": 128,
+                "format": "mp3",
+                "listeners": {
+                    "current": 1,
+                    "unique": 1,
+                    "total": 1
+                }
+            }
+        ],
+        "remotes": []
+    }
 }
 ```
 
@@ -223,7 +719,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/history" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":1}'
+    -d '{"stationId":3}'
 
 ```
 
@@ -236,7 +732,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 1
+    "stationId": 3
 }
 
 fetch(url, {
@@ -279,7 +775,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/listeners" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":2}'
+    -d '{"stationId":15}'
 
 ```
 
@@ -292,7 +788,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 2
+    "stationId": 15
 }
 
 fetch(url, {
@@ -305,12 +801,28 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
-{
-    "message": "Server Error"
-}
+[
+    {
+        "ip": "117.2.195.222",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/78.0.3904.108 Safari\/537.36",
+        "is_mobile": false,
+        "connected_on": 1575778351,
+        "connected_time": 666,
+        "location": {
+            "status": "success",
+            "lat": 16.4667,
+            "lon": 107.6,
+            "timezone": "Asia\/Ho_Chi_Minh",
+            "region": "Tinh Thua Thien-Hue",
+            "country": "Vietnam",
+            "city": "Huế",
+            "message": "This product includes GeoLite2 data created by MaxMind, available from <a href=\"http:\/\/www.maxmind.com\">http:\/\/www.maxmind.com<\/a>."
+        }
+    }
+]
 ```
 
 ### HTTP Request
@@ -335,7 +847,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/playlists" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":9}'
+    -d '{"stationId":13}'
 
 ```
 
@@ -348,7 +860,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 9
+    "stationId": 13
 }
 
 fetch(url, {
@@ -361,11 +873,48 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "code": 200,
+    "data": [
+        {
+            "id": 2,
+            "name": "playlist kenh 1",
+            "type": "default",
+            "source": "songs",
+            "order": "shuffle",
+            "remote_url": null,
+            "remote_type": "stream",
+            "remote_buffer": 0,
+            "is_enabled": true,
+            "is_jingle": false,
+            "play_per_songs": 0,
+            "play_per_minutes": 0,
+            "play_per_hour_minute": 0,
+            "weight": 3,
+            "include_in_requests": true,
+            "include_in_automation": true,
+            "backend_options": [
+                "",
+                "merge"
+            ],
+            "played_at": 0,
+            "schedule_items": [],
+            "num_songs": 1,
+            "total_length": 2247,
+            "links": {
+                "toggle": "http:\/\/35.240.185.246\/api\/station\/1\/playlist\/2\/toggle",
+                "order": "http:\/\/35.240.185.246\/api\/station\/1\/playlist\/2\/order",
+                "self": "http:\/\/35.240.185.246\/api\/station\/1\/playlist\/2",
+                "export": {
+                    "pls": "http:\/\/35.240.185.246\/api\/station\/1\/playlist\/2\/export\/pls",
+                    "m3u": "http:\/\/35.240.185.246\/api\/station\/1\/playlist\/2\/export\/m3u"
+                }
+            }
+        }
+    ]
 }
 ```
 
@@ -388,7 +937,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/playlist/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":4}'
+    -d '{"stationId":19}'
 
 ```
 
@@ -401,7 +950,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 4
+    "stationId": 19
 }
 
 fetch(url, {
@@ -444,7 +993,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/status" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":14}'
+    -d '{"stationId":8}'
 
 ```
 
@@ -457,7 +1006,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 14
+    "stationId": 8
 }
 
 fetch(url, {
@@ -470,11 +1019,12 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "backend_running": true,
+    "frontend_running": true
 }
 ```
 
@@ -523,12 +1073,10 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response:
 
 ```json
-{
-    "message": "Server Error"
-}
+null
 ```
 
 ### HTTP Request
@@ -550,7 +1098,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/frontend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":18,"action":"tempore"}'
+    -d '{"stationId":4,"action":"enim"}'
 
 ```
 
@@ -563,8 +1111,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 18,
-    "action": "tempore"
+    "stationId": 4,
+    "action": "enim"
 }
 
 fetch(url, {
@@ -605,7 +1153,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/backend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":17,"action":"nulla"}'
+    -d '{"stationId":12,"action":"quos"}'
 
 ```
 
@@ -618,8 +1166,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 17,
-    "action": "nulla"
+    "stationId": 12,
+    "action": "quos"
 }
 
 fetch(url, {
@@ -663,7 +1211,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/requests" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":1,"requestId":19}'
+    -d '{"stationId":4,"requestId":10}'
 
 ```
 
@@ -676,8 +1224,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 1,
-    "requestId": 19
+    "stationId": 4,
+    "requestId": 10
 }
 
 fetch(url, {
@@ -718,7 +1266,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X POST "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":11,"requestId":20}'
+    -d '{"stationId":5,"requestId":17}'
 
 ```
 
@@ -731,8 +1279,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 11,
-    "requestId": 20
+    "stationId": 5,
+    "requestId": 17
 }
 
 fetch(url, {
@@ -769,7 +1317,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X POST "http://localhost:8000/api/auth/login" \
     -H "Content-Type: application/json" \
-    -d '{"email":"eos","password":"quos"}'
+    -d '{"email":"id","password":"vel"}'
 
 ```
 
@@ -782,8 +1330,8 @@ let headers = {
 }
 
 let body = {
-    "email": "eos",
-    "password": "quos"
+    "email": "id",
+    "password": "vel"
 }
 
 fetch(url, {
@@ -846,57 +1394,57 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Calendar 96",
-            "desc": "Quis aliquid veniam eos voluptas autem possimus.",
+            "name": "Calendar 8",
+            "desc": "Vitae corporis quibusdam officiis voluptatem nihil.",
             "audio": null,
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "positions_id": 2,
-            "users_id": 4,
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "positions_id": 1,
+            "users_id": 2,
             "status": "pending"
         },
         {
             "id": 2,
-            "name": "Calendar 38",
-            "desc": "Quam repudiandae fugiat similique excepturi sed.",
+            "name": "Calendar 31",
+            "desc": "Tempora eum ipsum distinctio laborum.",
             "audio": null,
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
             "positions_id": 1,
             "users_id": 5,
             "status": "pending"
         },
         {
             "id": 3,
-            "name": "Calendar 90",
-            "desc": "Iure recusandae tempora hic repellat.",
+            "name": "Calendar 91",
+            "desc": "Doloremque dolores et est harum qui.",
             "audio": null,
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "positions_id": 2,
-            "users_id": 3,
-            "status": "pending"
-        },
-        {
-            "id": 4,
-            "name": "Calendar 87",
-            "desc": "Soluta qui eum in consequuntur ut eius.",
-            "audio": null,
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
             "positions_id": 5,
             "users_id": 5,
             "status": "pending"
         },
         {
-            "id": 5,
-            "name": "Calendar 27",
-            "desc": "Maiores accusantium ut voluptas sit maxime.",
+            "id": 4,
+            "name": "Calendar 11",
+            "desc": "Ab ea blanditiis molestiae fugit.",
             "audio": null,
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "positions_id": 1,
-            "users_id": 4,
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "positions_id": 3,
+            "users_id": 5,
+            "status": "pending"
+        },
+        {
+            "id": 5,
+            "name": "Calendar 94",
+            "desc": "Distinctio eligendi veritatis excepturi qui.",
+            "audio": null,
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "positions_id": 3,
+            "users_id": 1,
             "status": "pending"
         }
     ]
@@ -957,7 +1505,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/calendars" \
     -H "Content-Type: application/json" \
-    -d '{"name":"cumque","desc":"vero","audio":"ab","time_from":"distinctio","time_to":"qui","positions_id":"quia","status":"magni"}'
+    -d '{"name":"ut","desc":"nesciunt","audio":"ipsam","time_from":"sint","time_to":"quia","positions_id":"cumque","status":"ab"}'
 
 ```
 
@@ -970,13 +1518,13 @@ let headers = {
 }
 
 let body = {
-    "name": "cumque",
-    "desc": "vero",
-    "audio": "ab",
-    "time_from": "distinctio",
-    "time_to": "qui",
-    "positions_id": "quia",
-    "status": "magni"
+    "name": "ut",
+    "desc": "nesciunt",
+    "audio": "ipsam",
+    "time_from": "sint",
+    "time_to": "quia",
+    "positions_id": "cumque",
+    "status": "ab"
 }
 
 fetch(url, {
@@ -1015,7 +1563,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/calendars/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"officia","desc":"atque","audio":"iste","time_from":"ad","time_to":"est","positions_id":"consectetur","status":"voluptas"}'
+    -d '{"name":"velit","desc":"laborum","audio":"magnam","time_from":"adipisci","time_to":"velit","positions_id":"sint","status":"minus"}'
 
 ```
 
@@ -1028,13 +1576,13 @@ let headers = {
 }
 
 let body = {
-    "name": "officia",
-    "desc": "atque",
-    "audio": "iste",
-    "time_from": "ad",
-    "time_to": "est",
-    "positions_id": "consectetur",
-    "status": "voluptas"
+    "name": "velit",
+    "desc": "laborum",
+    "audio": "magnam",
+    "time_from": "adipisci",
+    "time_to": "velit",
+    "positions_id": "sint",
+    "status": "minus"
 }
 
 fetch(url, {
@@ -1135,52 +1683,57 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Device 21",
-            "desc": "ferry.stevie@example.org",
-            "slug": 4,
+            "code": "device-87",
+            "name": "Device 87",
+            "desc": "jacobi.myah@example.org",
+            "slug": 1,
             "positions_id": 2,
-            "users_id": 4,
+            "users_id": 1,
             "groups_id": 2,
             "status": "good"
         },
         {
             "id": 2,
-            "name": "Device 92",
-            "desc": "earnest30@example.org",
-            "slug": 3,
-            "positions_id": 1,
-            "users_id": 3,
-            "groups_id": 1,
-            "status": "good"
-        },
-        {
-            "id": 3,
-            "name": "Device 69",
-            "desc": "loyce.heaney@example.com",
-            "slug": 3,
-            "positions_id": 4,
-            "users_id": 3,
-            "groups_id": 4,
-            "status": "good"
-        },
-        {
-            "id": 4,
-            "name": "Device 97",
-            "desc": "tpadberg@example.com",
-            "slug": 3,
-            "positions_id": 1,
-            "users_id": 3,
-            "groups_id": 1,
-            "status": "good"
-        },
-        {
-            "id": 5,
-            "name": "Device 51",
-            "desc": "ahintz@example.com",
+            "code": "device-40",
+            "name": "Device 40",
+            "desc": "joanny.zieme@example.net",
             "slug": 2,
             "positions_id": 4,
             "users_id": 2,
             "groups_id": 4,
+            "status": "good"
+        },
+        {
+            "id": 3,
+            "code": "device-33",
+            "name": "Device 33",
+            "desc": "egrady@example.com",
+            "slug": 4,
+            "positions_id": 1,
+            "users_id": 4,
+            "groups_id": 1,
+            "status": "good"
+        },
+        {
+            "id": 4,
+            "code": "device-62",
+            "name": "Device 62",
+            "desc": "alarkin@example.org",
+            "slug": 4,
+            "positions_id": 4,
+            "users_id": 4,
+            "groups_id": 4,
+            "status": "good"
+        },
+        {
+            "id": 5,
+            "code": "device-51",
+            "name": "Device 51",
+            "desc": "javon38@example.net",
+            "slug": 2,
+            "positions_id": 2,
+            "users_id": 2,
+            "groups_id": 2,
             "status": "good"
         }
     ]
@@ -1226,11 +1779,12 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Device 21",
-        "desc": "ferry.stevie@example.org",
-        "slug": 4,
+        "code": "device-87",
+        "name": "Device 87",
+        "desc": "jacobi.myah@example.org",
+        "slug": 1,
         "positions_id": 2,
-        "users_id": 4,
+        "users_id": 1,
         "groups_id": 2,
         "status": "good"
     }
@@ -1251,7 +1805,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/devices" \
     -H "Content-Type: application/json" \
-    -d '{"name":"architecto","desc":"eaque","positions_id":14,"users_id":9,"groups_id":11}'
+    -d '{"code":"ut","name":"nobis","desc":"et","positions_id":13,"users_id":19,"groups_id":11}'
 
 ```
 
@@ -1264,10 +1818,11 @@ let headers = {
 }
 
 let body = {
-    "name": "architecto",
-    "desc": "eaque",
-    "positions_id": 14,
-    "users_id": 9,
+    "code": "ut",
+    "name": "nobis",
+    "desc": "et",
+    "positions_id": 13,
+    "users_id": 19,
     "groups_id": 11
 }
 
@@ -1289,6 +1844,7 @@ fetch(url, {
 
 Parameter | Type | Status | Description
 --------- | ------- | ------- | ------- | -----------
+    code | string |  required  | Code of device
     name | string |  required  | Name of device
     desc | string |  required  | Description of device
     positions_id | integer |  required  | positions_id of device
@@ -1305,7 +1861,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/devices/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"nam","name":"eveniet","desc":"doloremque","groups_id":20}'
+    -d '{"parent_id":"sit","code":"facilis","name":"ut","desc":"laudantium","groups_id":20}'
 
 ```
 
@@ -1318,9 +1874,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "nam",
-    "name": "eveniet",
-    "desc": "doloremque",
+    "parent_id": "sit",
+    "code": "facilis",
+    "name": "ut",
+    "desc": "laudantium",
     "groups_id": 20
 }
 
@@ -1343,6 +1900,7 @@ fetch(url, {
 Parameter | Type | Status | Description
 --------- | ------- | ------- | ------- | -----------
     parent_id | string |  required  | id of parent's device
+    code | string |  required  | Code of device
     name | string |  required  | Name of device
     desc | string |  required  | Description of device
     groups_id | integer |  required  | groups_id of deivce
@@ -1410,7 +1968,7 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response:
 
 ```json
 null
@@ -1460,35 +2018,35 @@ fetch(url, {
         {
             "id": 1,
             "name": "Group 71",
-            "desc": "Deserunt commodi aliquam officia commodi soluta error libero ex.",
+            "desc": "Dignissimos aut assumenda soluta exercitationem quis autem.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 2,
-            "name": "Group 24",
-            "desc": "Enim itaque rem quia dolorum non.",
+            "name": "Group 44",
+            "desc": "Nihil voluptate porro exercitationem odit ipsam sunt corrupti.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 3,
-            "name": "Group 89",
-            "desc": "Unde sapiente voluptatum est beatae doloribus incidunt tenetur vero.",
+            "name": "Group 39",
+            "desc": "Accusamus accusamus fugit dicta eos dicta soluta.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 4,
-            "name": "Group 77",
-            "desc": "Iste animi quae blanditiis qui possimus.",
+            "name": "Group 99",
+            "desc": "Animi ut quia odio omnis rem.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 5,
-            "name": "Group 95",
-            "desc": "Sequi ullam culpa dolor.",
+            "name": "Group 18",
+            "desc": "Aut et illum laudantium sit laudantium porro non.",
             "slug": null,
             "type": "vip"
         }
@@ -1536,7 +2094,7 @@ fetch(url, {
     "data": {
         "id": 1,
         "name": "Group 71",
-        "desc": "Deserunt commodi aliquam officia commodi soluta error libero ex.",
+        "desc": "Dignissimos aut assumenda soluta exercitationem quis autem.",
         "slug": null,
         "type": "vip"
     }
@@ -1557,7 +2115,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"hic","desc":"quia","type":"omnis"}'
+    -d '{"name":"distinctio","desc":"deleniti","type":"autem"}'
 
 ```
 
@@ -1570,9 +2128,9 @@ let headers = {
 }
 
 let body = {
-    "name": "hic",
-    "desc": "quia",
-    "type": "omnis"
+    "name": "distinctio",
+    "desc": "deleniti",
+    "type": "autem"
 }
 
 fetch(url, {
@@ -1607,7 +2165,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"omnis","desc":"sunt","type":"numquam"}'
+    -d '{"name":"consequatur","desc":"laboriosam","type":"maxime"}'
 
 ```
 
@@ -1620,9 +2178,9 @@ let headers = {
 }
 
 let body = {
-    "name": "omnis",
-    "desc": "sunt",
-    "type": "numquam"
+    "name": "consequatur",
+    "desc": "laboriosam",
+    "type": "maxime"
 }
 
 fetch(url, {
@@ -1682,6 +2240,50 @@ fetch(url, {
 
 <!-- END_1047682f8958a6c8574e111e83f9cc17 -->
 
+#home
+
+
+<!-- START_ef0a4fcc5d5d2e999b7cb6b573280cb0 -->
+## audio
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost:8000/api/audio/1" 
+```
+
+```javascript
+const url = new URL("http://localhost:8000/api/audio/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "code": 602,
+    "message": "messages.validate.not_found"
+}
+```
+
+### HTTP Request
+`GET api/audio/{code}`
+
+
+<!-- END_ef0a4fcc5d5d2e999b7cb6b573280cb0 -->
+
 #positions
 
 
@@ -1723,46 +2325,46 @@ fetch(url, {
             {
                 "id": 1,
                 "parent_id": 1,
-                "name": "Position 2",
-                "desc": "Ut aspernatur cum velit magnam ut quo ut.",
-                "users_id": 1,
-                "groups_id": 2,
+                "name": "Position 66",
+                "desc": "Culpa vel possimus laudantium et.",
+                "users_id": 4,
+                "groups_id": 3,
                 "station_id": 0
             },
             {
                 "id": 2,
                 "parent_id": 1,
-                "name": "Position 24",
-                "desc": "Sit ut sapiente optio aliquid eos.",
-                "users_id": 2,
-                "groups_id": 3,
+                "name": "Position 72",
+                "desc": "Et pariatur quas necessitatibus et et sint et.",
+                "users_id": 4,
+                "groups_id": 5,
                 "station_id": 0
             },
             {
                 "id": 3,
                 "parent_id": 1,
-                "name": "Position 3",
-                "desc": "Velit est et debitis exercitationem cum tempore.",
-                "users_id": 4,
-                "groups_id": 4,
+                "name": "Position 94",
+                "desc": "Non accusamus fugiat reprehenderit aut.",
+                "users_id": 1,
+                "groups_id": 2,
                 "station_id": 0
             },
             {
                 "id": 4,
                 "parent_id": 1,
-                "name": "Position 77",
-                "desc": "Alias voluptatibus enim nemo eaque totam itaque consequatur.",
-                "users_id": 2,
+                "name": "Position 61",
+                "desc": "Expedita eaque sunt qui error aut.",
+                "users_id": 1,
                 "groups_id": 2,
                 "station_id": 0
             },
             {
                 "id": 5,
                 "parent_id": 1,
-                "name": "Position 44",
-                "desc": "Eveniet id non animi et non.",
-                "users_id": 3,
-                "groups_id": 4,
+                "name": "Position 95",
+                "desc": "Deleniti sunt ex esse dolorem at ut unde.",
+                "users_id": 1,
+                "groups_id": 5,
                 "station_id": 0
             }
         ],
@@ -1808,53 +2410,56 @@ fetch(url, {
 > Example response (200):
 
 ```json
-[
-    {
-        "id": 1,
-        "parent_id": 1,
-        "name": "Position 2",
-        "desc": "Ut aspernatur cum velit magnam ut quo ut.",
-        "users_id": 1,
-        "groups_id": 2,
-        "station_id": 0
-    },
-    {
-        "id": 2,
-        "parent_id": 1,
-        "name": "Position 24",
-        "desc": "Sit ut sapiente optio aliquid eos.",
-        "users_id": 2,
-        "groups_id": 3,
-        "station_id": 0
-    },
-    {
-        "id": 3,
-        "parent_id": 1,
-        "name": "Position 3",
-        "desc": "Velit est et debitis exercitationem cum tempore.",
-        "users_id": 4,
-        "groups_id": 4,
-        "station_id": 0
-    },
-    {
-        "id": 4,
-        "parent_id": 1,
-        "name": "Position 77",
-        "desc": "Alias voluptatibus enim nemo eaque totam itaque consequatur.",
-        "users_id": 2,
-        "groups_id": 2,
-        "station_id": 0
-    },
-    {
-        "id": 5,
-        "parent_id": 1,
-        "name": "Position 44",
-        "desc": "Eveniet id non animi et non.",
-        "users_id": 3,
-        "groups_id": 4,
-        "station_id": 0
-    }
-]
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "parent_id": 1,
+            "name": "Position 66",
+            "desc": "Culpa vel possimus laudantium et.",
+            "users_id": 4,
+            "groups_id": 3,
+            "station_id": 0
+        },
+        {
+            "id": 2,
+            "parent_id": 1,
+            "name": "Position 72",
+            "desc": "Et pariatur quas necessitatibus et et sint et.",
+            "users_id": 4,
+            "groups_id": 5,
+            "station_id": 0
+        },
+        {
+            "id": 3,
+            "parent_id": 1,
+            "name": "Position 94",
+            "desc": "Non accusamus fugiat reprehenderit aut.",
+            "users_id": 1,
+            "groups_id": 2,
+            "station_id": 0
+        },
+        {
+            "id": 4,
+            "parent_id": 1,
+            "name": "Position 61",
+            "desc": "Expedita eaque sunt qui error aut.",
+            "users_id": 1,
+            "groups_id": 2,
+            "station_id": 0
+        },
+        {
+            "id": 5,
+            "parent_id": 1,
+            "name": "Position 95",
+            "desc": "Deleniti sunt ex esse dolorem at ut unde.",
+            "users_id": 1,
+            "groups_id": 5,
+            "station_id": 0
+        }
+    ]
+}
 ```
 
 ### HTTP Request
@@ -1899,10 +2504,10 @@ fetch(url, {
     "data": {
         "id": 1,
         "parent_id": 1,
-        "name": "Position 2",
-        "desc": "Ut aspernatur cum velit magnam ut quo ut.",
-        "users_id": 1,
-        "groups_id": 2,
+        "name": "Position 66",
+        "desc": "Culpa vel possimus laudantium et.",
+        "users_id": 4,
+        "groups_id": 3,
         "station_id": 0
     }
 }
@@ -1922,7 +2527,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"aut","name":"ad","desc":"aperiam","groups_id":5}'
+    -d '{"parent_id":"aut","name":"quam","desc":"recusandae","groups_id":17}'
 
 ```
 
@@ -1936,9 +2541,9 @@ let headers = {
 
 let body = {
     "parent_id": "aut",
-    "name": "ad",
-    "desc": "aperiam",
-    "groups_id": 5
+    "name": "quam",
+    "desc": "recusandae",
+    "groups_id": 17
 }
 
 fetch(url, {
@@ -1974,7 +2579,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"soluta","name":"dolorum","desc":"est","groups_id":20}'
+    -d '{"parent_id":"sunt","name":"amet","desc":"alias","groups_id":11}'
 
 ```
 
@@ -1987,10 +2592,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "soluta",
-    "name": "dolorum",
-    "desc": "est",
-    "groups_id": 20
+    "parent_id": "sunt",
+    "name": "amet",
+    "desc": "alias",
+    "groups_id": 11
 }
 
 fetch(url, {
@@ -2084,22 +2689,14 @@ fetch(url, {
     "code": 200,
     "data": [
         {
-            "id": 2,
-            "name": "Device 92",
-            "desc": "earnest30@example.org",
+            "id": 3,
+            "name": "Device 33",
+            "desc": "egrady@example.com",
             "positions_id": 1,
-            "users_id": 3,
+            "users_id": 4,
             "groups_id": 1,
-            "status": "good"
-        },
-        {
-            "id": 4,
-            "name": "Device 97",
-            "desc": "tpadberg@example.com",
-            "positions_id": 1,
-            "users_id": 3,
-            "groups_id": 1,
-            "status": "good"
+            "status": "good",
+            "code": "device-33"
         }
     ]
 }
@@ -2202,7 +2799,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/siteinfos" \
     -H "Content-Type: application/json" \
-    -d '{"name":"sunt","desc":"deserunt","url":"qui"}'
+    -d '{"name":"iusto","desc":"quia","url":"fuga"}'
 
 ```
 
@@ -2215,9 +2812,9 @@ let headers = {
 }
 
 let body = {
-    "name": "sunt",
-    "desc": "deserunt",
-    "url": "qui"
+    "name": "iusto",
+    "desc": "quia",
+    "url": "fuga"
 }
 
 fetch(url, {
@@ -2252,7 +2849,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/siteinfos/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"molestiae","desc":"id","url":"non"}'
+    -d '{"name":"quo","desc":"et","url":"veritatis"}'
 
 ```
 
@@ -2265,9 +2862,9 @@ let headers = {
 }
 
 let body = {
-    "name": "molestiae",
-    "desc": "id",
-    "url": "non"
+    "name": "quo",
+    "desc": "et",
+    "url": "veritatis"
 }
 
 fetch(url, {
@@ -2364,53 +2961,53 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Task 50",
-            "desc": "In pariatur dicta id voluptate aliquam soluta.",
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "status": 2,
-            "users_id": 2,
-            "troubles_id": 1
+            "name": "Task 17",
+            "desc": "Eos velit eveniet laborum nemo voluptate omnis nam libero.",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "status": 3,
+            "users_id": 3,
+            "troubles_id": 5
         },
         {
             "id": 2,
-            "name": "Task 41",
-            "desc": "Ut minima aliquam corporis placeat eos.",
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "status": 1,
-            "users_id": 1,
-            "troubles_id": 1
+            "name": "Task 64",
+            "desc": "Vitae quisquam et nam consequatur libero.",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "status": 3,
+            "users_id": 3,
+            "troubles_id": 5
         },
         {
             "id": 3,
-            "name": "Task 64",
-            "desc": "Ad quia autem repellat qui.",
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
+            "name": "Task 35",
+            "desc": "Et dolore eos ex aut delectus.",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
             "status": 2,
             "users_id": 2,
             "troubles_id": 5
         },
         {
             "id": 4,
-            "name": "Task 57",
-            "desc": "Harum explicabo delectus ad adipisci.",
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "status": 5,
-            "users_id": 5,
-            "troubles_id": 3
+            "name": "Task 63",
+            "desc": "Delectus quidem voluptates qui voluptatibus aut dolores.",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "status": 2,
+            "users_id": 2,
+            "troubles_id": 2
         },
         {
             "id": 5,
-            "name": "Task 94",
-            "desc": "Ducimus occaecati atque aut doloribus officiis omnis.",
-            "time_from": "2019-10-21 01:14:11",
-            "time_to": "2019-10-21 01:14:11",
-            "status": 1,
-            "users_id": 1,
-            "troubles_id": 5
+            "name": "Task 85",
+            "desc": "Explicabo illum assumenda laudantium repudiandae distinctio.",
+            "time_from": "2019-12-07 03:48:07",
+            "time_to": "2019-12-07 03:48:07",
+            "status": 5,
+            "users_id": 5,
+            "troubles_id": 2
         }
     ]
 }
@@ -2455,13 +3052,13 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Task 50",
-        "desc": "In pariatur dicta id voluptate aliquam soluta.",
-        "time_from": "2019-10-21 01:14:11",
-        "time_to": "2019-10-21 01:14:11",
-        "status": 2,
-        "users_id": 2,
-        "troubles_id": 1
+        "name": "Task 17",
+        "desc": "Eos velit eveniet laborum nemo voluptate omnis nam libero.",
+        "time_from": "2019-12-07 03:48:07",
+        "time_to": "2019-12-07 03:48:07",
+        "status": 3,
+        "users_id": 3,
+        "troubles_id": 5
     }
 }
 ```
@@ -2480,7 +3077,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/tasks" \
     -H "Content-Type: application/json" \
-    -d '{"name":"ut","desc":"suscipit","time_from":"qui","time_to":19,"status":"nihil","users_id":11,"troubles_id":9}'
+    -d '{"name":"deleniti","desc":"qui","time_from":"maiores","time_to":11,"status":"id","users_id":2,"troubles_id":20}'
 
 ```
 
@@ -2493,13 +3090,13 @@ let headers = {
 }
 
 let body = {
-    "name": "ut",
-    "desc": "suscipit",
-    "time_from": "qui",
-    "time_to": 19,
-    "status": "nihil",
-    "users_id": 11,
-    "troubles_id": 9
+    "name": "deleniti",
+    "desc": "qui",
+    "time_from": "maiores",
+    "time_to": 11,
+    "status": "id",
+    "users_id": 2,
+    "troubles_id": 20
 }
 
 fetch(url, {
@@ -2538,7 +3135,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/tasks/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"quidem","desc":"suscipit","time_from":"architecto","time_to":12,"status":"ut","users_id":16,"troubles_id":19}'
+    -d '{"name":"repellendus","desc":"qui","time_from":"optio","time_to":16,"status":"quae","users_id":6,"troubles_id":7}'
 
 ```
 
@@ -2551,13 +3148,13 @@ let headers = {
 }
 
 let body = {
-    "name": "quidem",
-    "desc": "suscipit",
-    "time_from": "architecto",
-    "time_to": 12,
-    "status": "ut",
-    "users_id": 16,
-    "troubles_id": 19
+    "name": "repellendus",
+    "desc": "qui",
+    "time_from": "optio",
+    "time_to": 16,
+    "status": "quae",
+    "users_id": 6,
+    "troubles_id": 7
 }
 
 fetch(url, {
@@ -2658,33 +3255,33 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Trouble 25",
-            "desc": "ddaniel@example.org",
-            "devices_id": 4
+            "name": "Trouble 22",
+            "desc": "sabryna.damore@example.org",
+            "devices_id": 2
         },
         {
             "id": 2,
-            "name": "Trouble 65",
-            "desc": "torey.gislason@example.net",
-            "devices_id": 4
+            "name": "Trouble 64",
+            "desc": "brandon24@example.net",
+            "devices_id": 1
         },
         {
             "id": 3,
-            "name": "Trouble 6",
-            "desc": "pnikolaus@example.net",
-            "devices_id": 2
+            "name": "Trouble 93",
+            "desc": "chelsey01@example.org",
+            "devices_id": 4
         },
         {
             "id": 4,
-            "name": "Trouble 10",
-            "desc": "nkuphal@example.com",
-            "devices_id": 3
+            "name": "Trouble 49",
+            "desc": "rodrick71@example.com",
+            "devices_id": 2
         },
         {
             "id": 5,
-            "name": "Trouble 50",
-            "desc": "germaine09@example.org",
-            "devices_id": 2
+            "name": "Trouble 86",
+            "desc": "kareem.crona@example.net",
+            "devices_id": 5
         }
     ]
 }
@@ -2729,9 +3326,9 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Trouble 25",
-        "desc": "ddaniel@example.org",
-        "devices_id": 4
+        "name": "Trouble 22",
+        "desc": "sabryna.damore@example.org",
+        "devices_id": 2
     }
 }
 ```
@@ -2750,7 +3347,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/troubles" \
     -H "Content-Type: application/json" \
-    -d '{"name":"aut","desc":"aliquid","devices_id":1}'
+    -d '{"name":"pariatur","desc":"eveniet","devices_id":12}'
 
 ```
 
@@ -2763,9 +3360,9 @@ let headers = {
 }
 
 let body = {
-    "name": "aut",
-    "desc": "aliquid",
-    "devices_id": 1
+    "name": "pariatur",
+    "desc": "eveniet",
+    "devices_id": 12
 }
 
 fetch(url, {
@@ -2800,7 +3397,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/troubles/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"omnis","desc":"aperiam","devices_id":7}'
+    -d '{"name":"enim","desc":"porro","devices_id":8}'
 
 ```
 
@@ -2813,9 +3410,9 @@ let headers = {
 }
 
 let body = {
-    "name": "omnis",
-    "desc": "aperiam",
-    "devices_id": 7
+    "name": "enim",
+    "desc": "porro",
+    "devices_id": 8
 }
 
 fetch(url, {
@@ -2887,7 +3484,7 @@ APIs for managing users
 ```bash
 curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"sapiente","email":"qui","password":"ut"}'
+    -d '{"name":"ipsa","email":"quam","password":"voluptates"}'
 
 ```
 
@@ -2900,9 +3497,9 @@ let headers = {
 }
 
 let body = {
-    "name": "sapiente",
-    "email": "qui",
-    "password": "ut"
+    "name": "ipsa",
+    "email": "quam",
+    "password": "voluptates"
 }
 
 fetch(url, {
@@ -2937,7 +3534,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"illo","birthday":"esse","job":"itaque"}'
+    -d '{"name":"impedit","birthday":"quibusdam","job":"temporibus"}'
 
 ```
 
@@ -2950,9 +3547,9 @@ let headers = {
 }
 
 let body = {
-    "name": "illo",
-    "birthday": "esse",
-    "job": "itaque"
+    "name": "impedit",
+    "birthday": "quibusdam",
+    "job": "temporibus"
 }
 
 fetch(url, {

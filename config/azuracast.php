@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'host' => 'http://35.240.185.246/',
-    'api_key' => 'd2fa3cddf05343fc:e2ae23230691cd5764614f0bbcef2532',
+    'host' => 'http://35.240.185.246',
+    'api_key' => 'e6ea25639f5da501:7d0b8abb47447ed43fdc915884fa5b10',
 ];

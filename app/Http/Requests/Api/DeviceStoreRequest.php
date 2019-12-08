@@ -22,6 +22,7 @@ class DeviceStoreRequest extends BaseRequest
     public function rules()
     {
         return [
+            'code' => 'required|max:20',
             'name' => 'required|max:20',
             'positions_id' => 'required',
             'users_id' => 'required',

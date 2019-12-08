@@ -4,6 +4,7 @@ return [
     'basic' => [
         'validate' => 600,
         'save_failed' => 601,
+        'not_found' => 404,
     ],
     'user' => [
         'email_exists' => 701,
