@@ -5,6 +5,9 @@
     </ul>
     <div class="node-info p-3">
       {{position.name}}
+      <div v-for="device in devices" :key="device.id">
+          {{device.name}}
+      </div>
     </div>
     <modal v-if="showModal" @close="showModal = false" @submit="updatePosition"></modal>
  </div>
@@ -57,6 +60,9 @@ export default {
       },
       model() {
         return {id: 0, name: this.treeData.name}
+      },
+      devices: function() {
+          return this.$store.getters.getDevices;
       }
     },
     mounted() {

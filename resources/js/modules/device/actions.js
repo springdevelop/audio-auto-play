@@ -7,11 +7,24 @@
 import API from '@/js/api/devices.js';
 
 export default {
+    initDevice({ commit }, positions_id = null) {
+        return new Promise((resolve) => {
+            var device = { 
+                id: null, 
+                name: 'Nhập tên thiết bị', 
+                desc: 'Nhập mô tả ngắn', 
+                positions_id : positions_id
+            }
+            commit('setDevice', device)
+            resolve(device)
+        })
+    },
     loadDevices({ commit }) {
         return new Promise((resolve, reject) => {
             commit('setGetDevicesStatus', 1)
             API.all()
                 .then(resp => {
+                    console.log(resp)
                     commit('setDevices', resp.data.data)
                     commit('setGetDevicesStatus', 2)
                     resolve(resp)

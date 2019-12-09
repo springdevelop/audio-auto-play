@@ -4,11 +4,11 @@
         <folder-plus-icon size="2x" class="menu-plus mr-1"></folder-plus-icon>
       <span>Thêm địa điểm con</span>
     </li>
-     <li class="menu-item" role="menuitem" @click="$emit('addDevice')" tabindex="-1">
+     <li class="menu-item" role="menuitem" @click="$emit('addDevice', id)" tabindex="-1">
         <plus-square-icon size="1.5x" class="menu-plus mr-1"></plus-square-icon>
         <span>Thêm thiết bị</span>
     </li>
-     <li class="menu-item" role="menuitem" @click="$emit('editItem')" tabindex="-1">
+     <li class="menu-item" role="menuitem" @click="$emit('editItem',id)" tabindex="-1">
         <edit-icon size="1.5x" class="menu-plus mr-1"></edit-icon>
         <span>Sửa thông tin</span>
     </li>

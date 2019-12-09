@@ -4,7 +4,7 @@
 import { CONFIG } from '../config.js';
 
 export default {
-    all: () => axios.get(CONFIG.API_URL + '/devices/all'),
+    all: () => axios.get(CONFIG.API_URL + '/devices'),
     index: () => axios.get(CONFIG.API_URL + '/devices'),
     show: (id) => axios.get(CONFIG.API_URL + '/devices/' + id),
     store: (data) => axios.post(CONFIG.API_URL + '/devices', data),
