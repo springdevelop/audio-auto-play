@@ -45,6 +45,21 @@ export default {
                 })
         })
     },
+    loadDevicesOfPosition({ commit }, id) {
+        return new Promise((resolve, reject) => {
+            commit('setGetDevicesStatus', 1)
+            API.getDevices(id)
+                .then(resp => {
+                    commit('setDevices', resp.data.data)
+                    commit('setGetDevicesStatus', 2)
+                    resolve(resp)
+                })
+                .catch(err => {
+                    commit('setGetDevicesStatus', 3)
+                    reject(err)
+                })
+        })
+    },
     updatePosition({ commit, state }, data) {
         return new Promise((resolve, reject) => {
             API.update(data.id, data)

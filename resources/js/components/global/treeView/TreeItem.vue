@@ -1,16 +1,12 @@
 <template>
     <li @drop="handleDrop" class="node-tree" :class="{open: open}" @mouseleave="showMenu=false">
-        <drag
-            :class="{bold: isFolder, 'has-children': isFolder}"
-            @contextmenu="show"
-            @dblclick="toggle"
-            >
-            <span @click="loadItem(model.id)">{{model.name}}</span>
+        <drag :class="{bold: isFolder, 'has-children': isFolder}">
+            <span  @dblclick="toggle" @contextmenu="show" @click="loadItem(model.id)">{{model.name}}</span>
             <span @click="toggle" v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
             <button @click="show" type="button" class="btn btn-outline-secondary btn-sm ml-1">
                 <more-horizontal-icon size="2x" class="custom-class  text-muted"></more-horizontal-icon>
             </button>
-            <menu-item @editItem="editItem(model.id)" @addChildPosition="addItem" v-if="showMenu" :id="model.id"></menu-item>
+            <menu-item @addDevice="addDevice" @editItem="editItem" @addChildPosition="addItem" v-if="showMenu" :id="model.id"></menu-item>
         </drag>
         <ul v-show="open" v-if="isFolder">
             <node
@@ -63,7 +59,8 @@ export default {
             return this.treeData.filter(item => {
                  return item.parent_id === this.model.id
             })
-        }
+        },
+       
     },
     methods: {
         toggle: function () {
@@ -103,6 +100,12 @@ export default {
                 alert("Chưa chọn địa chiểm")
             }
         },
+        addDevice: function(position_id = 0) {
+            this.$store.dispatch('makeModalComponent',{name: 'add-device', title: 'Thêm thiết bị', submit: 'Thêm'})
+            this.$store.dispatch('initDevice')
+            this.$store.dispatch('loadPosition',position_id)
+            this.setShowModal();
+        },
         addItem: function (parent_id = 0) {
             this.$store.dispatch('initPosition', parent_id)
             this.$store.dispatch('setModalTitle','Thêm mới vị trí')
@@ -111,6 +114,7 @@ export default {
         },
         loadItem: function(id) {
             this.$store.dispatch('loadPosition', id)
+            this.$store.dispatch('loadDevicesOfPosition', id)
         },
         setShowModal: function() {
             this.$emit('setShowModal', 'true')

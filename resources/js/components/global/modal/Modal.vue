@@ -97,10 +97,13 @@
 </template>
 <script>
 import EditPosition from '@/js/pages/dashboard/position/FormEdit'
+import AddDevice from '@/js/components/global/modal/AddDevice'
+
 
 export default {
     components: {
         EditPosition,
+        AddDevice,
     },
     props: {
         textSubmit: String,
@@ -113,7 +116,7 @@ export default {
             return this.$store.getters.getModalTitle;
         },
         modal_submit() {
-            return this.$store.getters.getModalSubmit;
+            return this.$store.getters.getModalSubmit ? this.$store.getters.getModalSubmit: "Thêm";
         },
     }
 }
