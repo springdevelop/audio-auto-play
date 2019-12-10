@@ -77,7 +77,7 @@ class PositionController extends BaseController
 
         if($position) return $this->responseSuccess(new PositionResource($position));
 
-        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed')); 
+        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }
 
     /**
@@ -91,9 +91,9 @@ class PositionController extends BaseController
         if($rs['data'])
             return $rs;
 
-        return $this->responseErrors(config('code.position.position_not_found'), trans('messages.position.position_not_found')); 
+        return $this->responseErrors(config('code.position.position_not_found'), trans('messages.position.position_not_found'));
     }
-    
+
 
     /**
      * update
@@ -123,7 +123,7 @@ class PositionController extends BaseController
     public function destroy($id)
     {
         $bool = $this->service->delete($id);
-        if(!$bool) 
+        if(!$bool)
             return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));
 
         return $this->responseSuccess([]);
@@ -136,6 +136,10 @@ class PositionController extends BaseController
      */
     public function devices($positionId)
     {
-        return $this->service->devices($positionId);
+        $position = $this->service->find($positionId);
+        if($position){
+            return api_success($position->devices);
+        }
+        return api_errors(200, config('position.not_found'));
     }
 }

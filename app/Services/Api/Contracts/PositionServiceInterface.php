@@ -27,10 +27,10 @@ interface PositionServiceInterface extends BaseServiceInterface
     public function delete($id);
 
     /**
-     * @param \App\Models\Device $devices
+     * @param \App\Models\Position $position
      * @param array $inputs Associative array [name, birthday, job, gender]
      *
      * @return boolean
      */
-    public function devices($positionId);
+    public function find($id);
 }

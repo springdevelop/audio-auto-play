@@ -17,7 +17,7 @@ class CreatePositionsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('parent_id')
                 ->references('id')->on('positions')
-                ->onDelete('set null');
+                ->onDelete('cascade');
             $table->string('name');
             $table->string('desc')->nullable();
             $table->integer('users_id');

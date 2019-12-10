@@ -60,7 +60,7 @@ class CalendarController extends BaseController
 
         if($calendar) return $this->responseSuccess(new CalendarResource($calendar));
 
-        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed')); 
+        return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }
 
     /**
@@ -73,9 +73,9 @@ class CalendarController extends BaseController
         $calendar = $this->repository->find($id);
         if($calendar) return $this->responseSuccess(new PositionResource($calendar));
 
-        return $this->responseErrors(config('code.calendar.position_not_found'), trans('messages.calendar.position_not_found')); 
+        return $this->responseErrors(config('code.calendar.position_not_found'), trans('messages.calendar.position_not_found'));
     }
-    
+
 
     /**
      * update
@@ -112,7 +112,7 @@ class CalendarController extends BaseController
     public function destroy($id)
     {
         $calendar = $this->repository->find($id);
-        if($calendar) 
+        if($calendar)
             $this->repository->destroy($calendar);
         else
             return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));
