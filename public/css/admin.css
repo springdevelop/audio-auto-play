@@ -10649,13 +10649,18 @@ a.text-dark:focus {
 }
 
 body {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+body > div {
+  min-height: 100vh;
 }
 
 .feather {
-  width: 16px;
-  height: 16px;
+  width: auto;
+  height: 1.4em;
   vertical-align: text-bottom;
+  margin-right: 0.8em;
 }
 
 .sidebar {
@@ -10664,16 +10669,17 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100;
-  /* Behind the navbar */
-  padding: 48px 0 0;
-  /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: #212120;
+  width: 260px;
+  display: block;
+  font-weight: 200;
 }
 
 .sidebar-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 48px);
+  height: 100vh;
   padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto;
@@ -10689,16 +10695,19 @@ body {
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #ccc;
+  margin: 10px 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: 0.5s;
+}
+
+.sidebar .nav-link:hover {
+  opacity: 1;
 }
 
 .sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #999;
-}
-
-.sidebar .nav-link.active {
-  color: #007bff;
+  color: #fff;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -10712,8 +10721,13 @@ body {
 }
 
 [role=main] {
-  padding-top: 48px;
-  /* Space for fixed navbar */
+  background-color: #f4f3ef;
+  position: relative;
+  z-index: 2;
+  float: right;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .navbar-brand {
@@ -10779,5 +10793,16 @@ body {
 
 .table tr th.address {
   width: auto;
+}
+
+.card {
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #fff;
+  color: #252422;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  border: none;
 }
 

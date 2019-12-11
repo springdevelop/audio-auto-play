@@ -1,6 +1,10 @@
 <template>
-  <div class="mt-4">
-    <data-grid :lists="devices" :columns="gridColumns" :filter-key="searchQuery"></data-grid>
+  <div class="d-flex">
+    <div class="mid-content">
+      <div class="card">
+        <data-grid @deleteItem="deleteItem" :lists="devices" :nameColumns="nameColumns" :columns="gridColumns" :filter-key="searchQuery"></data-grid>
+      </div>
+    </div>
     <div class="menu-action p-3 text-center">
         <button class="btn btn-primary" @click="addDevice">Thêm Thiết bị</button>
     </div>
@@ -19,7 +23,8 @@ export default {
   data() {
       return {
         searchQuery: '',
-        gridColumns: ['name', 'status'],
+        gridColumns: ['name', 'desc', 'status'],
+        nameColumns: {'name': 'Tên', 'desc': 'Mô tả', 'status': 'Trạng thái' },
         showModal: false,
       }
   },
@@ -40,19 +45,23 @@ export default {
       setShowModal: function(show) {
          this.showModal = show
       },
+      deleteItem: function() {
+        alert()
+      }
   }
 };
 </script>
 
 <style>
+.mid-content{
+  width: calc(100% - 220px);
+}
 .menu-action{
-  height: calc(100vh - 48px);
   overflow-x: auto;
-  position: absolute;
-  right:0;
-  width: 300px;
-  top: 48px;
+  float: right;
+  width: 200px;
   z-index: 101;
-  border-left: 1px solid #333;
+  border-left: 1px solid #ccc;
+  margin-left: auto;
 }
 </style>

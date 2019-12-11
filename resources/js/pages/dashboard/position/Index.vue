@@ -16,7 +16,6 @@ export default {
     },
     created() {
         this.$store.dispatch('loadPositions')
-        this.$store.dispatch('makeModalComponent',{name: 'edit-position', title: 'Cập nhật', submit: 'Cập nhật'})
     },
     computed: {
         positions: function() {

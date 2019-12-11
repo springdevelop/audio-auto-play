@@ -60,7 +60,7 @@ export default {
                 })
         })
     },
-    updatePosition({ commit, state }, data) {
+    updatePosition({ commit }, data) {
         return new Promise((resolve, reject) => {
             API.update(data.id, data)
                 .then(function(resp) {
@@ -87,6 +87,19 @@ export default {
                     commit('setCreatePositionStatus', 3)
                     reject(err)
                 });
+        })
+    },
+    deletePosition({ dispatch }, id){
+        return new Promise((resolve, reject) => {
+            API.delete(id)
+                .then(resp => {
+                    console.log(resp)
+                    dispatch('loadPositions')
+                    resolve(resp)
+                })
+                .catch(err => {
+                    reject(err)
+            })
         })
     },
 
