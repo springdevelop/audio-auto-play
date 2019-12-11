@@ -149,8 +149,8 @@ li.add-new:hover{
   position: absolute;
   right:0;
   width: 300px;
-  top: 0;
-  height: 100%;
+  top: -1em;
+  height: calc( 100% + 2em);
   z-index: 1;
   border-left: 1px solid #333;
 }

@@ -4,15 +4,15 @@
         <folder-plus-icon size="2x" class="menu-plus mr-1"></folder-plus-icon>
       <span>Thêm địa điểm con</span>
     </li>
-     <li class="menu-item" role="menuitem" @click="$emit('addDevice', id)" tabindex="-1">
-        <plus-square-icon size="1.5x" class="menu-plus mr-1"></plus-square-icon>
-        <span>Thêm thiết bị</span>
-    </li>
      <li class="menu-item" role="menuitem" @click="$emit('editItem',id)" tabindex="-1">
         <edit-icon size="1.5x" class="menu-plus mr-1"></edit-icon>
         <span>Sửa thông tin</span>
     </li>
-    <li class="menu-item" @click="$emit('deleteItem')" role="menuitem" tabindex="-1">
+      <li class="menu-item" role="menuitem" @click="$emit('addDevice', id)" tabindex="-1">
+        <plus-square-icon size="1.5x" class="menu-plus mr-1"></plus-square-icon>
+        <span>Thêm thiết bị</span>
+    </li>
+    <li class="menu-item" @click="$emit('deleteItem', id)" role="menuitem" tabindex="-1">
         <x-octagon-icon size="1.5x" class="custom-class mr-1"></x-octagon-icon>
         <span>Xoá địa điểm</span>
     </li>

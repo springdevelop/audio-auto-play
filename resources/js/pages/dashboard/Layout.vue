@@ -1,14 +1,10 @@
 <template>
-<div>
-    <navigation></navigation>
-     <div class="container-fluid">
-        <div class="row">
+<div class="wrapper">
             <sidebar></sidebar>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                 <router-view></router-view>
+            <main role="main" class="">
+                <navigation></navigation>
+                 <router-view class="content"></router-view>
             </main>
-        </div>
-    </div>
 </div>
 </template>
 
@@ -21,3 +17,9 @@
         },
     }
 </script>
+<style scoped>
+.content{
+    position: relative;
+    padding: 1em;
+}
+</style>

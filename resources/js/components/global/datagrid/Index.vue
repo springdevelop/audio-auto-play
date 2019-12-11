@@ -2,16 +2,28 @@
     <table>
     <thead>
       <tr>
+        <th>STT</th>
         <th v-for="key in columns" @click="sortBy(key)" :class="{ active: sortKey == key }" :key="key">
-          {{ key | capitalize }}
+          <span v-if="nameColumns[key]">
+            {{ nameColumns[key] | capitalize }}
+          </span>
+          <span v-else>
+            {{ key | capitalize }}
+          </span>        
           <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
         </th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="entry in filteredLists">
+      <tr v-for="(entry, index) in filteredLists">
+        <td>{{index +1}}</td>
         <td v-for="key in columns" :key="key">
           {{entry[key]}}
+        </td>
+        <td>
+          <button @click="$emit(editItem)" class="btn btn-primary btn-sm">sửa</button>
+          <button  @click="$emit(deleteItem)" class="btn btn-danger btn-sm">xoá</button>
         </td>
       </tr>
     </tbody>
@@ -22,20 +34,21 @@ export default {
     props: {
         lists: Array,
         columns: Array,
+        nameColumns: Object,
         filterKey: String
     },
     data: function () {
         var sortOrders = {}
         this.columns.forEach(function (key) {
-        sortOrders[key] = 1
+          sortOrders[key] = 1
         })
         return {
-        sortKey: '',
-        sortOrders: sortOrders
+          sortKey: '',
+          sortOrders: sortOrders
         }
     },
     computed: {
-        filteredLists: function () {
+      filteredLists: function () {
         var sortKey = this.sortKey
         var filterKey = this.filterKey && this.filterKey.toLowerCase()
         var order = this.sortOrders[sortKey] || 1
@@ -43,15 +56,14 @@ export default {
         if (filterKey) {
             lists = lists.filter(function (row) {
             return Object.keys(row).some(function (key) {
-                return String(row[key]).toLowerCase().indexOf(filterKey) > -1
-            })
+                return String(row[key]).toLowerCase().indexOf(filterKey) > -1})
             })
         }
         if (sortKey) {
             lists = lists.slice().sort(function (a, b) {
-            a = a[sortKey]
-            b = b[sortKey]
-            return (a === b ? 0 : a > b ? 1 : -1) * order
+              a = a[sortKey]
+              b = b[sortKey]
+              return (a === b ? 0 : a > b ? 1 : -1) * order
             })
         }
         return lists
@@ -93,7 +105,7 @@ td {
 th, td {
   min-width: 120px;
   padding: 10px 20px;
-  border: 1px solid #E0E0E0;
+  border-top: 1px solid #ccc5b9;
 }
 
 th.active {

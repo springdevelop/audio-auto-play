@@ -35,7 +35,10 @@ const router = new VueRouter({
             children: [{
                     path: '',
                     name: 'dashboard_home',
-                    component: DashboardHome
+                    component: DashboardHome,
+                    meta: {
+                        title: 'Trang quản lý',
+                    }
                 },
                 {
                     path: 'calendars',
@@ -45,8 +48,12 @@ const router = new VueRouter({
                             path: '',
                             name: 'calendars',
                             component: IndexCalendars,
+                            meta: {
+                                title: 'Lịch phát',
+                            }
                         }
-                    ]
+                    ],
+                    
                 },
                 {
                     path: 'users',
@@ -60,6 +67,9 @@ const router = new VueRouter({
                         path: '',
                         name: 'positions',
                         component: IndexPositions,
+                        meta: {
+                            title: 'Địa điểm',
+                        }
                     }]
                 },
                 {
@@ -69,6 +79,9 @@ const router = new VueRouter({
                         path: '',
                         name: 'devices',
                         component: IndexDevices,
+                        meta: {
+                            title: 'Thiết bị',
+                        }
                     }]
                 },
                 {
@@ -78,6 +91,9 @@ const router = new VueRouter({
                         path: '',
                         name: 'stations',
                         component: IndexPositions,
+                        meta: {
+                            title: 'Kênh phát',
+                        }
                     }]
                 }
             ]
