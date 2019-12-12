@@ -105,12 +105,17 @@ class PositionController extends BaseController
      * @bodyParam desc string required Description of position
      * @bodyParam groups_id integer required groups_id of position
      */
-    public function update(PositionUpdateRequest $request, $position)
+    public function update(PositionUpdateRequest $request, $id)
     {
         $inputs = $request->only('name', 'desc', 'groups_id', 'parent_id');
-        $update = $this->service->update($position, $inputs);
-        if ($update) {
-            return $this->responseSuccess(true);
+        $position = $this->service->find($id);
+        if($position){
+            $updated = $this->service->update($position, $inputs);
+            if ($updated) {
+                return $this->responseSuccess(new PositionResource($updated));
+            }
+        }else{
+            return $this->responseErrors(config('code.basic.not_found'), trans('messages.validate.not_found'));
         }
         return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }
