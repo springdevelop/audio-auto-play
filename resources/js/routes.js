@@ -14,7 +14,8 @@ import Devices from '@/js/pages/dashboard/Devices';
 import IndexDevices from '@/js/pages/dashboard/device/Index';
 import Stations from '@/js/pages/dashboard/Stations';
 import IndexStations from '@/js/pages/dashboard/station/Index';
-
+import Settings from '@/js/pages/dashboard/Settings';
+import IndexSettings from '@/js/pages/dashboard/setting/Index';
 
 Vue.use(VueRouter);
 
@@ -86,13 +87,25 @@ const router = new VueRouter({
                 },
                 {
                     path: 'stations',
-                    component: IndexStations,
+                    component: Stations,
                     children: [{
                         path: '',
                         name: 'stations',
-                        component: IndexPositions,
+                        component: IndexStations,
                         meta: {
                             title: 'Kênh phát',
+                        }
+                    }]
+                },
+                {
+                    path: 'settings',
+                    component: Settings,
+                    children: [{
+                        path: '',
+                        name: 'settings',
+                        component: IndexSettings,
+                        meta: {
+                            title: 'Cài đặt',
                         }
                     }]
                 }

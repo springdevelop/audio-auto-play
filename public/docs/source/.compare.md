@@ -63,7 +63,7 @@ fetch(url, {
                 "description": "Kênh phát 1",
                 "frontend": "icecast",
                 "backend": "liquidsoap",
-                "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953104",
+                "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062843",
                 "is_public": true,
                 "mounts": [
                     {
@@ -71,22 +71,22 @@ fetch(url, {
                         "is_default": true,
                         "id": 1,
                         "name": "128kbps MP3",
-                        "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953104",
+                        "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062843",
                         "bitrate": 128,
                         "format": "mp3",
                         "listeners": {
-                            "current": 1,
-                            "unique": 1,
-                            "total": 1
+                            "current": 0,
+                            "unique": 0,
+                            "total": 0
                         }
                     }
                 ],
                 "remotes": []
             },
             "listeners": {
-                "current": 1,
-                "unique": 1,
-                "total": 1
+                "current": 0,
+                "unique": 0,
+                "total": 0
             },
             "live": {
                 "is_live": false,
@@ -95,8 +95,8 @@ fetch(url, {
             "now_playing": {
                 "elapsed": 2247,
                 "remaining": 0,
-                "sh_id": 294,
-                "played_at": 1575949766,
+                "sh_id": 322,
+                "played_at": 1576054225,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -114,8 +114,8 @@ fetch(url, {
             "playing_next": null,
             "song_history": [
                 {
-                    "sh_id": 295,
-                    "played_at": 1575949762,
+                    "sh_id": 323,
+                    "played_at": 1576054222,
                     "duration": 0,
                     "playlist": "",
                     "is_request": false,
@@ -131,8 +131,25 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 293,
-                    "played_at": 1575940779,
+                    "sh_id": 321,
+                    "played_at": 1576042988,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 320,
+                    "played_at": 1576042992,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -148,8 +165,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 292,
-                    "played_at": 1575940777,
+                    "sh_id": 319,
+                    "played_at": 1576034002,
                     "duration": 0,
                     "playlist": "",
                     "is_request": false,
@@ -165,25 +182,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 291,
-                    "played_at": 1575938528,
-                    "duration": 0,
-                    "playlist": "",
-                    "is_request": false,
-                    "song": {
-                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                        "text": "AzuraCast.com - AzuraCast is Live!",
-                        "artist": "AzuraCast.com",
-                        "title": "AzuraCast is Live!",
-                        "album": "",
-                        "lyrics": "",
-                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                        "custom_fields": []
-                    }
-                },
-                {
-                    "sh_id": 290,
-                    "played_at": 1575938533,
+                    "sh_id": 318,
+                    "played_at": 1576034005,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -199,25 +199,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 289,
-                    "played_at": 1575929542,
-                    "duration": 0,
-                    "playlist": "",
-                    "is_request": false,
-                    "song": {
-                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                        "text": "AzuraCast.com - AzuraCast is Live!",
-                        "artist": "AzuraCast.com",
-                        "title": "AzuraCast is Live!",
-                        "album": "",
-                        "lyrics": "",
-                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                        "custom_fields": []
-                    }
-                },
-                {
-                    "sh_id": 288,
-                    "played_at": 1575929546,
+                    "sh_id": 317,
+                    "played_at": 1576025019,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -233,8 +216,42 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 287,
-                    "played_at": 1575920560,
+                    "sh_id": 316,
+                    "played_at": 1576025016,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 315,
+                    "played_at": 1576022768,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 314,
+                    "played_at": 1576022773,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -250,8 +267,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 286,
-                    "played_at": 1575920557,
+                    "sh_id": 313,
+                    "played_at": 1576013782,
                     "duration": 0,
                     "playlist": "",
                     "is_request": false,
@@ -267,25 +284,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 285,
-                    "played_at": 1575918308,
-                    "duration": 0,
-                    "playlist": "",
-                    "is_request": false,
-                    "song": {
-                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                        "text": "AzuraCast.com - AzuraCast is Live!",
-                        "artist": "AzuraCast.com",
-                        "title": "AzuraCast is Live!",
-                        "album": "",
-                        "lyrics": "",
-                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                        "custom_fields": []
-                    }
-                },
-                {
-                    "sh_id": 284,
-                    "played_at": 1575918313,
+                    "sh_id": 312,
+                    "played_at": 1576013786,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -301,8 +301,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 283,
-                    "played_at": 1575909322,
+                    "sh_id": 311,
+                    "played_at": 1576004797,
                     "duration": 0,
                     "playlist": "",
                     "is_request": false,
@@ -318,8 +318,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 282,
-                    "played_at": 1575909327,
+                    "sh_id": 310,
+                    "played_at": 1576004800,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -335,8 +335,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 281,
-                    "played_at": 1575900338,
+                    "sh_id": 309,
+                    "played_at": 1575993562,
                     "duration": 0,
                     "playlist": "",
                     "is_request": false,
@@ -352,8 +352,8 @@ fetch(url, {
                     }
                 },
                 {
-                    "sh_id": 280,
-                    "played_at": 1575900341,
+                    "sh_id": 308,
+                    "played_at": 1575993567,
                     "duration": 2247,
                     "playlist": "playlist kenh 1",
                     "is_request": false,
@@ -379,7 +379,7 @@ fetch(url, {
                 "description": "Kenh 2",
                 "frontend": "icecast",
                 "backend": "liquidsoap",
-                "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575953104",
+                "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1576062843",
                 "is_public": true,
                 "mounts": [
                     {
@@ -387,7 +387,7 @@ fetch(url, {
                         "is_default": true,
                         "id": 2,
                         "name": "128kbps MP3",
-                        "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575953104",
+                        "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1576062843",
                         "bitrate": 128,
                         "format": "mp3",
                         "listeners": {
@@ -409,10 +409,10 @@ fetch(url, {
                 "streamer_name": ""
             },
             "now_playing": {
-                "elapsed": 62593,
+                "elapsed": 104206,
                 "remaining": 0,
-                "sh_id": 277,
-                "played_at": 1575890528,
+                "sh_id": 302,
+                "played_at": 1575958656,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -429,6 +429,40 @@ fetch(url, {
             },
             "playing_next": null,
             "song_history": [
+                {
+                    "sh_id": 301,
+                    "played_at": 1575958630,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "7a1230502efebe8990578f71285bcf46",
+                        "text": "Stream Offline",
+                        "artist": "",
+                        "title": "",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
+                {
+                    "sh_id": 277,
+                    "played_at": 1575890528,
+                    "duration": 0,
+                    "playlist": "",
+                    "is_request": false,
+                    "song": {
+                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                        "text": "AzuraCast.com - AzuraCast is Live!",
+                        "artist": "AzuraCast.com",
+                        "title": "AzuraCast is Live!",
+                        "album": "",
+                        "lyrics": "",
+                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                        "custom_fields": []
+                    }
+                },
                 {
                     "sh_id": 276,
                     "played_at": 1575890499,
@@ -479,40 +513,6 @@ fetch(url, {
                         "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
                         "custom_fields": []
                     }
-                },
-                {
-                    "sh_id": 210,
-                    "played_at": 1575528937,
-                    "duration": 0,
-                    "playlist": "",
-                    "is_request": false,
-                    "song": {
-                        "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                        "text": "AzuraCast.com - AzuraCast is Live!",
-                        "artist": "AzuraCast.com",
-                        "title": "AzuraCast is Live!",
-                        "album": "",
-                        "lyrics": "",
-                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                        "custom_fields": []
-                    }
-                },
-                {
-                    "sh_id": 209,
-                    "played_at": 1575528879,
-                    "duration": 0,
-                    "playlist": "",
-                    "is_request": false,
-                    "song": {
-                        "id": "7a1230502efebe8990578f71285bcf46",
-                        "text": "Stream Offline",
-                        "artist": "",
-                        "title": "",
-                        "album": "",
-                        "lyrics": "",
-                        "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                        "custom_fields": []
-                    }
                 }
             ],
             "cache": "station"
@@ -535,7 +535,7 @@ fetch(url, {
 ```bash
 curl -X GET -G "http://localhost:8000/api/nowplaying/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":19}'
+    -d '{"stationId":12}'
 
 ```
 
@@ -548,7 +548,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 19
+    "stationId": 12
 }
 
 fetch(url, {
@@ -574,7 +574,7 @@ fetch(url, {
             "description": "Kênh phát 1",
             "frontend": "icecast",
             "backend": "liquidsoap",
-            "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953104",
+            "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062843",
             "is_public": true,
             "mounts": [
                 {
@@ -582,22 +582,22 @@ fetch(url, {
                     "is_default": true,
                     "id": 1,
                     "name": "128kbps MP3",
-                    "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953104",
+                    "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062843",
                     "bitrate": 128,
                     "format": "mp3",
                     "listeners": {
-                        "current": 1,
-                        "unique": 1,
-                        "total": 1
+                        "current": 0,
+                        "unique": 0,
+                        "total": 0
                     }
                 }
             ],
             "remotes": []
         },
         "listeners": {
-            "current": 1,
-            "unique": 1,
-            "total": 1
+            "current": 0,
+            "unique": 0,
+            "total": 0
         },
         "live": {
             "is_live": false,
@@ -606,8 +606,8 @@ fetch(url, {
         "now_playing": {
             "elapsed": 2247,
             "remaining": 0,
-            "sh_id": 294,
-            "played_at": 1575949766,
+            "sh_id": 322,
+            "played_at": 1576054225,
             "duration": 2247,
             "playlist": "playlist kenh 1",
             "is_request": false,
@@ -625,8 +625,8 @@ fetch(url, {
         "playing_next": null,
         "song_history": [
             {
-                "sh_id": 295,
-                "played_at": 1575949762,
+                "sh_id": 323,
+                "played_at": 1576054222,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -642,8 +642,25 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 293,
-                "played_at": 1575940779,
+                "sh_id": 321,
+                "played_at": 1576042988,
+                "duration": 0,
+                "playlist": "",
+                "is_request": false,
+                "song": {
+                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                    "text": "AzuraCast.com - AzuraCast is Live!",
+                    "artist": "AzuraCast.com",
+                    "title": "AzuraCast is Live!",
+                    "album": "",
+                    "lyrics": "",
+                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                    "custom_fields": []
+                }
+            },
+            {
+                "sh_id": 320,
+                "played_at": 1576042992,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -659,8 +676,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 292,
-                "played_at": 1575940777,
+                "sh_id": 319,
+                "played_at": 1576034002,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -676,25 +693,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 291,
-                "played_at": 1575938528,
-                "duration": 0,
-                "playlist": "",
-                "is_request": false,
-                "song": {
-                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                    "text": "AzuraCast.com - AzuraCast is Live!",
-                    "artist": "AzuraCast.com",
-                    "title": "AzuraCast is Live!",
-                    "album": "",
-                    "lyrics": "",
-                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                    "custom_fields": []
-                }
-            },
-            {
-                "sh_id": 290,
-                "played_at": 1575938533,
+                "sh_id": 318,
+                "played_at": 1576034005,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -710,25 +710,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 289,
-                "played_at": 1575929542,
-                "duration": 0,
-                "playlist": "",
-                "is_request": false,
-                "song": {
-                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                    "text": "AzuraCast.com - AzuraCast is Live!",
-                    "artist": "AzuraCast.com",
-                    "title": "AzuraCast is Live!",
-                    "album": "",
-                    "lyrics": "",
-                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                    "custom_fields": []
-                }
-            },
-            {
-                "sh_id": 288,
-                "played_at": 1575929546,
+                "sh_id": 317,
+                "played_at": 1576025019,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -744,8 +727,42 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 287,
-                "played_at": 1575920560,
+                "sh_id": 316,
+                "played_at": 1576025016,
+                "duration": 0,
+                "playlist": "",
+                "is_request": false,
+                "song": {
+                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                    "text": "AzuraCast.com - AzuraCast is Live!",
+                    "artist": "AzuraCast.com",
+                    "title": "AzuraCast is Live!",
+                    "album": "",
+                    "lyrics": "",
+                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                    "custom_fields": []
+                }
+            },
+            {
+                "sh_id": 315,
+                "played_at": 1576022768,
+                "duration": 0,
+                "playlist": "",
+                "is_request": false,
+                "song": {
+                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
+                    "text": "AzuraCast.com - AzuraCast is Live!",
+                    "artist": "AzuraCast.com",
+                    "title": "AzuraCast is Live!",
+                    "album": "",
+                    "lyrics": "",
+                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
+                    "custom_fields": []
+                }
+            },
+            {
+                "sh_id": 314,
+                "played_at": 1576022773,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -761,8 +778,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 286,
-                "played_at": 1575920557,
+                "sh_id": 313,
+                "played_at": 1576013782,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -778,25 +795,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 285,
-                "played_at": 1575918308,
-                "duration": 0,
-                "playlist": "",
-                "is_request": false,
-                "song": {
-                    "id": "ab574fe34f592faf5c3f27dbc52088a4",
-                    "text": "AzuraCast.com - AzuraCast is Live!",
-                    "artist": "AzuraCast.com",
-                    "title": "AzuraCast is Live!",
-                    "album": "",
-                    "lyrics": "",
-                    "art": "http:\/\/35.240.185.246\/static\/img\/generic_song.jpg",
-                    "custom_fields": []
-                }
-            },
-            {
-                "sh_id": 284,
-                "played_at": 1575918313,
+                "sh_id": 312,
+                "played_at": 1576013786,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -812,8 +812,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 283,
-                "played_at": 1575909322,
+                "sh_id": 311,
+                "played_at": 1576004797,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -829,8 +829,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 282,
-                "played_at": 1575909327,
+                "sh_id": 310,
+                "played_at": 1576004800,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -846,8 +846,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 281,
-                "played_at": 1575900338,
+                "sh_id": 309,
+                "played_at": 1575993562,
                 "duration": 0,
                 "playlist": "",
                 "is_request": false,
@@ -863,8 +863,8 @@ fetch(url, {
                 }
             },
             {
-                "sh_id": 280,
-                "played_at": 1575900341,
+                "sh_id": 308,
+                "played_at": 1575993567,
                 "duration": 2247,
                 "playlist": "playlist kenh 1",
                 "is_request": false,
@@ -938,7 +938,7 @@ fetch(url, {
             "description": "Kênh phát 1",
             "frontend": "icecast",
             "backend": "liquidsoap",
-            "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953117",
+            "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062857",
             "is_public": true,
             "mounts": [
                 {
@@ -946,13 +946,13 @@ fetch(url, {
                     "is_default": true,
                     "id": 1,
                     "name": "128kbps MP3",
-                    "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953117",
+                    "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062857",
                     "bitrate": 128,
                     "format": "mp3",
                     "listeners": {
-                        "current": 1,
-                        "unique": 1,
-                        "total": 1
+                        "current": 0,
+                        "unique": 0,
+                        "total": 0
                     }
                 }
             ],
@@ -965,7 +965,7 @@ fetch(url, {
             "description": "Kenh 2",
             "frontend": "icecast",
             "backend": "liquidsoap",
-            "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575953117",
+            "listen_url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1576062857",
             "is_public": true,
             "mounts": [
                 {
@@ -973,7 +973,7 @@ fetch(url, {
                     "is_default": true,
                     "id": 2,
                     "name": "128kbps MP3",
-                    "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1575953117",
+                    "url": "http:\/\/35.240.185.246\/radio\/8010\/radio.mp3?1576062857",
                     "bitrate": 128,
                     "format": "mp3",
                     "listeners": {
@@ -1003,7 +1003,7 @@ fetch(url, {
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"$stationId":8}'
+    -d '{"$stationId":7}'
 
 ```
 
@@ -1016,7 +1016,7 @@ let headers = {
 }
 
 let body = {
-    "$stationId": 8
+    "$stationId": 7
 }
 
 fetch(url, {
@@ -1041,7 +1041,7 @@ fetch(url, {
         "description": "Kênh phát 1",
         "frontend": "icecast",
         "backend": "liquidsoap",
-        "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953117",
+        "listen_url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062857",
         "is_public": true,
         "mounts": [
             {
@@ -1049,13 +1049,13 @@ fetch(url, {
                 "is_default": true,
                 "id": 1,
                 "name": "128kbps MP3",
-                "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1575953117",
+                "url": "http:\/\/35.240.185.246\/radio\/8000\/radio.mp3?1576062857",
                 "bitrate": 128,
                 "format": "mp3",
                 "listeners": {
-                    "current": 1,
-                    "unique": 1,
-                    "total": 1
+                    "current": 0,
+                    "unique": 0,
+                    "total": 0
                 }
             }
         ],
@@ -1086,7 +1086,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/history" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":2}'
+    -d '{"stationId":4}'
 
 ```
 
@@ -1099,7 +1099,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 2
+    "stationId": 4
 }
 
 fetch(url, {
@@ -1142,7 +1142,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/listeners" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":20}'
+    -d '{"stationId":19}'
 
 ```
 
@@ -1155,7 +1155,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 20
+    "stationId": 19
 }
 
 fetch(url, {
@@ -1171,25 +1171,7 @@ fetch(url, {
 > Example response (200):
 
 ```json
-[
-    {
-        "ip": "117.2.0.112",
-        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/78.0.3904.108 Safari\/537.36",
-        "is_mobile": false,
-        "connected_on": 1575949982,
-        "connected_time": 3139,
-        "location": {
-            "status": "success",
-            "lat": 16,
-            "lon": 106,
-            "timezone": "Asia\/Ho_Chi_Minh",
-            "region": "",
-            "country": "Vietnam",
-            "city": "",
-            "message": "This product includes GeoLite2 data created by MaxMind, available from <a href=\"http:\/\/www.maxmind.com\">http:\/\/www.maxmind.com<\/a>."
-        }
-    }
-]
+[]
 ```
 
 ### HTTP Request
@@ -1304,7 +1286,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/playlist/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":16}'
+    -d '{"stationId":8}'
 
 ```
 
@@ -1317,7 +1299,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 16
+    "stationId": 8
 }
 
 fetch(url, {
@@ -1360,7 +1342,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/status" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":13}'
+    -d '{"stationId":3}'
 
 ```
 
@@ -1373,7 +1355,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 13
+    "stationId": 3
 }
 
 fetch(url, {
@@ -1414,7 +1396,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/restart" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":18}'
+    -d '{"stationId":9}'
 
 ```
 
@@ -1427,7 +1409,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 18
+    "stationId": 9
 }
 
 fetch(url, {
@@ -1465,7 +1447,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/frontend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":7,"action":"iure"}'
+    -d '{"stationId":20,"action":"atque"}'
 
 ```
 
@@ -1478,8 +1460,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 7,
-    "action": "iure"
+    "stationId": 20,
+    "action": "atque"
 }
 
 fetch(url, {
@@ -1520,7 +1502,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/backend/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":17,"action":"dolor"}'
+    -d '{"stationId":1,"action":"in"}'
 
 ```
 
@@ -1533,8 +1515,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 17,
-    "action": "dolor"
+    "stationId": 1,
+    "action": "in"
 }
 
 fetch(url, {
@@ -1578,7 +1560,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X GET -G "http://localhost:8000/api/station/1/requests" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":18,"requestId":18}'
+    -d '{"stationId":2,"requestId":18}'
 
 ```
 
@@ -1591,7 +1573,7 @@ let headers = {
 }
 
 let body = {
-    "stationId": 18,
+    "stationId": 2,
     "requestId": 18
 }
 
@@ -1633,7 +1615,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X POST "http://localhost:8000/api/station/1" \
     -H "Content-Type: application/json" \
-    -d '{"stationId":4,"requestId":4}'
+    -d '{"stationId":17,"requestId":20}'
 
 ```
 
@@ -1646,8 +1628,8 @@ let headers = {
 }
 
 let body = {
-    "stationId": 4,
-    "requestId": 4
+    "stationId": 17,
+    "requestId": 20
 }
 
 fetch(url, {
@@ -1684,7 +1666,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X POST "http://localhost:8000/api/auth/login" \
     -H "Content-Type: application/json" \
-    -d '{"email":"atque","password":"expedita"}'
+    -d '{"email":"aut","password":"corrupti"}'
 
 ```
 
@@ -1697,8 +1679,8 @@ let headers = {
 }
 
 let body = {
-    "email": "atque",
-    "password": "expedita"
+    "email": "aut",
+    "password": "corrupti"
 }
 
 fetch(url, {
@@ -1761,57 +1743,57 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Calendar 8",
-            "desc": "Vitae corporis quibusdam officiis voluptatem nihil.",
+            "name": "Calendar 68",
+            "desc": "Quidem quas voluptas unde impedit iste corporis mollitia.",
             "audio": null,
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "positions_id": 1,
-            "users_id": 2,
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "positions_id": 5,
+            "users_id": 1,
             "status": "pending"
         },
         {
             "id": 2,
-            "name": "Calendar 31",
-            "desc": "Tempora eum ipsum distinctio laborum.",
+            "name": "Calendar 20",
+            "desc": "Possimus doloribus et nesciunt commodi et optio mollitia.",
             "audio": null,
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "positions_id": 1,
-            "users_id": 5,
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "positions_id": 2,
+            "users_id": 3,
             "status": "pending"
         },
         {
             "id": 3,
-            "name": "Calendar 91",
-            "desc": "Doloremque dolores et est harum qui.",
+            "name": "Calendar 53",
+            "desc": "Cum rerum et omnis rem et placeat.",
             "audio": null,
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
             "positions_id": 5,
-            "users_id": 5,
+            "users_id": 4,
             "status": "pending"
         },
         {
             "id": 4,
-            "name": "Calendar 11",
-            "desc": "Ab ea blanditiis molestiae fugit.",
+            "name": "Calendar 3",
+            "desc": "Aspernatur et sit a et modi modi.",
             "audio": null,
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "positions_id": 3,
-            "users_id": 5,
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "positions_id": 4,
+            "users_id": 4,
             "status": "pending"
         },
         {
             "id": 5,
-            "name": "Calendar 94",
-            "desc": "Distinctio eligendi veritatis excepturi qui.",
+            "name": "Calendar 99",
+            "desc": "Nesciunt corrupti quo perspiciatis impedit nam ipsum.",
             "audio": null,
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "positions_id": 3,
-            "users_id": 1,
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "positions_id": 5,
+            "users_id": 4,
             "status": "pending"
         }
     ]
@@ -1872,7 +1854,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/calendars" \
     -H "Content-Type: application/json" \
-    -d '{"name":"ea","desc":"ut","audio":"sequi","time_from":"consectetur","time_to":"ea","positions_id":"libero","status":"dolorem"}'
+    -d '{"name":"corporis","desc":"exercitationem","audio":"fugit","time_from":"eveniet","time_to":"voluptatem","positions_id":"molestiae","status":"laborum"}'
 
 ```
 
@@ -1885,13 +1867,13 @@ let headers = {
 }
 
 let body = {
-    "name": "ea",
-    "desc": "ut",
-    "audio": "sequi",
-    "time_from": "consectetur",
-    "time_to": "ea",
-    "positions_id": "libero",
-    "status": "dolorem"
+    "name": "corporis",
+    "desc": "exercitationem",
+    "audio": "fugit",
+    "time_from": "eveniet",
+    "time_to": "voluptatem",
+    "positions_id": "molestiae",
+    "status": "laborum"
 }
 
 fetch(url, {
@@ -1930,7 +1912,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/calendars/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"nemo","desc":"eum","audio":"cum","time_from":"alias","time_to":"et","positions_id":"reiciendis","status":"quam"}'
+    -d '{"name":"corporis","desc":"aut","audio":"veniam","time_from":"non","time_to":"voluptatem","positions_id":"vel","status":"est"}'
 
 ```
 
@@ -1943,13 +1925,13 @@ let headers = {
 }
 
 let body = {
-    "name": "nemo",
-    "desc": "eum",
-    "audio": "cum",
-    "time_from": "alias",
-    "time_to": "et",
-    "positions_id": "reiciendis",
-    "status": "quam"
+    "name": "corporis",
+    "desc": "aut",
+    "audio": "veniam",
+    "time_from": "non",
+    "time_to": "voluptatem",
+    "positions_id": "vel",
+    "status": "est"
 }
 
 fetch(url, {
@@ -2050,57 +2032,57 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "code": "device-87",
-            "name": "Device 87",
-            "desc": "jacobi.myah@example.org",
-            "slug": 1,
-            "positions_id": 2,
-            "users_id": 1,
-            "groups_id": 2,
+            "code": "",
+            "name": "Device 29",
+            "desc": "lwisoky@example.net",
+            "slug": 2,
+            "positions_id": 5,
+            "users_id": 2,
+            "groups_id": 5,
             "status": "good"
         },
         {
             "id": 2,
-            "code": "device-40",
-            "name": "Device 40",
-            "desc": "joanny.zieme@example.net",
-            "slug": 2,
+            "code": "",
+            "name": "Device 71",
+            "desc": "streich.moriah@example.com",
+            "slug": 3,
             "positions_id": 4,
-            "users_id": 2,
+            "users_id": 3,
             "groups_id": 4,
             "status": "good"
         },
         {
             "id": 3,
-            "code": "device-33",
-            "name": "Device 33",
-            "desc": "egrady@example.com",
+            "code": "",
+            "name": "Device 74",
+            "desc": "ibosco@example.net",
             "slug": 4,
-            "positions_id": 1,
+            "positions_id": 5,
             "users_id": 4,
-            "groups_id": 1,
+            "groups_id": 5,
             "status": "good"
         },
         {
             "id": 4,
-            "code": "device-62",
-            "name": "Device 62",
-            "desc": "alarkin@example.org",
-            "slug": 4,
-            "positions_id": 4,
-            "users_id": 4,
-            "groups_id": 4,
+            "code": "",
+            "name": "Device 91",
+            "desc": "thea21@example.net",
+            "slug": 1,
+            "positions_id": 1,
+            "users_id": 1,
+            "groups_id": 1,
             "status": "good"
         },
         {
             "id": 5,
-            "code": "device-51",
-            "name": "Device 51",
-            "desc": "javon38@example.net",
-            "slug": 2,
-            "positions_id": 2,
-            "users_id": 2,
-            "groups_id": 2,
+            "code": "",
+            "name": "Device 73",
+            "desc": "elda93@example.net",
+            "slug": 5,
+            "positions_id": 1,
+            "users_id": 5,
+            "groups_id": 1,
             "status": "good"
         }
     ]
@@ -2146,13 +2128,13 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "code": "device-87",
-        "name": "Device 87",
-        "desc": "jacobi.myah@example.org",
-        "slug": 1,
-        "positions_id": 2,
-        "users_id": 1,
-        "groups_id": 2,
+        "code": "",
+        "name": "Device 29",
+        "desc": "lwisoky@example.net",
+        "slug": 2,
+        "positions_id": 5,
+        "users_id": 2,
+        "groups_id": 5,
         "status": "good"
     }
 }
@@ -2172,7 +2154,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/devices" \
     -H "Content-Type: application/json" \
-    -d '{"code":"possimus","name":"tempore","desc":"possimus","positions_id":11,"users_id":20,"groups_id":2}'
+    -d '{"code":"omnis","name":"omnis","desc":"non","positions_id":13,"users_id":12,"groups_id":19}'
 
 ```
 
@@ -2185,12 +2167,12 @@ let headers = {
 }
 
 let body = {
-    "code": "possimus",
-    "name": "tempore",
-    "desc": "possimus",
-    "positions_id": 11,
-    "users_id": 20,
-    "groups_id": 2
+    "code": "omnis",
+    "name": "omnis",
+    "desc": "non",
+    "positions_id": 13,
+    "users_id": 12,
+    "groups_id": 19
 }
 
 fetch(url, {
@@ -2228,7 +2210,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/devices/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"ut","code":"sit","name":"quae","desc":"aliquid","groups_id":17}'
+    -d '{"parent_id":"iste","code":"officia","name":"debitis","desc":"occaecati","groups_id":10}'
 
 ```
 
@@ -2241,11 +2223,11 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "ut",
-    "code": "sit",
-    "name": "quae",
-    "desc": "aliquid",
-    "groups_id": 17
+    "parent_id": "iste",
+    "code": "officia",
+    "name": "debitis",
+    "desc": "occaecati",
+    "groups_id": 10
 }
 
 fetch(url, {
@@ -2335,7 +2317,7 @@ fetch(url, {
 ```
 
 
-> Example response:
+> Example response (200):
 
 ```json
 null
@@ -2384,36 +2366,36 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Group 71",
-            "desc": "Dignissimos aut assumenda soluta exercitationem quis autem.",
+            "name": "Group 58",
+            "desc": "Magnam illum aut harum earum totam sit.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 2,
-            "name": "Group 44",
-            "desc": "Nihil voluptate porro exercitationem odit ipsam sunt corrupti.",
+            "name": "Group 54",
+            "desc": "Qui enim sunt tempora molestiae at vero.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 3,
-            "name": "Group 39",
-            "desc": "Accusamus accusamus fugit dicta eos dicta soluta.",
+            "name": "Group 19",
+            "desc": "Corrupti in voluptatem facilis nesciunt.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 4,
-            "name": "Group 99",
-            "desc": "Animi ut quia odio omnis rem.",
+            "name": "Group 51",
+            "desc": "Qui sit expedita quam aut facilis ut.",
             "slug": null,
             "type": "vip"
         },
         {
             "id": 5,
-            "name": "Group 18",
-            "desc": "Aut et illum laudantium sit laudantium porro non.",
+            "name": "Group 20",
+            "desc": "Esse culpa ut aspernatur consequatur.",
             "slug": null,
             "type": "vip"
         }
@@ -2460,8 +2442,8 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Group 71",
-        "desc": "Dignissimos aut assumenda soluta exercitationem quis autem.",
+        "name": "Group 58",
+        "desc": "Magnam illum aut harum earum totam sit.",
         "slug": null,
         "type": "vip"
     }
@@ -2482,7 +2464,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/groups" \
     -H "Content-Type: application/json" \
-    -d '{"name":"iure","desc":"nobis","type":"officiis"}'
+    -d '{"name":"et","desc":"optio","type":"possimus"}'
 
 ```
 
@@ -2495,9 +2477,9 @@ let headers = {
 }
 
 let body = {
-    "name": "iure",
-    "desc": "nobis",
-    "type": "officiis"
+    "name": "et",
+    "desc": "optio",
+    "type": "possimus"
 }
 
 fetch(url, {
@@ -2532,7 +2514,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/groups/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"hic","desc":"quia","type":"nihil"}'
+    -d '{"name":"accusantium","desc":"praesentium","type":"quam"}'
 
 ```
 
@@ -2545,9 +2527,9 @@ let headers = {
 }
 
 let body = {
-    "name": "hic",
-    "desc": "quia",
-    "type": "nihil"
+    "name": "accusantium",
+    "desc": "praesentium",
+    "type": "quam"
 }
 
 fetch(url, {
@@ -2680,11 +2662,65 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "status_code": 200,
+    "is_error": false,
+    "message": "",
+    "data": {
+        "results": [
+            {
+                "id": 1,
+                "parent_id": 0,
+                "name": "Nhà D2",
+                "desc": "Nhà D2 - Cơ sở 1",
+                "users_id": 1,
+                "groups_id": 5,
+                "station_id": 0
+            },
+            {
+                "id": 2,
+                "parent_id": 1,
+                "name": "Tầng 4",
+                "desc": "Quia cupiditate non nihil vitae illum natus quia.",
+                "users_id": 5,
+                "groups_id": 3,
+                "station_id": 0
+            },
+            {
+                "id": 3,
+                "parent_id": 1,
+                "name": "Position 100",
+                "desc": "Et pariatur dolores eaque non et sit adipisci.",
+                "users_id": 2,
+                "groups_id": 3,
+                "station_id": 0
+            },
+            {
+                "id": 4,
+                "parent_id": 1,
+                "name": "Position 39",
+                "desc": "Cum ut dolorem architecto odio sint.",
+                "users_id": 4,
+                "groups_id": 2,
+                "station_id": 0
+            },
+            {
+                "id": 5,
+                "parent_id": 1,
+                "name": "Position 15",
+                "desc": "Laudantium necessitatibus aperiam nobis molestiae harum.",
+                "users_id": 4,
+                "groups_id": 2,
+                "station_id": 0
+            }
+        ],
+        "count": 11,
+        "next": "http:\/\/localhost\/api\/positions?page=2",
+        "previous": null
+    }
 }
 ```
 
@@ -2727,48 +2763,102 @@ fetch(url, {
     "code": 200,
     "data": [
         {
-            "id": 1,
-            "parent_id": 1,
-            "name": "adsff",
-            "desc": "est",
-            "users_id": 4,
+            "id": 11,
+            "parent_id": 6,
+            "name": "Phòng D301",
+            "desc": "Phòng D301 - T3 - Cơ sở 1",
+            "users_id": 1,
             "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 10,
+            "parent_id": 1,
+            "name": "Phòng D201",
+            "desc": "Phòng D201",
+            "users_id": 1,
+            "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 9,
+            "parent_id": 0,
+            "name": "Nhà D1",
+            "desc": "Nhà D1 - Cơ sở 1",
+            "users_id": 1,
+            "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 8,
+            "parent_id": 7,
+            "name": "Nhập tên 1",
+            "desc": "Nhập mô tả ngắn",
+            "users_id": 1,
+            "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 7,
+            "parent_id": 6,
+            "name": "Hành Lang",
+            "desc": "Nhập mô tả ngắn",
+            "users_id": 1,
+            "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 6,
+            "parent_id": 1,
+            "name": "Phòng D202",
+            "desc": "Phòng D202",
+            "users_id": 1,
+            "groups_id": 1,
+            "station_id": 0
+        },
+        {
+            "id": 1,
+            "parent_id": 0,
+            "name": "Nhà D2",
+            "desc": "Nhà D2 - Cơ sở 1",
+            "users_id": 1,
+            "groups_id": 5,
             "station_id": 0
         },
         {
             "id": 2,
             "parent_id": 1,
-            "name": "Position 72",
-            "desc": "Et pariatur quas necessitatibus et et sint et.",
-            "users_id": 4,
-            "groups_id": 5,
+            "name": "Tầng 4",
+            "desc": "Quia cupiditate non nihil vitae illum natus quia.",
+            "users_id": 5,
+            "groups_id": 3,
             "station_id": 0
         },
         {
             "id": 3,
             "parent_id": 1,
-            "name": "Position 94",
-            "desc": "Non accusamus fugiat reprehenderit aut.",
-            "users_id": 1,
-            "groups_id": 2,
+            "name": "Position 100",
+            "desc": "Et pariatur dolores eaque non et sit adipisci.",
+            "users_id": 2,
+            "groups_id": 3,
             "station_id": 0
         },
         {
             "id": 4,
             "parent_id": 1,
-            "name": "Position 61",
-            "desc": "Expedita eaque sunt qui error aut.",
-            "users_id": 1,
+            "name": "Position 39",
+            "desc": "Cum ut dolorem architecto odio sint.",
+            "users_id": 4,
             "groups_id": 2,
             "station_id": 0
         },
         {
             "id": 5,
             "parent_id": 1,
-            "name": "Position 95",
-            "desc": "Deleniti sunt ex esse dolorem at ut unde.",
-            "users_id": 1,
-            "groups_id": 5,
+            "name": "Position 15",
+            "desc": "Laudantium necessitatibus aperiam nobis molestiae harum.",
+            "users_id": 4,
+            "groups_id": 2,
             "station_id": 0
         }
     ]
@@ -2807,11 +2897,22 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Server Error"
+    "status_code": 200,
+    "is_error": false,
+    "message": "",
+    "data": {
+        "id": 1,
+        "parent_id": 0,
+        "name": "Nhà D2",
+        "desc": "Nhà D2 - Cơ sở 1",
+        "users_id": 1,
+        "groups_id": 5,
+        "station_id": 0
+    }
 }
 ```
 
@@ -2829,7 +2930,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/positions" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"cupiditate","name":"voluptates","desc":"omnis","groups_id":10}'
+    -d '{"parent_id":"culpa","name":"quaerat","desc":"et","groups_id":13}'
 
 ```
 
@@ -2842,10 +2943,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "cupiditate",
-    "name": "voluptates",
-    "desc": "omnis",
-    "groups_id": 10
+    "parent_id": "culpa",
+    "name": "quaerat",
+    "desc": "et",
+    "groups_id": 13
 }
 
 fetch(url, {
@@ -2881,7 +2982,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/positions/1" \
     -H "Content-Type: application/json" \
-    -d '{"parent_id":"est","name":"ipsum","desc":"eligendi","groups_id":12}'
+    -d '{"parent_id":"omnis","name":"qui","desc":"quos","groups_id":3}'
 
 ```
 
@@ -2894,10 +2995,10 @@ let headers = {
 }
 
 let body = {
-    "parent_id": "est",
-    "name": "ipsum",
-    "desc": "eligendi",
-    "groups_id": 12
+    "parent_id": "omnis",
+    "name": "qui",
+    "desc": "quos",
+    "groups_id": 3
 }
 
 fetch(url, {
@@ -2991,14 +3092,24 @@ fetch(url, {
     "code": 200,
     "data": [
         {
-            "id": 3,
-            "name": "Device 33",
-            "desc": "egrady@example.com",
+            "id": 4,
+            "name": "Device 91",
+            "desc": "thea21@example.net",
             "positions_id": 1,
-            "users_id": 4,
+            "users_id": 1,
             "groups_id": 1,
             "status": "good",
-            "code": "device-33"
+            "code": ""
+        },
+        {
+            "id": 5,
+            "name": "Device 73",
+            "desc": "elda93@example.net",
+            "positions_id": 1,
+            "users_id": 5,
+            "groups_id": 1,
+            "status": "good",
+            "code": ""
         }
     ]
 }
@@ -3101,7 +3212,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/siteinfos" \
     -H "Content-Type: application/json" \
-    -d '{"name":"fuga","desc":"magni","url":"dolores"}'
+    -d '{"name":"expedita","desc":"quos","url":"enim"}'
 
 ```
 
@@ -3114,9 +3225,9 @@ let headers = {
 }
 
 let body = {
-    "name": "fuga",
-    "desc": "magni",
-    "url": "dolores"
+    "name": "expedita",
+    "desc": "quos",
+    "url": "enim"
 }
 
 fetch(url, {
@@ -3151,7 +3262,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/siteinfos/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"doloremque","desc":"eaque","url":"et"}'
+    -d '{"name":"sequi","desc":"et","url":"qui"}'
 
 ```
 
@@ -3164,9 +3275,9 @@ let headers = {
 }
 
 let body = {
-    "name": "doloremque",
-    "desc": "eaque",
-    "url": "et"
+    "name": "sequi",
+    "desc": "et",
+    "url": "qui"
 }
 
 fetch(url, {
@@ -3263,53 +3374,53 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Task 17",
-            "desc": "Eos velit eveniet laborum nemo voluptate omnis nam libero.",
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "status": 3,
-            "users_id": 3,
-            "troubles_id": 5
+            "name": "Task 54",
+            "desc": "Laudantium qui et repellendus est.",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "status": 4,
+            "users_id": 4,
+            "troubles_id": 1
         },
         {
             "id": 2,
-            "name": "Task 64",
-            "desc": "Vitae quisquam et nam consequatur libero.",
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "status": 3,
-            "users_id": 3,
-            "troubles_id": 5
+            "name": "Task 97",
+            "desc": "Aut laborum ut officia et.",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "status": 5,
+            "users_id": 5,
+            "troubles_id": 4
         },
         {
             "id": 3,
-            "name": "Task 35",
-            "desc": "Et dolore eos ex aut delectus.",
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "status": 2,
-            "users_id": 2,
-            "troubles_id": 5
+            "name": "Task 80",
+            "desc": "Debitis facere officia porro ex nobis vel sunt.",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "status": 4,
+            "users_id": 4,
+            "troubles_id": 1
         },
         {
             "id": 4,
-            "name": "Task 63",
-            "desc": "Delectus quidem voluptates qui voluptatibus aut dolores.",
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "status": 2,
-            "users_id": 2,
-            "troubles_id": 2
+            "name": "Task 30",
+            "desc": "Exercitationem eum minus qui possimus maxime eligendi error.",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "status": 3,
+            "users_id": 3,
+            "troubles_id": 3
         },
         {
             "id": 5,
-            "name": "Task 85",
-            "desc": "Explicabo illum assumenda laudantium repudiandae distinctio.",
-            "time_from": "2019-12-07 03:48:07",
-            "time_to": "2019-12-07 03:48:07",
-            "status": 5,
-            "users_id": 5,
-            "troubles_id": 2
+            "name": "Task 6",
+            "desc": "Asperiores culpa distinctio nesciunt odio eveniet voluptatem ut.",
+            "time_from": "2019-10-25 06:10:03",
+            "time_to": "2019-10-25 06:10:03",
+            "status": 4,
+            "users_id": 4,
+            "troubles_id": 5
         }
     ]
 }
@@ -3354,13 +3465,13 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Task 17",
-        "desc": "Eos velit eveniet laborum nemo voluptate omnis nam libero.",
-        "time_from": "2019-12-07 03:48:07",
-        "time_to": "2019-12-07 03:48:07",
-        "status": 3,
-        "users_id": 3,
-        "troubles_id": 5
+        "name": "Task 54",
+        "desc": "Laudantium qui et repellendus est.",
+        "time_from": "2019-10-25 06:10:03",
+        "time_to": "2019-10-25 06:10:03",
+        "status": 4,
+        "users_id": 4,
+        "troubles_id": 1
     }
 }
 ```
@@ -3379,7 +3490,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/tasks" \
     -H "Content-Type: application/json" \
-    -d '{"name":"ipsum","desc":"error","time_from":"fugit","time_to":12,"status":"aspernatur","users_id":2,"troubles_id":12}'
+    -d '{"name":"provident","desc":"consectetur","time_from":"ipsa","time_to":18,"status":"omnis","users_id":18,"troubles_id":19}'
 
 ```
 
@@ -3392,13 +3503,13 @@ let headers = {
 }
 
 let body = {
-    "name": "ipsum",
-    "desc": "error",
-    "time_from": "fugit",
-    "time_to": 12,
-    "status": "aspernatur",
-    "users_id": 2,
-    "troubles_id": 12
+    "name": "provident",
+    "desc": "consectetur",
+    "time_from": "ipsa",
+    "time_to": 18,
+    "status": "omnis",
+    "users_id": 18,
+    "troubles_id": 19
 }
 
 fetch(url, {
@@ -3437,7 +3548,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/tasks/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"modi","desc":"harum","time_from":"laboriosam","time_to":20,"status":"reiciendis","users_id":20,"troubles_id":9}'
+    -d '{"name":"quod","desc":"odio","time_from":"enim","time_to":10,"status":"optio","users_id":8,"troubles_id":11}'
 
 ```
 
@@ -3450,13 +3561,13 @@ let headers = {
 }
 
 let body = {
-    "name": "modi",
-    "desc": "harum",
-    "time_from": "laboriosam",
-    "time_to": 20,
-    "status": "reiciendis",
-    "users_id": 20,
-    "troubles_id": 9
+    "name": "quod",
+    "desc": "odio",
+    "time_from": "enim",
+    "time_to": 10,
+    "status": "optio",
+    "users_id": 8,
+    "troubles_id": 11
 }
 
 fetch(url, {
@@ -3557,33 +3668,33 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Trouble 22",
-            "desc": "sabryna.damore@example.org",
-            "devices_id": 2
+            "name": "Trouble 67",
+            "desc": "connie.luettgen@example.net",
+            "devices_id": 5
         },
         {
             "id": 2,
-            "name": "Trouble 64",
-            "desc": "brandon24@example.net",
-            "devices_id": 1
-        },
-        {
-            "id": 3,
-            "name": "Trouble 93",
-            "desc": "chelsey01@example.org",
-            "devices_id": 4
-        },
-        {
-            "id": 4,
-            "name": "Trouble 49",
-            "desc": "rodrick71@example.com",
+            "name": "Trouble 29",
+            "desc": "paula75@example.com",
             "devices_id": 2
         },
         {
-            "id": 5,
-            "name": "Trouble 86",
-            "desc": "kareem.crona@example.net",
+            "id": 3,
+            "name": "Trouble 78",
+            "desc": "wpouros@example.org",
+            "devices_id": 2
+        },
+        {
+            "id": 4,
+            "name": "Trouble 81",
+            "desc": "gfeest@example.com",
             "devices_id": 5
+        },
+        {
+            "id": 5,
+            "name": "Trouble 35",
+            "desc": "barton.colten@example.net",
+            "devices_id": 3
         }
     ]
 }
@@ -3628,9 +3739,9 @@ fetch(url, {
     "code": 200,
     "data": {
         "id": 1,
-        "name": "Trouble 22",
-        "desc": "sabryna.damore@example.org",
-        "devices_id": 2
+        "name": "Trouble 67",
+        "desc": "connie.luettgen@example.net",
+        "devices_id": 5
     }
 }
 ```
@@ -3649,7 +3760,7 @@ fetch(url, {
 ```bash
 curl -X POST "http://localhost:8000/api/troubles" \
     -H "Content-Type: application/json" \
-    -d '{"name":"nam","desc":"similique","devices_id":7}'
+    -d '{"name":"est","desc":"et","devices_id":19}'
 
 ```
 
@@ -3662,9 +3773,9 @@ let headers = {
 }
 
 let body = {
-    "name": "nam",
-    "desc": "similique",
-    "devices_id": 7
+    "name": "est",
+    "desc": "et",
+    "devices_id": 19
 }
 
 fetch(url, {
@@ -3699,7 +3810,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/troubles/1" \
     -H "Content-Type: application/json" \
-    -d '{"name":"qui","desc":"porro","devices_id":5}'
+    -d '{"name":"temporibus","desc":"ut","devices_id":2}'
 
 ```
 
@@ -3712,9 +3823,9 @@ let headers = {
 }
 
 let body = {
-    "name": "qui",
-    "desc": "porro",
-    "devices_id": 5
+    "name": "temporibus",
+    "desc": "ut",
+    "devices_id": 2
 }
 
 fetch(url, {
@@ -3786,7 +3897,7 @@ APIs for managing users
 ```bash
 curl -X POST "http://localhost:8000/api/user/register" \
     -H "Content-Type: application/json" \
-    -d '{"name":"fugiat","email":"ratione","password":"ipsum"}'
+    -d '{"name":"sapiente","email":"quis","password":"cupiditate"}'
 
 ```
 
@@ -3799,9 +3910,9 @@ let headers = {
 }
 
 let body = {
-    "name": "fugiat",
-    "email": "ratione",
-    "password": "ipsum"
+    "name": "sapiente",
+    "email": "quis",
+    "password": "cupiditate"
 }
 
 fetch(url, {
@@ -3836,7 +3947,7 @@ Parameter | Type | Status | Description
 ```bash
 curl -X PUT "http://localhost:8000/api/user/me" \
     -H "Content-Type: application/json" \
-    -d '{"name":"enim","birthday":"sed","job":"rerum"}'
+    -d '{"name":"dicta","birthday":"corrupti","job":"cumque"}'
 
 ```
 
@@ -3849,9 +3960,9 @@ let headers = {
 }
 
 let body = {
-    "name": "enim",
-    "birthday": "sed",
-    "job": "rerum"
+    "name": "dicta",
+    "birthday": "corrupti",
+    "job": "cumque"
 }
 
 fetch(url, {

@@ -30,7 +30,7 @@
 }
 
 .modal-header{
-    background-color: #33b5e5;
+    background-color: #21211F;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     border: 0;
     padding: 1rem;
@@ -38,7 +38,6 @@
 .modal-header button{
     padding: 0;
     background-color: transparent;
-    font-size: 1.5em;
     border: none;
     outline: none;
 }
@@ -50,6 +49,7 @@
     color: #fff;
     font-size: 1.15rem;
     font-weight: 100;
+    margin-bottom: 0;
 }
 
 .modal-body {
@@ -98,12 +98,15 @@
 <script>
 import EditPosition from '@/js/pages/dashboard/position/FormEdit'
 import AddDevice from '@/js/components/global/modal/AddDevice'
+import SelectDevice from '@/js/components/global/modal/SelectDevice'
+
 
 
 export default {
     components: {
         EditPosition,
         AddDevice,
+        SelectDevice
     },
     props: {
         textSubmit: String,

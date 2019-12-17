@@ -3,19 +3,29 @@
     <ul class="tree-list root">
           <node-tree class="node-tree" :treeData="filterTreeData" :model="model" @setShowModal="setShowModal" ></node-tree>
     </ul>
-    <div class="node-info p-3">
-      {{position.name}}
-      <div v-for="device in devices" :key="device.id">
-          {{device.name}}
+    <div class="node-info" v-if="position.name">
+      <h4 class="text-center py-3 text-uppercase border-bottom">Thông tin địa điểm</h4>
+      <div  class="name px-3 py-1">Tên: {{position.name}}</div>
+      <div class="px-3" v-if="devicesOfPosition.length">
+        <div class="">Danh sách thiết bị:</div>
+
+        <div class="device p-2" v-for="device in devicesOfPosition" :key="device.id" >
+              <cpu-icon size="1.5x" class="custom-class"></cpu-icon>{{device.name}}
+        </div>
+      </div>
+      <div v-else class="px-3">Không có thiết bị.</div>
+      <div class="text-center p-3">
+        <button class="btn btn-primary" @click="addDevice(position.id)">Thêm Thiết bị</button>
       </div>
     </div>
-    <modal v-if="showModal" @close="showModal = false" @submit="updatePosition"></modal>
+    <modal v-if="showModal" @close="showModal = false" @submit="submitModal"></modal>
  </div>
 </template>
 
 <script>
 import NodeTree from "@/js/components/global/treeView/TreeItem"
 import Modal from "@/js/components/global/modal/Modal"
+import { CpuIcon } from 'vue-feather-icons'
 
 export default {
     props: {
@@ -23,7 +33,8 @@ export default {
     },
     components: {
       NodeTree,
-      Modal
+      Modal,
+      CpuIcon
     },
     data() {
         return {
@@ -31,7 +42,12 @@ export default {
         }
     },
     methods: {
-      setShowModal: function(show) {
+      addDevice: function(position_id = 0) {
+            this.$store.dispatch('makeModalComponent',{name: 'select-device', title: 'Thêm thiết bị', submit: 'Thêm'})
+            this.$store.dispatch('initDevice')
+            this.setShowModal(true);
+      },
+      setShowModal: function(show = true) {
          this.showModal = show
       },
       updatePosition: async function() {
@@ -49,6 +65,26 @@ export default {
            this.$store.dispatch('loadPositions')
         }
         this.showModal = false
+      },
+      updateDevice: async function() {
+        this.device
+        this.device.positions_id = this.position.id
+        if(this.device.id){
+          console.log(this.device )
+          await this.$store.dispatch('updateDevice',this.device)
+          this.$store.dispatch('loadDevicesOfPosition', this.position.id)
+        }
+        else{
+          await this.$store.dispatch('createDevice', data)
+        }
+        this.showModal = false
+      },
+      submitModal: function() {
+        if(this.modal == 'edit-position'){
+          this.updatePosition()
+        } else{
+          this.updateDevice()
+        }
       }
     },
     computed: {
@@ -58,11 +94,20 @@ export default {
       position: function() {
         return this.$store.getters.getPosition;
       },
+      modal() {
+        return this.$store.getters.getModalComponent;
+      },
       model() {
         return {id: 0, name: this.treeData.name}
       },
       devices: function() {
           return this.$store.getters.getDevices;
+      },
+      devicesOfPosition: function() {
+          return this.$store.getters.getDevicesOfPosition;
+      },
+      device: function() {
+          return this.$store.getters.getDevice;
       }
     },
     mounted() {
@@ -85,7 +130,6 @@ export default {
   font-size: 1.1em;
  
 }
-
 .tree-list ul {
     padding-left: em;
     margin: 6px 0;
@@ -127,15 +171,24 @@ export default {
   display: none;
   position: absolute;
   z-index: 100;
-  top: 7px;
-  right: 3px;
+  top: 10px;
+  right: -3px;
   padding: 1px 3px;
 }
 .tree-list .node-tree.item>div:hover>button{
   display: block;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
+.tree-list .node-tree.item>div>button:focus,
+.tree-list .node-tree.item>div>button:active,
 .tree-list .node-tree.item>div>button:hover{
   background-color: inherit;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 .tree-list .node-tree>div:hover{
   color: #0c5af7;
@@ -147,11 +200,18 @@ li.add-new:hover{
 }
 .node-info{
   position: absolute;
-  right:0;
+  right: -1em;
   width: 300px;
   top: -1em;
   height: calc( 100% + 2em);
   z-index: 1;
-  border-left: 1px solid #333;
+  border-left: 1px solid #ccc;
+  transition: all 0.5s linear;
+  background-color: #fff;
+  box-shadow: -5px 0 5px -5px #ccc;
+}
+.device:hover{
+  cursor: pointer;
+  color: #B3562F;
 }
 </style>

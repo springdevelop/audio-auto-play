@@ -14,6 +14,12 @@
                     Dashboard
                 </a>
             </router-link>
+            <router-link tag="li" class="nav-item" to="/dashboard/calendars">
+                <a class="nav-link" href="#">
+                    <calendar-icon size="1.5x" class="custom-class"></calendar-icon>
+                    Lịch phát
+                </a>
+            </router-link>
             <router-link tag="li" class="nav-item" to="/dashboard/positions">
                 <a class="nav-link" href="#">
                     <map-icon size="1.5x" class="custom-class"></map-icon>
@@ -22,7 +28,7 @@
             </router-link>
             <router-link tag="li" class="nav-item" to="/dashboard/devices">
                 <a class="nav-link" href="#">
-                    <map-icon size="1.5x" class="custom-class"></map-icon>
+                    <cpu-icon size="1.5x" class="custom-class"></cpu-icon>
                     Thiết bị
                 </a>
             </router-link>
@@ -38,19 +44,27 @@
                     Người dùng
                  </a>
             </router-link>
+             <router-link tag="li" class="nav-item border-top" to="/dashboard/users">
+                 <a class="nav-link" href="#">
+                    <settings-icon size="1.5x" class="custom-class"></settings-icon>
+                    Cài đặt
+                 </a>
+            </router-link>
         </ul>
     </div>
 </nav>
 </template>
 <script>
-import { CalendarIcon, MapIcon, HomeIcon, UserIcon, ActivityIcon } from 'vue-feather-icons'
+import { SettingsIcon, CalendarIcon, MapIcon, HomeIcon, UserIcon, ActivityIcon, CpuIcon } from 'vue-feather-icons'
 export default {
     components: {
         CalendarIcon,
+        SettingsIcon,
         MapIcon,
         HomeIcon,
         UserIcon,
-        ActivityIcon
+        ActivityIcon,
+        CpuIcon
     },
 }
 </script>
