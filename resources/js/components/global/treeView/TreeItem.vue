@@ -3,8 +3,8 @@
         <drag :class="{bold: isFolder, 'has-children': isFolder}">
             <span  @dblclick="toggle" @contextmenu="show" @click="loadItem(model.id)">{{model.name}}</span>
             <span @click="toggle" v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
-            <button @click="show" type="button" class="btn btn-outline-secondary btn-sm ml-1">
-                <more-horizontal-icon size="2x" class="custom-class  text-muted"></more-horizontal-icon>
+            <button @click="show" type="button" class="btn btn-sm">
+                <more-vertical-icon size="2x" class="custom-class text-muted"></more-vertical-icon>
             </button>
             <menu-item @deleteItem="deleteItem" @addDevice="addDevice" @editItem="editItem" @addChildPosition="addItem" v-if="showMenu" :id="model.id"></menu-item>
         </drag>
@@ -23,7 +23,7 @@
 
 <script>
 import MenuItem from "@/js/components/global/treeView/MenuItem"
-import { MoreHorizontalIcon, ChevronRightIcon, ChevronDownIcon} from 'vue-feather-icons'
+import { MoreVerticalIcon, ChevronRightIcon, ChevronDownIcon} from 'vue-feather-icons'
 import { Drag, Drop } from 'vue-drag-drop';
 
 export default {
@@ -32,7 +32,7 @@ export default {
         Drag,
         Drop,
         MenuItem,
-        MoreHorizontalIcon,
+        MoreVerticalIcon,
         ChevronRightIcon
     },
     props: {
@@ -82,7 +82,6 @@ export default {
                 }
                 localStorage.setItem('tree', JSON.stringify(state_tree));
             } else {
-                console.log(this.isFolder)
                 this.editItem(this.model.id)
             }
         },

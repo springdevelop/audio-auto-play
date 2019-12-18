@@ -15,6 +15,9 @@ export default {
             resolve(position)
         })
     },
+    initPositions({ commit }) {
+        commit('setPositions', [])
+    },
     loadPositions({ commit }) {
         return new Promise((resolve, reject) => {
             commit('setGetPositionsStatus', 1)
@@ -47,15 +50,15 @@ export default {
     },
     loadDevicesOfPosition({ commit }, id) {
         return new Promise((resolve, reject) => {
-            commit('setGetDevicesStatus', 1)
+            commit('getdevicesOfPositionStatus', 1)
             API.getDevices(id)
                 .then(resp => {
-                    commit('setDevices', resp.data.data)
-                    commit('setGetDevicesStatus', 2)
+                    commit('setDevicesOfPosition', resp.data.data)
+                    commit('getdevicesOfPositionStatus', 2)
                     resolve(resp)
                 })
                 .catch(err => {
-                    commit('setGetDevicesStatus', 3)
+                    commit('getdevicesOfPositionStatus', 3)
                     reject(err)
                 })
         })

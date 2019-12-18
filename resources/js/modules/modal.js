@@ -6,7 +6,6 @@
 */
 
 export const modal = {
-
     state: {
         modal_component: '',
         modal_title: '',

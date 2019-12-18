@@ -29,7 +29,7 @@ $factory->define(Position::class, function (Faker $faker) {
 
     return [
         'name' => $name,
-        'parent_id' => 1,
+        'parent_id' => 0,
         'desc' => $faker->sentence(),
         'users_id' => $userIds[0],
         'groups_id' => $groupIds[0],

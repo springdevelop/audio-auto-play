@@ -1,6 +1,8 @@
 <template>
 <div>
-    <full-calendar :events="events" @event-selected="eventSelected" :config="config"></full-calendar>
+    <div class="card p-3">
+        <full-calendar :events="events" @event-selected="eventSelected" :config="config"></full-calendar>
+    </div>
 </div>
 </template>
 <script>
@@ -26,8 +28,8 @@ export default {
                 },
                 {
                     title  : 'event2',
-                    start  : '01/11/2019',
-                    end    : '01/12/2019',
+                    start  : moment("20191217", "YYYYMMDD"),
+                    end    : moment("20191231", "YYYYMMDD"),
                 },
             ]
          }
@@ -36,8 +38,6 @@ export default {
        
     },
     created() {
-        // moment().locale('vi')
-        console.log(moment().locale())
     },
     methods: {
         eventSelected(event) {

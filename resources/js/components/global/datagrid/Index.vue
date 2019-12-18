@@ -12,7 +12,7 @@
           </span>        
           <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
         </th>
-        <th></th>
+        <th  v-if="hasColumnEdit" ></th>
       </tr>
     </thead>
     <tbody>
@@ -21,21 +21,33 @@
         <td v-for="key in columns" :key="key">
           {{entry[key]}}
         </td>
-        <td>
-          <button @click="$emit(editItem)" class="btn btn-primary btn-sm">sửa</button>
-          <button  @click="$emit(deleteItem)" class="btn btn-danger btn-sm">xoá</button>
+        <td v-if="hasColumnEdit">
+          <span v-if="hasEdit" @click="$emit('editItem',entry['id'])" class="btn btn-primary btn-sm">sửa</span>
+          <button v-if="hasDelete" @click="$emit('deleteItem')" class="btn btn-danger btn-sm">xoá</button>
         </td>
       </tr>
     </tbody>
   </table>
 </template>
 <script>
+import { runInContext } from 'vm'
 export default {
+    created() {
+       console.log(this.changeName);
+    },
     props: {
         lists: Array,
         columns: Array,
         nameColumns: Object,
-        filterKey: String
+        filterKey: String,
+        hasEdit: {
+          type: Boolean,
+          default: false,
+        },
+        hasDelete: {
+          type: Boolean,
+          default: false,
+        }
     },
     data: function () {
         var sortOrders = {}
@@ -48,6 +60,7 @@ export default {
         }
     },
     computed: {
+     
       filteredLists: function () {
         var sortKey = this.sortKey
         var filterKey = this.filterKey && this.filterKey.toLowerCase()
@@ -67,18 +80,22 @@ export default {
             })
         }
         return lists
-        }
+      },
+      hasColumnEdit: function () {
+        return this.hasEdit||this.hasDelete;
+      }
     },
     filters: {
         capitalize: function (str) {
-        return str.charAt(0).toUpperCase() + str.slice(1)
+          return str.charAt(0).toUpperCase() + str.slice(1)
         }
     },
     methods: {
         sortBy: function (key) {
-        this.sortKey = key
-        this.sortOrders[key] = this.sortOrders[key] * -1
-        }
+          this.sortKey = key
+          this.sortOrders[key] = this.sortOrders[key] * -1
+        },
+       
     }
 }
 </script>
@@ -103,7 +120,7 @@ td {
 }
 
 th, td {
-  min-width: 120px;
+  /* min-width: 120px; */
   padding: 10px 20px;
   border-top: 1px solid #ccc5b9;
 }

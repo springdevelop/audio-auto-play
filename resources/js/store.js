@@ -18,12 +18,14 @@ import { positions } from '@/js/modules/positions.js';
 import { devices } from '@/js/modules/devices.js';
 import { stations } from '@/js/modules/stations.js';
 import { modal } from '@/js/modules/modal.js';
+import { loading } from '@/js/modules/loading.js';
 
 export default new Vuex.Store({
     modules: {
         stations,
         positions,
         devices,
-        modal
+        modal,
+        loading
     }
 });
