@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import Web from '@/js/pages/web/Layout';
 import WebHome from '@/js/pages/web/Home';
 import Dashboard from '@/js/pages/dashboard/Layout';
-import DashboardHome from '@/js/pages/dashboard/Home';
+import Index from '@/js/pages/dashboard/index/Index';
 import Calendars from '@/js/pages/dashboard/Calendars';
 import IndexCalendars from '@/js/pages/dashboard/calendars/Index';
 import Users from '@/js/pages/dashboard/Users';
@@ -36,7 +36,7 @@ const router = new VueRouter({
             children: [{
                     path: '',
                     name: 'dashboard_home',
-                    component: DashboardHome,
+                    component: Index,
                     meta: {
                         title: 'Trang quản lý',
                     }
@@ -54,7 +54,7 @@ const router = new VueRouter({
                             }
                         }
                     ],
-                    
+
                 },
                 {
                     path: 'users',
