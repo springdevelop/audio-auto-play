@@ -12,6 +12,6 @@ class PositionsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Position::class, 20)->create();
+        factory(Position::class, 10)->create();
     }
 }
