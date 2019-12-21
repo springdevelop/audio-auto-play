@@ -22,7 +22,7 @@
     <!--Charts-->
     <div class="row">
 
-      <div class="col-12">
+      <!-- <div class="col-12">
         <chart-card title="Users behavior"
                     sub-title="24 Hours performance"
                     :chart-data="usersChart.data"
@@ -36,34 +36,33 @@
             <i class="fa fa-circle text-warning"></i> Click Second Time
           </div>
         </chart-card>
-      </div>
+      </div> -->
 
       <div class="col-md-6 col-12">
-        <chart-card title="Email Statistics"
-                    sub-title="Last campaign performance"
+        <chart-card title="Thời gian phát"
+                    sub-title="Thống kê thời gian phát trong ngày (ngày/đêm)"
                     :chart-data="preferencesChart.data"
                     chart-type="Pie">
           <span slot="footer">
-            <i class="ti-timer"></i> Campaign set 2 days ago</span>
+            <i class="ti-timer"></i> Thời gian 1 ngày</span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Bounce
-            <i class="fa fa-circle text-warning"></i> Unsubscribe
+            <i class="fa fa-circle text-info"></i> Ngày
+            <i class="fa fa-circle text-warning"></i> Đêm
           </div>
         </chart-card>
       </div>
 
       <div class="col-md-6 col-12">
-        <chart-card title="2015 Sales"
-                    sub-title="All products including Taxes"
+        <chart-card title="Thống kê theo tuần"
+                    sub-title="Thống kê thời gian phát theo tuần (ngày/đêm)"
                     :chart-data="activityChart.data"
                     :chart-options="activityChart.options">
           <span slot="footer">
-            <i class="ti-check"></i> Data information certified
+            <i class="ti-timer"></i> Thời gian 1 tuần
           </span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Tesla Model S
-            <i class="fa fa-circle text-warning"></i> BMW 5 Series
+            <i class="fa fa-circle text-info"></i> Ngày
+            <i class="fa fa-circle text-warning"></i> Đêm
           </div>
         </chart-card>
       </div>
@@ -89,33 +88,33 @@ export default {
       statsCards: [
         {
           type: "warning",
-          icon: "ti-server",
-          title: "Capacity",
-          value: "105GB",
+          icon: "ti-location-pin",
+          title: "Địa điểm",
+          value: "20",
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
         {
           type: "success",
-          icon: "ti-wallet",
-          title: "Revenue",
-          value: "$1,345",
-          footerText: "Last day",
-          footerIcon: "ti-calendar"
+          icon: "ti-volume",
+          title: "Thiết bị",
+          value: "150",
+          footerText: "Updated now",
+          footerIcon: "ti-reload"
         },
         {
           type: "danger",
           icon: "ti-pulse",
-          title: "Errors",
-          value: "23",
-          footerText: "In the last hour",
-          footerIcon: "ti-timer"
+          title: "Kênh phát",
+          value: "2",
+          footerText: "Updated now",
+          footerIcon: "ti-reload"
         },
         {
           type: "info",
-          icon: "ti-twitter-alt",
-          title: "Followers",
-          value: "+45",
+          icon: "ti-user",
+          title: "Người quản lý",
+          value: "5",
           footerText: "Updated now",
           footerIcon: "ti-reload"
         }
@@ -170,8 +169,8 @@ export default {
             "Dec"
           ],
           series: [
-            [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
-            [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
+            [54, 54, 52, 68, 65, 75, 32, 43, 56, 61, 75, 89],
+            [23, 29, 38, 48, 50, 55, 60, 66, 69, 71, 73, 79]
           ]
         },
         options: {
@@ -184,8 +183,8 @@ export default {
       },
       preferencesChart: {
         data: {
-          labels: ["62%", "32%", "6%"],
-          series: [62, 32, 6]
+          labels: ["62%", "38%"],
+          series: [62, 38]
         },
         options: {}
       }
