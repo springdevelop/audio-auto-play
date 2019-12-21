@@ -1,7 +1,8 @@
 <template>
     <li @drop="handleDrop" class="node-tree" :class="{open: open}" @mouseleave="showMenu=false">
         <drag :class="{bold: isFolder, 'has-children': isFolder}">
-            <span  @dblclick="toggle" @contextmenu="show" @click="loadItem(model.id)">{{model.name}}</span>
+            <span  @dblclick="toggle" @contextmenu="show" @click="loadItem(model.id)">
+                {{model.name}}</span>
             <span @click="toggle" v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
             <button @click="show" type="button" class="btn btn-sm">
                 <more-vertical-icon size="2x" class="custom-class text-muted"></more-vertical-icon>
@@ -23,7 +24,7 @@
 
 <script>
 import MenuItem from "@/js/components/global/treeView/MenuItem"
-import { MoreVerticalIcon, ChevronRightIcon, ChevronDownIcon} from 'vue-feather-icons'
+import { MapIcon, MoreVerticalIcon, ChevronRightIcon, ChevronDownIcon} from 'vue-feather-icons'
 import { Drag, Drop } from 'vue-drag-drop';
 
 export default {
@@ -31,6 +32,7 @@ export default {
     components: {
         Drag,
         Drop,
+        MapIcon,
         MenuItem,
         MoreVerticalIcon,
         ChevronRightIcon

@@ -146,7 +146,7 @@ export default {
     width: max-content;
 }
 .tree-list .node-tree.item>div{
-    padding: 7px 40px 0 25px;
+    padding: 7px 40px 0 40px;
 }
 .tree-list .node-tree.item>div::after {
   position: absolute;
@@ -157,6 +157,15 @@ export default {
   left: 0px;
   top: 60%;
 }
+.tree-list .node-tree>div::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 100;
+  font-size: 1em;
+  margin-right: 3px;
+  content: "\f1ad";
+  left: 20px;
+}
 .tree-list>.node-tree>div::before {
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -164,7 +173,6 @@ export default {
   font-size: 1em;
   margin-right: 3px;
   content: "\f015";
-  left: -1.5em;
   left: 0;
 }
 .tree-list .node-tree>div> button{

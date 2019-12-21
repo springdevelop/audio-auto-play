@@ -44,7 +44,7 @@
                     Người dùng
                  </a>
             </router-link>
-             <router-link tag="li" class="nav-item border-top" to="/dashboard/users">
+             <router-link tag="li" class="nav-item border-top" to="/dashboard/settings">
                  <a class="nav-link" href="#">
                     <settings-icon size="1.5x" class="custom-class"></settings-icon>
                     Cài đặt

@@ -3,14 +3,20 @@
     <h2 class="text-uppercase">{{pageTitle}}</h2>
     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Tìm kiếm" aria-label="Tìm kiếm"> -->
     <ul class="navbar-nav px-3 ml-auto">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" href="">Đăng xuất</a>
-        </li>
+          <router-link tag="li" class="nav-item" to="/">
+            <a class="nav-link" href="">
+                 <log-out-icon size="1.5x" class="custom-class"></log-out-icon>Đăng xuất
+            </a>
+            </router-link>
     </ul>
 </nav>
 </template>
 <script>
+import { LogOutIcon } from 'vue-feather-icons'
 export default {
+    components: {
+        LogOutIcon
+    },
     computed: {
         pageTitle() {
             return (this.$route.meta.title);
