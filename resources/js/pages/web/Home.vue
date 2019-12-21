@@ -48,7 +48,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <a href="" id="login-button" class="btn btn-lg btn-primary col-md-12">Đăng nhập</a>
+                                <router-link tag="a" class="btn btn-lg btn-primary col-md-12" to="/dashboard" id="login-button">Đăng nhập
+                                </router-link>
                             </form>
                         </div>
                     </div>

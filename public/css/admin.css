@@ -10657,7 +10657,8 @@ body > div {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.8em !important;
+  margin: 0 !important;
   font-weight: 600;
 }
 
