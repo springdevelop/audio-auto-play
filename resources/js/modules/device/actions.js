@@ -43,7 +43,6 @@ export default {
             commit('setGetDeviceStatus', 1)
             API.show(id)
                 .then(resp => {
-                    console.log(resp)
                     commit('setDevice', resp.data.data)
                     commit('setGetDeviceStatus', 2)
                     resolve(resp)
