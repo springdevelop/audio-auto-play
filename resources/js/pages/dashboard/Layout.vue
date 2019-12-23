@@ -36,7 +36,7 @@
         beforeUpdate() {
             setTimeout(() => {
                 this.$store.dispatch('makeLoading', false)
-            }, 1000)
+            }, 500)
            
         }
     }

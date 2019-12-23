@@ -1,6 +1,6 @@
 <template>
-   <form class="" >
-        <div class="form-group row">
+   <form class="">
+        <div class="form-group row d-none">
             <label for="id" class="col-sm-3 col-form-label">Id</label>
             <div class="col-sm-9">
                 <input v-model="device.id" type="text" class="form-control" id="id" name="id">
@@ -9,7 +9,7 @@
          <div class="form-group row">
             <label for="id" class="col-sm-3 col-form-label">Mã thiết bị</label>
             <div class="col-sm-9">
-                <input v-model="device.code" type="text" class="form-control" id="code" name="code">
+                <input required v-model="device.code" type="text" class="form-control" id="code" name="code">
             </div>
         </div>
         <div class="form-group row">
@@ -55,6 +55,9 @@ export default {
         idAndName (item) {
             return `${item.id} - ${item.name}`
         },
+        checkForm (){
+            alert()
+        }
     },
     computed: {
         device: function() {
