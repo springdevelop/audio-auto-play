@@ -7,6 +7,9 @@
 import API from '@/js/api/stations.js';
 
 export default {
+    initStation({ commit }) {
+        commit('setStation', {})
+    },
     loadStations({ commit }) {
         return new Promise((resolve, reject) => {
             commit('setGetStationsStatus', 1)

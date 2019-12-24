@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/docs
+/public/js
 /config/azuracast.php
 /storage/*.key
 /vendor

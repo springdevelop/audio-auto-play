@@ -5,18 +5,22 @@
     </ul>
     <div class="node-info" v-if="position.name">
       <h4 class="text-center py-3 text-uppercase border-bottom">Thông tin địa điểm</h4>
-      <div  class="name px-3 py-1">Tên: {{position.name}}</div>
-      <div class="px-3" v-if="devicesOfPosition.length">
-        <div class="">Danh sách thiết bị:</div>
-
-        <div class="device p-2" v-for="device in devicesOfPosition" :key="device.id" >
-              <cpu-icon size="1.5x" class="custom-class"></cpu-icon>{{device.name}}
+      <div  class="name px-3 py-1">Tên: <span class="text-primary">{{position.name}}</span></div>
+      <div  class="name px-3 py-1">Kênh phát: 
+        <span v-if="station.id" class="text-primary">{{station.name}}</span>
+        <span v-else class="text-danger">Không có kênh phát</span>
+      </div>
+        <div class="px-3" v-if="devicesOfPosition.length">
+          <div class="">Danh sách thiết bị:</div>
+            <div class="device p-2" v-for="device in devicesOfPosition" :key="device.id" >
+                  <cpu-icon size="1.5x" class="custom-class"></cpu-icon>{{device.name}}
+            </div>
         </div>
-      </div>
-      <div v-else class="px-3">Không có thiết bị.</div>
-      <div class="text-center p-3">
-        <button class="btn btn-primary" @click="addDevice(position.id)">Thêm Thiết bị</button>
-      </div>
+        <div v-else class="px-3">Không có thiết bị.</div>
+        <div class="text-center p-3">
+          <button class="btn btn-primary" @click="addDevice(position.id)">Thêm Thiết bị</button>
+        </div>
+      
     </div>
     <modal v-if="showModal" @close="showModal = false" @submit="submitModal"></modal>
  </div>
@@ -52,6 +56,7 @@ export default {
       },
       updatePosition: async function() {
         let data = this.position
+        console.log(data)
         let status = 0
         if(data.id){
           await this.$store.dispatch('updatePosition', data)
@@ -67,7 +72,6 @@ export default {
         this.showModal = false
       },
       updateDevice: async function() {
-        this.device
         this.device.positions_id = this.position.id
         if(this.device.id){
           console.log(this.device )
@@ -80,9 +84,12 @@ export default {
         this.showModal = false
       },
       submitModal: function() {
-        if(this.modal == 'edit-position'){
+        if (this.modal == 'edit-position'){
           this.updatePosition()
-        } else{
+        } else if (this.modal == 'select-station'){
+          this.position.station_id = this.station.id
+          this.updatePosition()
+        }else{
           this.updateDevice()
         }
       }
@@ -93,6 +100,9 @@ export default {
       },
       position: function() {
         return this.$store.getters.getPosition;
+      },
+      station: function() {
+        return this.$store.getters.getStation;
       },
       modal() {
         return this.$store.getters.getModalComponent;

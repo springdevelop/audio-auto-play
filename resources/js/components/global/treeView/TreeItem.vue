@@ -7,7 +7,7 @@
             <button @click="show" type="button" class="btn btn-sm">
                 <more-vertical-icon size="2x" class="custom-class text-muted"></more-vertical-icon>
             </button>
-            <menu-item @deleteItem="deleteItem" @addDevice="addDevice" @editItem="editItem" @addChildPosition="addItem" v-if="showMenu" :id="model.id"></menu-item>
+            <menu-item @deleteItem="deleteItem" @addDevice="addDevice" @addStation="addStation" @editItem="editItem" @addChildPosition="addItem" v-if="showMenu" :id="model.id"></menu-item>
         </drag>
         <ul v-show="open" v-if="isFolder">
             <node
@@ -62,6 +62,9 @@ export default {
                  return item.parent_id === this.model.id
             })
         },
+        position: function() {
+            return this.$store.getters.getPosition;
+        },
        
     },
     methods: {
@@ -101,7 +104,13 @@ export default {
             }
         },
         addDevice: function(position_id = 0) {
-            this.$store.dispatch('makeModalComponent',{name: 'add-device', title: 'Thêm thiết bị', submit: 'Thêm'})
+            this.$store.dispatch('makeModalComponent',{name: 'add-device', title: 'Chọn Kênh', submit: 'Chọn'})
+            this.$store.dispatch("loadStations");
+            this.$store.dispatch('loadPosition',position_id)
+            this.setShowModal();
+        },
+        addStation: function(position_id = 0) {
+            this.$store.dispatch('makeModalComponent',{name: 'select-station', title: 'Thêm thiết bị', submit: 'Thêm'})
             this.$store.dispatch('initDevice')
             this.$store.dispatch('loadPosition',position_id)
             this.setShowModal();
@@ -111,8 +120,13 @@ export default {
             this.$store.dispatch('initPosition', parent_id)
             this.setShowModal();
         },
-        loadItem: function(id) {
-            this.$store.dispatch('loadPosition', id)
+        loadItem: async function(id) {
+            await this.$store.dispatch('loadPosition', id)
+            if( this.position.station_id ){
+                this.$store.dispatch('loadStation', this.position.station_id)
+            } else {
+                this.$store.dispatch('initStation')
+            }
             this.$store.dispatch('loadDevicesOfPosition', id)
         },
         deleteItem: function(id) {
