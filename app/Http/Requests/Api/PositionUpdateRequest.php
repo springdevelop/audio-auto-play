@@ -24,7 +24,6 @@ class PositionUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'groups_id' => 'required',
             'name' => 'required|max:20',
         ];
     }

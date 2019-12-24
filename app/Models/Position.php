@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Position extends Model
 {
     use ApiScopes;
-    
+
     protected $fillable = [
     	'parent_id',
     	'name',
@@ -16,6 +16,7 @@ class Position extends Model
     	'slug',
     	'users_id',
     	'groups_id',
+    	'station_id',
     ];
 
     protected $hidden = [

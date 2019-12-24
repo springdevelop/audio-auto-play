@@ -21,7 +21,7 @@ class PositionResource extends JsonResource
             'desc' => $this->desc,
             'users_id' => $this->users_id,
             'groups_id' => $this->groups_id,
-            'parent_id' => $this->parent_id
+            'station_id' => $this->station_id
         ];
     }
 }
