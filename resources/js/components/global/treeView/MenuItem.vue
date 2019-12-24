@@ -12,6 +12,10 @@
         <plus-square-icon size="1.5x" class="menu-plus mr-1"></plus-square-icon>
         <span>Thêm thiết bị</span>
     </li>
+      <li class="menu-item" role="menuitem" @click="$emit('addStation', id)" tabindex="-1">
+          <activity-icon size="1.5x" class="custom-class mr-1"></activity-icon>
+        <span>Chọn Kênh phát</span>
+    </li>
     <li class="menu-item" @click="$emit('deleteItem', id)" role="menuitem" tabindex="-1">
         <x-octagon-icon size="1.5x" class="custom-class mr-1"></x-octagon-icon>
         <span>Xoá địa điểm</span>
@@ -20,10 +24,11 @@
 </template>
 
 <script>
-import { EditIcon, FolderPlusIcon, XOctagonIcon, PlusSquareIcon} from 'vue-feather-icons'
+import { ActivityIcon, EditIcon, FolderPlusIcon, XOctagonIcon, PlusSquareIcon} from 'vue-feather-icons'
 
 export default {
     components: {
+        ActivityIcon,
         EditIcon,
         FolderPlusIcon,
         PlusSquareIcon,

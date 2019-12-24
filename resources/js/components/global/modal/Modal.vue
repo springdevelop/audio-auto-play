@@ -99,14 +99,14 @@
 import EditPosition from '@/js/pages/dashboard/position/FormEdit'
 import AddDevice from '@/js/components/global/modal/AddDevice'
 import SelectDevice from '@/js/components/global/modal/SelectDevice'
-
-
+import SelectStation from '@/js/components/global/modal/SelectStation'
 
 export default {
     components: {
         EditPosition,
         AddDevice,
-        SelectDevice
+        SelectDevice,
+        SelectStation
     },
     props: {
         textSubmit: String,
