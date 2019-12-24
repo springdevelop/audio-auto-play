@@ -22,7 +22,6 @@ class PositionStoreRequest extends BaseRequest
     public function rules()
     {
         return [
-            'groups_id' => 'required',
             'name' => 'required|max:20',
         ];
     }

@@ -72,7 +72,8 @@ class PositionController extends BaseController
      */
     public function store(PositionStoreRequest $request)
     {
-        $inputs = $request->only('parent_id', 'name', 'desc', 'groups_id');
+        // $inputs = $request->only('parent_id', 'name', 'desc', 'groups_id');
+        $inputs = $request->only('parent_id', 'name', 'desc', 'groups_id', 'station_id');
         $position = $this->service->create(array_merge($inputs));
 
         if($position) return $this->responseSuccess(new PositionResource($position));
@@ -107,7 +108,8 @@ class PositionController extends BaseController
      */
     public function update(PositionUpdateRequest $request, $id)
     {
-        $inputs = $request->only('name', 'desc', 'groups_id', 'parent_id');
+        // $inputs = $request->only('name', 'desc', 'groups_id', 'parent_id');
+        $inputs = $request->only('parent_id', 'name', 'desc', 'groups_id', 'station_id');
         $position = $this->service->find($id);
         if($position){
             $updated = $this->service->update($position, $inputs);
