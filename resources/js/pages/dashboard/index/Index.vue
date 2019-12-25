@@ -83,14 +83,27 @@ export default {
   /**
    * Chart data used to render stats, charts. Should be replaced with server data
    */
-  data() {
-    return {
-      statsCards: [
+  created() {
+    this.$store.dispatch('loadDevices')
+    this.$store.dispatch('loadStations')
+    this.$store.dispatch('loadPositions')
+  },
+  computed: {
+    positions: function() {
+      return this.$store.getters.getPositions;
+    },
+    devices: function() {
+      return this.$store.getters.getDevices;
+    },
+    stations: function() {
+      return this.$store.getters.getStations;
+    },
+    statsCards: function () { return [
         {
           type: "warning",
           icon: "ti-location-pin",
           title: "Địa điểm",
-          value: "20",
+          value: this.positions.length,
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
@@ -98,7 +111,7 @@ export default {
           type: "success",
           icon: "ti-volume",
           title: "Thiết bị",
-          value: "15",
+          value: this.devices.length,
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
@@ -106,7 +119,7 @@ export default {
           type: "danger",
           icon: "ti-pulse",
           title: "Kênh phát",
-          value: "2",
+          value: this.stations.length,
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
@@ -118,7 +131,10 @@ export default {
           footerText: "Updated now",
           footerIcon: "ti-reload"
         }
-      ],
+      ]},
+  },
+  data() {
+    return {
       usersChart: {
         data: {
           labels: [
