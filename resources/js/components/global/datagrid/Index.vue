@@ -23,7 +23,7 @@
         </td>
         <td v-if="hasColumnEdit">
           <span v-if="hasEdit" @click="$emit('editItem',entry['id'])" class="btn btn-primary btn-sm">sửa</span>
-          <button v-if="hasDelete" @click="$emit('deleteItem')" class="btn btn-danger btn-sm">xoá</button>
+          <button v-if="hasDelete" @click="$emit('deleteItem',entry['id'])" class="btn btn-danger btn-sm">xoá</button>
         </td>
       </tr>
     </tbody>

@@ -56,7 +56,6 @@ export default {
       },
       updatePosition: async function() {
         let data = this.position
-        console.log(data)
         let status = 0
         if(data.id){
           await this.$store.dispatch('updatePosition', data)

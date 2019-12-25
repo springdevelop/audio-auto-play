@@ -81,13 +81,17 @@ export default {
           await this.$store.dispatch('createDevice', data)
         }
         this.$store.dispatch('loadDevices')
-        // this.showModal = false
+        this.showModal = false
       },
       setShowModal: function(show) {
          this.showModal = show
       },
-      deleteItem: function() {
-        alert()
+      deleteItem: function(id) {
+          if(id){
+            this.$store.dispatch('deleteDevice', id)
+          } else {
+            alert("Chưa chọn thiết bị!")
+          }
       },
       editItem: function(id = null) {
         if(id){
