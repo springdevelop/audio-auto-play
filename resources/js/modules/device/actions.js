@@ -82,5 +82,18 @@ export default {
                 });
         })
     },
+    deleteDevice({ dispatch }, id){
+        return new Promise((resolve, reject) => {
+            API.delete(id)
+                .then(resp => {
+                    console.log(resp)
+                    dispatch('loadDevices')
+                    resolve(resp)
+                })
+                .catch(err => {
+                    reject(err)
+            })
+        })
+    },
 
 }

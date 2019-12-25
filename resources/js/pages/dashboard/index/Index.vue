@@ -98,7 +98,7 @@ export default {
           type: "success",
           icon: "ti-volume",
           title: "Thiết bị",
-          value: "150",
+          value: "15",
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
